@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Star Citizen Referral Codes</title>
+    <meta name="description" content="Privacy policy for Star Citizen Referral Code Generator">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+        .privacy-content h1 {
+            font-family: 'Orbitron', monospace;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        .privacy-content h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .privacy-content p, .privacy-content li {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <main>
+        <div class="privacy-content">
+            <a href="/" class="back-link">← Back to Generator</a>
+
+            <h1>Privacy Policy</h1>
+            <p><strong>Last Updated: January 2, 2025</strong></p>
+
+            <h2>1. Information We Collect</h2>
+            <p>We collect minimal information to provide our referral code service:</p>
+            <ul>
+                <li>Referral codes submitted by users (optional)</li>
+                <li>Email addresses (optional, only when provided)</li>
+                <li>Basic analytics data (page views, browser type)</li>
+            </ul>
+
+            <h2>2. How We Use Information</h2>
+            <p>The information collected is used to:</p>
+            <ul>
+                <li>Display random referral codes to new users</li>
+                <li>Track community statistics</li>
+                <li>Improve our service</li>
+            </ul>
+
+            <h2>3. Data Storage</h2>
+            <p>All data is stored locally in your browser using localStorage. We do not maintain server-side databases. This means:</p>
+            <ul>
+                <li>Your data stays on your device</li>
+                <li>Clearing browser data will remove stored information</li>
+                <li>We cannot access your personal browsing data</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>We may use:</p>
+            <ul>
+                <li>Google Analytics for traffic analysis</li>
+                <li>GitHub Pages for hosting</li>
+            </ul>
+
+            <h2>5. Cookies</h2>
+            <p>We use browser localStorage to remember:</p>
+            <ul>
+                <li>Your language preference</li>
+                <li>Your theme preference</li>
+                <li>Last generated code</li>
+            </ul>
+
+            <h2>6. Data Sharing</h2>
+            <p>We do not sell, trade, or transfer your information to third parties. Referral codes are shared publicly as part of the service's core functionality.</p>
+
+            <h2>7. External Links</h2>
+            <p>Our site contains links to Roberts Space Industries. We are not responsible for their privacy practices.</p>
+
+            <h2>8. Children's Privacy</h2>
+            <p>Our service is not directed to children under 13. We do not knowingly collect information from children.</p>
+
+            <h2>9. Contact</h2>
+            <p>For privacy concerns, please open an issue on our <a href="https://github.com/RedBeret/starcitizenreferral" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+
+            <h2>10. Changes</h2>
+            <p>We may update this policy periodically. Changes will be posted on this page.</p>
+
+            <h2>11. Disclaimer</h2>
+            <p>This site is not affiliated with Cloud Imperium Games or Roberts Space Industries. Star Citizen® is a registered trademark of Cloud Imperium Rights LLC.</p>
+        </div>
+    </main>
+
+    <script>
+        // Apply saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.body.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>

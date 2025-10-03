@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://starcitizenreferrals.space/sitemap.xml
+
+# Optimize crawl rate
+Crawl-delay: 1
+
+# Block unnecessary files
+Disallow: /.git/
+Disallow: /.claude/
+Disallow: /README.md
+Disallow: /CLAUDE.md
