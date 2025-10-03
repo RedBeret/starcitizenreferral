@@ -192,13 +192,18 @@
                     </a>
 
                     <div class="url-display">
-                        <p class="url-label" data-i18n="or-copy-url">Or copy this link:</p>
+                        <div class="url-divider">
+                            <span class="divider-text" data-i18n="or-copy-url">Or copy this direct link</span>
+                        </div>
                         <div class="url-box">
+                            <div class="url-icon">🔗</div>
                             <input type="text" id="full-url" readonly value="https://robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY">
-                            <button id="copy-url-btn" class="btn-copy-url" data-i18n="copy-link">
-                                <span>📋</span>
+                            <button id="copy-url-btn" class="btn-copy-url">
+                                <span class="copy-url-icon">📋</span>
+                                <span class="copy-url-text" data-i18n="copy-link">Copy Link</span>
                             </button>
                         </div>
+                        <p class="url-hint" data-i18n="url-hint">Direct link with your referral code included</p>
                     </div>
                 </div>
 
