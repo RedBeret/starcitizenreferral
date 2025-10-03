@@ -24,6 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update stats periodically (every 15 minutes = 900000ms)
     setInterval(updateStats, 900000); // Update every 15 minutes
+
+    // Start countdown timer
+    startCountdown();
+
+    // Start activity feed
+    startActivityFeed();
+
+    // Start floating notifications
+    startFloatingNotifications();
 });
 
 // Get code (always returns your code now)
@@ -201,6 +210,109 @@ function updateOnlineUsers() {
     const onlineNow = Math.max(5, baseOnline + variance);
 
     document.getElementById('online-now').textContent = onlineNow;
+}
+
+// Countdown Timer
+function startCountdown() {
+    // Set end of month
+    const now = new Date();
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+
+    function updateCountdown() {
+        const now = new Date();
+        const distance = endOfMonth - now;
+
+        if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+// Activity Feed
+function startActivityFeed() {
+    const countries = ['USA', 'UK', 'Canada', 'Australia', 'Germany', 'France', 'Japan', 'Brazil'];
+    const actions = [
+        'just used code',
+        'claimed bonus',
+        'got 50,000 UEC',
+        'joined with code',
+        'redeemed referral'
+    ];
+
+    function addActivity() {
+        const country = countries[Math.floor(Math.random() * countries.length)];
+        const action = actions[Math.floor(Math.random() * actions.length)];
+        const timeAgo = Math.floor(Math.random() * 60) + 1;
+
+        const activityList = document.getElementById('activity-list');
+        const newItem = document.createElement('div');
+        newItem.className = 'activity-item';
+        newItem.textContent = `Someone from ${country} ${action} ${timeAgo}s ago`;
+
+        // Add to top of list
+        activityList.insertBefore(newItem, activityList.firstChild);
+
+        // Keep only last 3 items
+        while (activityList.children.length > 3) {
+            activityList.removeChild(activityList.lastChild);
+        }
+    }
+
+    // Add initial activities
+    addActivity();
+    setTimeout(addActivity, 2000);
+    setTimeout(addActivity, 4000);
+
+    // Add new activity every 10-30 seconds
+    setInterval(() => {
+        if (Math.random() > 0.5) {
+            addActivity();
+        }
+    }, 15000);
+}
+
+// Floating Notifications
+function startFloatingNotifications() {
+    const countries = ['USA', 'UK', 'Canada', 'Germany', 'Australia', 'France', 'Japan', 'South Korea', 'Netherlands', 'Sweden'];
+
+    function showNotification() {
+        const notification = document.getElementById('floating-notification');
+        const countrySpan = document.getElementById('notification-country');
+
+        const country = countries[Math.floor(Math.random() * countries.length)];
+        countrySpan.textContent = country;
+
+        notification.style.display = 'block';
+        notification.style.animation = 'floatIn 0.5s ease forwards';
+
+        setTimeout(() => {
+            notification.style.animation = 'floatOut 0.5s ease forwards';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 500);
+        }, 4000);
+    }
+
+    // Show first notification after 10 seconds
+    setTimeout(showNotification, 10000);
+
+    // Show notification every 45-90 seconds
+    setInterval(() => {
+        if (Math.random() > 0.3) {
+            showNotification();
+        }
+    }, 60000);
 }
 
 // Service Worker registration disabled for now

@@ -188,6 +188,25 @@
                             <span class="stat-label">Online Now</span>
                         </div>
                     </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="countdown-box">
+                        <p class="countdown-label">⏰ October Bonus Ends In:</p>
+                        <div id="countdown" class="countdown-timer">
+                            <span id="days">29</span>d
+                            <span id="hours">23</span>h
+                            <span id="minutes">59</span>m
+                            <span id="seconds">59</span>s
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="activity-feed">
+                        <p class="activity-label">🔥 Recent Activity</p>
+                        <div id="activity-list" class="activity-list">
+                            <div class="activity-item">Someone from USA just used code</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -270,5 +289,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Floating Notification -->
+    <div id="floating-notification" class="floating-notification" style="display: none;">
+        <span class="notification-icon">🎉</span>
+        <span class="notification-text">Someone from <span id="notification-country">USA</span> just claimed 50,000 UEC!</span>
+    </div>
+
 </body>
 </html>
