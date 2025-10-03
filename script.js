@@ -13,8 +13,9 @@ const translations = {
         'players-helped': 'Players Helped',
         'active-codes': 'Active Codes',
         'online-now': 'Online Now',
-        'or-copy-url': 'Or copy this link:',
-        'copy-link': '📋'
+        'or-copy-url': 'Or copy this direct link',
+        'copy-link': 'Copy Link',
+        'url-hint': 'Direct link with your referral code included'
     },
     de: {
         'hero-title': 'Star Citizen Empfehlungscode Oktober 2025 ✅ 50.000 UEC Gratis',
@@ -223,13 +224,14 @@ async function copyURL() {
     try {
         await navigator.clipboard.writeText(url);
         button.classList.add('copied');
-        button.innerHTML = '✓';
+        const originalHTML = button.innerHTML;
+        button.innerHTML = '<span class="copy-url-icon">✓</span><span class="copy-url-text">Copied!</span>';
 
         showToast('Link copied to clipboard!', 'success');
 
         setTimeout(() => {
             button.classList.remove('copied');
-            button.innerHTML = '<span>📋</span>';
+            button.innerHTML = originalHTML;
         }, 2000);
     } catch (err) {
         showToast('Failed to copy link', 'error');
