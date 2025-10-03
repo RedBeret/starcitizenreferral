@@ -2,8 +2,6 @@
 
 A community-driven referral code generator for Star Citizen that helps new players get 50,000 UEC bonus when creating their RSI account.
 
-🌟 **Live Site:** [https://starcitizenreferrals.space](https://starcitizenreferrals.space)
-
 ## Features
 
 - 🎲 **Random Code Generation** - Get a fresh referral code with each click
