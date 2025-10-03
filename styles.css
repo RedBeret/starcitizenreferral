@@ -586,42 +586,6 @@ footer {
     color: #ff6b35;
 }
 
-/* Activity Feed */
-.activity-feed {
-    margin-top: 1.5rem;
-}
-
-.activity-label {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.activity-list {
-    max-height: 100px;
-    overflow-y: auto;
-}
-
-.activity-item {
-    padding: 0.5rem;
-    background: var(--bg-darker);
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    animation: slideInLeft 0.5s ease;
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 /* Toast Notification */
 .toast {
