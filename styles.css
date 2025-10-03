@@ -559,6 +559,70 @@ footer {
     opacity: 0.8;
 }
 
+/* Countdown Timer */
+.countdown-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.countdown-timer {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.countdown-timer span {
+    color: #ff6b35;
+}
+
+/* Activity Feed */
+.activity-feed {
+    margin-top: 1.5rem;
+}
+
+.activity-label {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.activity-list {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.activity-item {
+    padding: 0.5rem;
+    background: var(--bg-darker);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    animation: slideInLeft 0.5s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Toast Notification */
 .toast {
     position: fixed;
@@ -592,4 +656,62 @@ footer {
 .toast.error {
     border-color: var(--secondary-color);
     background: rgba(255, 107, 53, 0.1);
+}
+
+/* Floating Notification */
+.floating-notification {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.95), rgba(0, 212, 255, 0.95));
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4);
+    z-index: 10000;
+    animation: floatIn 0.5s ease forwards;
+    font-weight: 600;
+}
+
+.notification-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes floatOut {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-40px);
+    }
+}
+
+/* Enhanced Copy Button Animation */
+.btn-copy:active {
+    transform: scale(0.95);
+}
+
+.btn-copy.copied {
+    animation: successPulse 0.5s ease;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
