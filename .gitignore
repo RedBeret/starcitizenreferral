@@ -1,0 +1,62 @@
+# Documentation and Claude files
+docs/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Optional: GitHub Pages
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Optional: Custom domain CNAME (uncomment if needed)
+# CNAME
