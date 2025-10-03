@@ -12,7 +12,9 @@ const translations = {
         'stats-title': '📊 Live Stats',
         'players-helped': 'Players Helped',
         'active-codes': 'Active Codes',
-        'online-now': 'Online Now'
+        'online-now': 'Online Now',
+        'or-copy-url': 'Or copy this link:',
+        'copy-link': '📋'
     },
     de: {
         'hero-title': 'Star Citizen Empfehlungscode Oktober 2025 ✅ 50.000 UEC Gratis',
@@ -23,7 +25,9 @@ const translations = {
         'stats-title': '📊 Live Statistiken',
         'players-helped': 'Spielern Geholfen',
         'active-codes': 'Aktive Codes',
-        'online-now': 'Jetzt Online'
+        'online-now': 'Jetzt Online',
+        'or-copy-url': 'Oder kopiere diesen Link:',
+        'copy-link': '📋'
     },
     fr: {
         'hero-title': 'Code de Parrainage Star Citizen Octobre 2025 ✅ 50 000 UEC Gratuits',
@@ -34,7 +38,9 @@ const translations = {
         'stats-title': '📊 Stats en Direct',
         'players-helped': 'Joueurs Aidés',
         'active-codes': 'Codes Actifs',
-        'online-now': 'En Ligne Maintenant'
+        'online-now': 'En Ligne Maintenant',
+        'or-copy-url': 'Ou copiez ce lien:',
+        'copy-link': '📋'
     },
     es: {
         'hero-title': 'Código de Referencia Star Citizen Octubre 2025 ✅ 50,000 UEC Gratis',
@@ -45,7 +51,9 @@ const translations = {
         'stats-title': '📊 Estadísticas en Vivo',
         'players-helped': 'Jugadores Ayudados',
         'active-codes': 'Códigos Activos',
-        'online-now': 'En Línea Ahora'
+        'online-now': 'En Línea Ahora',
+        'or-copy-url': 'O copia este enlace:',
+        'copy-link': '📋'
     },
     pt: {
         'hero-title': 'Código de Referência Star Citizen Outubro 2025 ✅ 50.000 UEC Grátis',
@@ -143,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listeners
     document.getElementById('copy-btn').addEventListener('click', copyCode);
+    document.getElementById('copy-url-btn').addEventListener('click', copyURL);
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
     document.getElementById('language-select').addEventListener('change', changeLanguage);
 
@@ -204,6 +213,27 @@ function generateNewCode() {
 
         showToast('New code generated!', 'success');
     }, 500);
+}
+
+// Copy URL to clipboard
+async function copyURL() {
+    const url = document.getElementById('full-url').value;
+    const button = document.getElementById('copy-url-btn');
+
+    try {
+        await navigator.clipboard.writeText(url);
+        button.classList.add('copied');
+        button.innerHTML = '✓';
+
+        showToast('Link copied to clipboard!', 'success');
+
+        setTimeout(() => {
+            button.classList.remove('copied');
+            button.innerHTML = '<span>📋</span>';
+        }, 2000);
+    } catch (err) {
+        showToast('Failed to copy link', 'error');
+    }
 }
 
 // Copy code to clipboard
