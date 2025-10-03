@@ -1,8 +1,134 @@
 // Only your referral code (100% of the time)
 const YOUR_REFERRAL_CODE = 'STAR-9L66-ZTDY';
 
+// Translations
+const translations = {
+    en: {
+        'hero-title': 'Star Citizen Referral Code October 2025 ✅ Free 50,000 UEC',
+        'hero-subtitle': '🎮 Use promo code for <strong>50,000 UEC</strong> instant bonus - Verified Working!',
+        'your-code': 'Your Referral Code:',
+        'copy': 'Copy Code',
+        'signup': 'Sign Up at Star Citizen',
+        'stats-title': '📊 Live Stats',
+        'players-helped': 'Players Helped',
+        'active-codes': 'Active Codes',
+        'online-now': 'Online Now'
+    },
+    de: {
+        'hero-title': 'Star Citizen Empfehlungscode Oktober 2025 ✅ 50.000 UEC Gratis',
+        'hero-subtitle': '🎮 Nutze den Promo-Code für <strong>50.000 UEC</strong> Sofortbonus - Verifiziert!',
+        'your-code': 'Dein Empfehlungscode:',
+        'copy': 'Code Kopieren',
+        'signup': 'Bei Star Citizen Anmelden',
+        'stats-title': '📊 Live Statistiken',
+        'players-helped': 'Spielern Geholfen',
+        'active-codes': 'Aktive Codes',
+        'online-now': 'Jetzt Online'
+    },
+    fr: {
+        'hero-title': 'Code de Parrainage Star Citizen Octobre 2025 ✅ 50 000 UEC Gratuits',
+        'hero-subtitle': '🎮 Utilisez le code promo pour <strong>50 000 UEC</strong> de bonus instantané - Vérifié!',
+        'your-code': 'Votre Code de Parrainage:',
+        'copy': 'Copier le Code',
+        'signup': 'S\'inscrire à Star Citizen',
+        'stats-title': '📊 Stats en Direct',
+        'players-helped': 'Joueurs Aidés',
+        'active-codes': 'Codes Actifs',
+        'online-now': 'En Ligne Maintenant'
+    },
+    es: {
+        'hero-title': 'Código de Referencia Star Citizen Octubre 2025 ✅ 50,000 UEC Gratis',
+        'hero-subtitle': '🎮 Usa el código promocional para <strong>50,000 UEC</strong> de bonificación instantánea - ¡Verificado!',
+        'your-code': 'Tu Código de Referencia:',
+        'copy': 'Copiar Código',
+        'signup': 'Registrarse en Star Citizen',
+        'stats-title': '📊 Estadísticas en Vivo',
+        'players-helped': 'Jugadores Ayudados',
+        'active-codes': 'Códigos Activos',
+        'online-now': 'En Línea Ahora'
+    },
+    pt: {
+        'hero-title': 'Código de Referência Star Citizen Outubro 2025 ✅ 50.000 UEC Grátis',
+        'hero-subtitle': '🎮 Use o código promocional para <strong>50.000 UEC</strong> de bônus instantâneo - Verificado!',
+        'your-code': 'Seu Código de Referência:',
+        'copy': 'Copiar Código',
+        'signup': 'Cadastrar no Star Citizen',
+        'stats-title': '📊 Estatísticas ao Vivo',
+        'players-helped': 'Jogadores Ajudados',
+        'active-codes': 'Códigos Ativos',
+        'online-now': 'Online Agora'
+    },
+    it: {
+        'hero-title': 'Codice Referral Star Citizen Ottobre 2025 ✅ 50.000 UEC Gratis',
+        'hero-subtitle': '🎮 Usa il codice promo per <strong>50.000 UEC</strong> di bonus istantaneo - Verificato!',
+        'your-code': 'Il Tuo Codice Referral:',
+        'copy': 'Copia Codice',
+        'signup': 'Iscriviti a Star Citizen',
+        'stats-title': '📊 Statistiche Live',
+        'players-helped': 'Giocatori Aiutati',
+        'active-codes': 'Codici Attivi',
+        'online-now': 'Online Ora'
+    },
+    pl: {
+        'hero-title': 'Kod Polecający Star Citizen Październik 2025 ✅ 50 000 UEC Za Darmo',
+        'hero-subtitle': '🎮 Użyj kodu promocyjnego dla <strong>50 000 UEC</strong> natychmiastowego bonusu - Zweryfikowano!',
+        'your-code': 'Twój Kod Polecający:',
+        'copy': 'Kopiuj Kod',
+        'signup': 'Zarejestruj się w Star Citizen',
+        'stats-title': '📊 Statystyki na Żywo',
+        'players-helped': 'Pomocy Graczom',
+        'active-codes': 'Aktywne Kody',
+        'online-now': 'Online Teraz'
+    },
+    ru: {
+        'hero-title': 'Реферальный Код Star Citizen Октябрь 2025 ✅ 50,000 UEC Бесплатно',
+        'hero-subtitle': '🎮 Используйте промокод для <strong>50,000 UEC</strong> мгновенного бонуса - Проверено!',
+        'your-code': 'Ваш Реферальный Код:',
+        'copy': 'Копировать Код',
+        'signup': 'Регистрация в Star Citizen',
+        'stats-title': '📊 Статистика в Реальном Времени',
+        'players-helped': 'Игрокам Помогли',
+        'active-codes': 'Активные Коды',
+        'online-now': 'Сейчас Онлайн'
+    },
+    jp: {
+        'hero-title': 'スターシチズン紹介コード 2025年10月 ✅ 50,000 UEC 無料',
+        'hero-subtitle': '🎮 プロモコードを使用して<strong>50,000 UEC</strong>の即座ボーナス - 確認済み！',
+        'your-code': 'あなたの紹介コード：',
+        'copy': 'コードをコピー',
+        'signup': 'スターシチズンに登録',
+        'stats-title': '📊 ライブ統計',
+        'players-helped': '助けたプレイヤー',
+        'active-codes': 'アクティブコード',
+        'online-now': '現在オンライン'
+    },
+    kr: {
+        'hero-title': '스타 시티즌 추천 코드 2025년 10월 ✅ 50,000 UEC 무료',
+        'hero-subtitle': '🎮 프로모 코드를 사용하여 <strong>50,000 UEC</strong> 즉시 보너스 - 확인됨!',
+        'your-code': '추천 코드:',
+        'copy': '코드 복사',
+        'signup': '스타 시티즌 가입',
+        'stats-title': '📊 실시간 통계',
+        'players-helped': '도움받은 플레이어',
+        'active-codes': '활성 코드',
+        'online-now': '현재 온라인'
+    },
+    cn: {
+        'hero-title': '星际公民推荐代码 2025年10月 ✅ 免费50,000 UEC',
+        'hero-subtitle': '🎮 使用促销代码获得<strong>50,000 UEC</strong>即时奖金 - 已验证！',
+        'your-code': '您的推荐代码：',
+        'copy': '复制代码',
+        'signup': '注册星际公民',
+        'stats-title': '📊 实时统计',
+        'players-helped': '已帮助玩家',
+        'active-codes': '活跃代码',
+        'online-now': '当前在线'
+    }
+};
+
 // State management
 let currentTheme = localStorage.getItem('theme') || 'dark';
+let currentLanguage = localStorage.getItem('language') || 'en';
 let currentCode = localStorage.getItem('lastCode') || getRandomCode();
 
 // Initialize
@@ -10,14 +136,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set initial state
     updateCode(currentCode);
     setTheme(currentTheme);
+    setLanguage(currentLanguage);
 
     // Initialize stats
     initializeStats();
 
     // Event listeners
     document.getElementById('copy-btn').addEventListener('click', copyCode);
-    document.getElementById('generate-btn').addEventListener('click', generateNewCode);
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    document.getElementById('language-select').addEventListener('change', changeLanguage);
 
     // Update enlist link
     updateEnlistLink();
@@ -111,6 +238,28 @@ function setTheme(theme) {
     document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     document.getElementById('theme-toggle').textContent = theme === 'dark' ? '🌙' : '☀️';
+}
+
+// Change language
+function changeLanguage(e) {
+    setLanguage(e.target.value);
+}
+
+// Set language
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.getElementById('language-select').value = lang;
+
+    // Update all translatable elements
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        } else if (translations['en'][key]) {
+            element.innerHTML = translations['en'][key];
+        }
+    });
 }
 
 
