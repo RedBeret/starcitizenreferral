@@ -1,5 +1,7 @@
 # Documentation and Claude files
 docs/
+.claude/
+claude.md
 
 # Dependencies
 node_modules/
