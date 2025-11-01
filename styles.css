@@ -49,6 +49,19 @@ body {
     display: block;
 }
 
+/* Pulse animation for live indicator */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+    }
+}
+
 .stars {
     background: transparent url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Ccircle cx="2" cy="2" r="1" fill="white" opacity="0.3"/%3E%3Ccircle cx="50" cy="50" r="1" fill="white" opacity="0.3"/%3E%3Ccircle cx="80" cy="30" r="1" fill="white" opacity="0.3"/%3E%3C/svg%3E') repeat;
     animation: animateStars 200s linear infinite;
@@ -122,6 +135,17 @@ nav {
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #theme-toggle {
@@ -662,6 +686,63 @@ footer {
 
     main {
         padding: 1rem;
+    }
+
+    /* Mobile-friendly code display */
+    .code-display {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn-copy {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Mobile-friendly stats */
+    .stat {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    /* Mobile-friendly countdown */
+    .countdown-timer {
+        font-size: 1rem;
+    }
+
+    /* Mobile-friendly URL box */
+    .url-box {
+        flex-direction: column;
+    }
+
+    .url-icon {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        padding: 0.75rem;
+        justify-content: center;
+    }
+
+    #full-url {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-copy-url {
+        border-left: none;
+        border-top: 1px solid rgba(0, 212, 255, 0.2);
+        padding: 0.75rem;
+        justify-content: center;
+    }
+
+    /* Smaller padding for mobile cards */
+    .referral-box, .stats-box, .info-card {
+        padding: 1.5rem;
     }
 }
 
