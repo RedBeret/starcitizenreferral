@@ -3,6 +3,11 @@ docs/
 .claude/
 claude.md
 
+# Star Citizen Fankit (DO NOT COMMIT - Licensed content)
+fankit/
+fankit-original/
+media/sc-fankit/
+
 # Dependencies
 node_modules/
 vendor/
