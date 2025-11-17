@@ -1,12 +1,60 @@
+# Robots.txt for starcitizenreferrals.space
+# Allow all crawlers
+
 User-agent: *
 Allow: /
+Crawl-delay: 0
+
+# Prioritize important pages
+Allow: /index.html
+Allow: /pages/guides/
+Allow: /pages/monthly/
+Allow: /pages/info/
+Allow: /pages/tools/
+Allow: /pages/comparisons/
+
+# AI and Bot specific pages - PRIORITY
+Allow: /pages/tools/ai.html
+Allow: /assets/api.json
+Allow: /assets/ai-instructions.txt
+
+# Asset directories
+Allow: /assets/
+
+# Sitemap location
 Sitemap: https://starcitizenreferrals.space/sitemap.xml
 
-# Optimize crawl rate
-Crawl-delay: 1
+# Special directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
 
-# Block unnecessary files
-Disallow: /.git/
-Disallow: /.claude/
-Disallow: /README.md
-Disallow: /CLAUDE.md
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+# Allow OpenAI GPT Bot
+User-agent: GPTBot
+Allow: /
+
+# Allow Anthropic Claude
+User-agent: Claude-Web
+Allow: /
+
+# Block bad bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
