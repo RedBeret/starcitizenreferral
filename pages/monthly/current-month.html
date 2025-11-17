@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Citizen Current Month Referral Code 2025 | STAR-9L66-ZTDY</title>
+
+    <!-- Auto-redirect to current month's page -->
+    <script>
+        // Get current date
+        const now = new Date();
+        const month = now.getMonth(); // 0-based (0 = January)
+        const year = now.getFullYear();
+
+        // Define month pages
+        const monthPages = {
+            0: '/january-2025-code.html',    // January
+            1: '/february-2025-code.html',   // February
+            2: '/march-2025-code.html',      // March
+            3: '/april-2025-code.html',      // April
+            4: '/may-2025-code.html',        // May
+            5: '/june-2025-code.html',       // June
+            6: '/july-2025-code.html',       // July
+            7: '/august-2025-code.html',     // August
+            8: '/september-2025-code.html',  // September
+            9: '/october-2025-code.html',     // October
+            10: '/november-2025-code.html',  // November
+            11: '/december-2025-code.html'   // December
+        };
+
+        // Get the appropriate page for current month
+        let targetPage = monthPages[month];
+
+        // If page doesn't exist yet (for months we haven't created), default to main page
+        const existingPages = ['/october-2025-code.html', '/november-2025-code.html', '/december-2025-code.html'];
+
+        if (!existingPages.includes(targetPage)) {
+            targetPage = '/'; // Redirect to homepage if month page doesn't exist yet
+        }
+
+        // Only redirect if we're in 2025
+        if (year === 2025) {
+            window.location.href = targetPage;
+        } else if (year > 2025) {
+            // For future years, redirect to main page
+            window.location.href = '/';
+        } else {
+            // For past years, redirect to main page
+            window.location.href = '/';
+        }
+    </script>
+
+    <!-- Fallback meta refresh -->
+    <meta http-equiv="refresh" content="0; url=/">
+
+    <!-- SEO -->
+    <meta name="description" content="Get the current month's Star Citizen referral code STAR-9L66-ZTDY for 50,000 UEC bonus. Auto-redirects to this month's promotions.">
+
+    <link rel="canonical" href="https://starcitizenreferrals.space/pages/monthly/current-month.html">
+</head>
+<body>
+    <p>Redirecting to current month's referral code page...</p>
+    <p>If you're not redirected, <a href="/">click here</a>.</p>
+</body>
+</html>
