@@ -2,104 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://starcitizenreferrals.space/</loc>
-        <lastmod>2025-11-01</lastmod>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://starcitizenreferrals.space/privacy.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/new-player-guide.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/guides/new-player-guide.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/50000-uec-bonus.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/guides/50000-uec-bonus.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/october-2025-code.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/monthly/october-2025-code.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/november-2025-code.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/monthly/november-2025-code.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/december-2025-code.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/monthly/december-2025-code.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/current-month.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/monthly/current-month.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/ai.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/tools/ai.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/api.json</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/assets/api.json</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/ai-instructions.txt</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/assets/ai-instructions.txt</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/verify.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/tools/verify.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/does-star-citizen-referral-code-still-work.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/info/does-star-citizen-referral-code-still-work.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/star-citizen-referral-code-reddit.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/info/star-citizen-referral-code-reddit.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/best-star-citizen-referral-code.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/info/best-star-citizen-referral-code.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/star-citizen-free-50000-uec.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/info/star-citizen-free-50000-uec.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://starcitizenreferrals.space/star-citizen-referral-code-not-working.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <loc>https://starcitizenreferrals.space/pages/info/star-citizen-referral-code-not-working.html</loc>
+        <lastmod>2025-11-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://starcitizenreferrals.space/pages/comparisons/vs-randomizer.html</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://starcitizenreferrals.space/pages/comparisons/vs-star-gvpp-wtp9.html</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://starcitizenreferrals.space/pages/comparisons/vs-star-k62p-gnzz.html</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://starcitizenreferrals.space/pages/comparisons/vs-star-vf79-ptpn.html</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://starcitizenreferrals.space/pages/comparisons/why-not-use-randomizer.html</loc>
+        <lastmod>2025-11-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
