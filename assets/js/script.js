@@ -4,7 +4,7 @@ const YOUR_REFERRAL_CODE = 'STAR-9L66-ZTDY';
 // Translations
 const translations = {
     en: {
-        'hero-title': 'Star Citizen Referral Code November 2025 ✅ Free 50,000 UEC',
+        'hero-title': 'Star Citizen Referral Code 2025-2026 ✅ Free 50,000 UEC',
         'hero-subtitle': '🎮 Use promo code for <strong>50,000 UEC</strong> instant bonus - Verified Working!',
         'your-code': 'Your Referral Code:',
         'copy': 'Copy Code',
@@ -62,7 +62,7 @@ const translations = {
         'use-verified-100': 'Use Verified Code (100% Success)'
     },
     de: {
-        'hero-title': 'Star Citizen Empfehlungscode November 2025 ✅ 50.000 UEC Gratis',
+        'hero-title': 'Star Citizen Empfehlungscode 2025-2026 ✅ 50.000 UEC Gratis',
         'hero-subtitle': '🎮 Nutze den Promo-Code für <strong>50.000 UEC</strong> Sofortbonus - Verifiziert!',
         'your-code': 'Dein Empfehlungscode:',
         'copy': 'Code Kopieren',
@@ -820,9 +820,8 @@ function updateOnlineUsers() {
 
 // Countdown Timer
 function startCountdown() {
-    // Set end of month
-    const now = new Date();
-    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+    // Set end date to March 31, 2026 (Q1 2026)
+    const endOfMonth = new Date(2026, 2, 31, 23, 59, 59); // Month is 0-indexed, so 2 = March
 
     function updateCountdown() {
         const now = new Date();
