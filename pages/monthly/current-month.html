@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Citizen Current Month Referral Code 2025 | STAR-9L66-ZTDY</title>
+    <title>Star Citizen Current Month Referral Code | STAR-9L66-ZTDY</title>
 
     <!-- Auto-redirect to current month's page -->
     <script>
@@ -12,40 +12,24 @@
         const month = now.getMonth(); // 0-based (0 = January)
         const year = now.getFullYear();
 
-        // Define month pages
-        const monthPages = {
-            0: '/january-2025-code.html',    // January
-            1: '/february-2025-code.html',   // February
-            2: '/march-2025-code.html',      // March
-            3: '/april-2025-code.html',      // April
-            4: '/may-2025-code.html',        // May
-            5: '/june-2025-code.html',       // June
-            6: '/july-2025-code.html',       // July
-            7: '/august-2025-code.html',     // August
-            8: '/september-2025-code.html',  // September
-            9: '/october-2025-code.html',     // October
-            10: '/november-2025-code.html',  // November
-            11: '/december-2025-code.html'   // December
+        // Monthly pages are only created for special events
+        // For regular months, redirect to homepage
+        const eventPages = {
+            // 2025 events
+            '2025-10': '/pages/monthly/october-2025-code.html',
+            '2025-11': '/pages/monthly/november-2025-code.html',
+            '2025-12': '/pages/monthly/december-2025-code.html',
+            // Add 2026+ event pages here as needed
         };
 
-        // Get the appropriate page for current month
-        let targetPage = monthPages[month];
+        // Create key for current month
+        const monthKey = `${year}-${String(month).padStart(2, '0')}`;
 
-        // If page doesn't exist yet (for months we haven't created), default to main page
-        const existingPages = ['/october-2025-code.html', '/november-2025-code.html', '/december-2025-code.html'];
-
-        if (!existingPages.includes(targetPage)) {
-            targetPage = '/'; // Redirect to homepage if month page doesn't exist yet
-        }
-
-        // Only redirect if we're in 2025
-        if (year === 2025) {
-            window.location.href = targetPage;
-        } else if (year > 2025) {
-            // For future years, redirect to main page
-            window.location.href = '/';
+        // Check if there's a special event page for this month
+        if (eventPages[monthKey]) {
+            window.location.href = eventPages[monthKey];
         } else {
-            // For past years, redirect to main page
+            // No special event page, redirect to homepage
             window.location.href = '/';
         }
     </script>
@@ -54,7 +38,7 @@
     <meta http-equiv="refresh" content="0; url=/">
 
     <!-- SEO -->
-    <meta name="description" content="Get the current month's Star Citizen referral code STAR-9L66-ZTDY for 50,000 UEC bonus. Auto-redirects to this month's promotions.">
+    <meta name="description" content="Get Star Citizen referral code STAR-9L66-ZTDY for 50,000 UEC bonus. Auto-redirects to current events or homepage.">
 
     <link rel="canonical" href="https://starcitizenreferrals.space/pages/monthly/current-month.html">
 </head>
