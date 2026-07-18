@@ -4,25 +4,25 @@ const YOUR_REFERRAL_CODE = 'STAR-9L66-ZTDY';
 // Translations
 const translations = {
     en: {
-        'hero-title': 'Star Citizen Referral Code 2025-2026 ✅ Free 50,000 UEC',
+        'hero-title': 'Star Citizen Referral Code 2026 ✅ Free 50,000 UEC',
         'hero-subtitle': '🎮 Use promo code for <strong>50,000 UEC</strong> instant bonus - Verified Working!',
         'your-code': 'Your Referral Code:',
         'copy': 'Copy Code',
         'signup': 'Sign Up at Star Citizen',
         'stats-title': '📊 Live Stats',
-        'players-helped': 'Players Helped',
-        'active-codes': 'Active Codes',
-        'online-now': 'Online Now',
+        'players-helped': 'Pilots Enlisted',
+        'active-codes': 'Citizens Recruited',
+        'online-now': 'Prospects Enlisted',
         'or-copy-url': 'Or copy this direct link',
         'copy-link': 'Copy Link',
         'url-hint': 'Direct link with your referral code included',
-        'trust-rating': '⭐ Rated 4.9/5',
+        'trust-rating': '⭐ Real player-owned code',
         'success-rate': '✅ 100% Success Rate',
         'secure-official': '🔒 Secure & Official',
         'why-choose': '🌟 Why Choose STAR-9L66-ZTDY?',
-        'daily-verified': 'Daily Verified - Never get a dead code',
+        'daily-verified': 'Monthly Verified - Never get a dead code',
         'guaranteed-work': '100% Success - Guaranteed to work',
-        'happy-citizens': '3,847+ Happy Citizens - Join the fleet',
+        'happy-citizens': '28 Citizens Recruited - Join the fleet',
         'single-owner': 'Single Owner - Not a random generator',
         'better-than': '⚡ Better than randomizers: We guarantee 100% success vs their 70% chance',
         'why-different': '🏆 Why We\'re Different',
@@ -62,7 +62,7 @@ const translations = {
         'use-verified-100': 'Use Verified Code (100% Success)'
     },
     de: {
-        'hero-title': 'Star Citizen Empfehlungscode 2025-2026 ✅ 50.000 UEC Gratis',
+        'hero-title': 'Star Citizen Empfehlungscode 2026 ✅ 50.000 UEC Gratis',
         'hero-subtitle': '🎮 Nutze den Promo-Code für <strong>50.000 UEC</strong> Sofortbonus - Verifiziert!',
         'your-code': 'Dein Empfehlungscode:',
         'copy': 'Code Kopieren',
@@ -73,13 +73,13 @@ const translations = {
         'online-now': 'Jetzt Online',
         'or-copy-url': 'Oder kopiere diesen Link:',
         'copy-link': '📋',
-        'trust-rating': '⭐ Bewertet 4.9/5',
+        'trust-rating': '⭐ Code eines echten Spielers',
         'success-rate': '✅ 100% Erfolgsquote',
         'secure-official': '🔒 Sicher & Offiziell',
         'why-choose': '🌟 Warum STAR-9L66-ZTDY wählen?',
-        'daily-verified': 'Täglich verifiziert - Niemals ein toter Code',
+        'daily-verified': 'Monatlich verifiziert - Niemals ein toter Code',
         'guaranteed-work': '100% Erfolg - Garantiert funktionierend',
-        'happy-citizens': '3,847+ Zufriedene Bürger',
+        'happy-citizens': '28 Bürger rekrutiert',
         'single-owner': 'Einzelner Besitzer - Kein Zufallsgenerator',
         'better-than': '⚡ Besser als Randomizer: 100% Erfolg vs 70% Chance',
         'why-different': '🏆 Warum wir anders sind',
@@ -119,7 +119,7 @@ const translations = {
         'use-verified-100': 'Verifizierten Code verwenden (100% Erfolg)'
     },
     fr: {
-        'hero-title': 'Code de Parrainage Star Citizen Novembre 2025 ✅ 50 000 UEC Gratuits',
+        'hero-title': 'Code de Parrainage Star Citizen 2026 ✅ 50 000 UEC Gratuits',
         'hero-subtitle': '🎮 Utilisez le code promo pour <strong>50 000 UEC</strong> de bonus instantané - Vérifié!',
         'your-code': 'Votre Code de Parrainage:',
         'copy': 'Copier le Code',
@@ -130,13 +130,13 @@ const translations = {
         'online-now': 'En Ligne Maintenant',
         'or-copy-url': 'Ou copiez ce lien:',
         'copy-link': '📋',
-        'trust-rating': '⭐ Noté 4.9/5',
+        'trust-rating': '⭐ Code de joueur réel',
         'success-rate': '✅ Taux de réussite 100%',
         'secure-official': '🔒 Sécurisé & Officiel',
         'why-choose': '🌟 Pourquoi choisir STAR-9L66-ZTDY?',
-        'daily-verified': 'Vérifié quotidiennement - Jamais de code mort',
+        'daily-verified': 'Vérifié chaque mois - Jamais de code mort',
         'guaranteed-work': '100% de succès - Garanti de fonctionner',
-        'happy-citizens': '3,847+ Citoyens satisfaits',
+        'happy-citizens': '28 citoyens recrutés',
         'single-owner': 'Propriétaire unique - Pas un générateur aléatoire',
         'better-than': '⚡ Mieux que les randomizers: 100% de succès vs 70% de chance',
         'why-different': '🏆 Pourquoi nous sommes différents',
@@ -176,7 +176,7 @@ const translations = {
         'use-verified-100': 'Utiliser le code vérifié (100% de succès)'
     },
     es: {
-        'hero-title': 'Código de Referencia Star Citizen Noviembre 2025 ✅ 50,000 UEC Gratis',
+        'hero-title': 'Código de Referencia Star Citizen 2026 ✅ 50,000 UEC Gratis',
         'hero-subtitle': '🎮 Usa el código promocional para <strong>50,000 UEC</strong> de bonificación instantánea - ¡Verificado!',
         'your-code': 'Tu Código de Referencia:',
         'copy': 'Copiar Código',
@@ -187,13 +187,13 @@ const translations = {
         'online-now': 'En Línea Ahora',
         'or-copy-url': 'O copia este enlace:',
         'copy-link': '📋',
-        'trust-rating': '⭐ Calificado 4.9/5',
+        'trust-rating': '⭐ Código de jugador real',
         'success-rate': '✅ 100% Tasa de éxito',
         'secure-official': '🔒 Seguro y Oficial',
         'why-choose': '🌟 ¿Por qué elegir STAR-9L66-ZTDY?',
-        'daily-verified': 'Verificado diariamente - Nunca un código muerto',
+        'daily-verified': 'Verificado cada mes - Nunca un código muerto',
         'guaranteed-work': '100% Éxito - Garantizado que funciona',
-        'happy-citizens': '3,847+ Ciudadanos felices',
+        'happy-citizens': '28 ciudadanos reclutados',
         'single-owner': 'Propietario único - No es un generador aleatorio',
         'better-than': '⚡ Mejor que randomizers: 100% de éxito vs 70% de probabilidad',
         'why-different': '🏆 Por qué somos diferentes',
@@ -233,7 +233,7 @@ const translations = {
         'use-verified-100': 'Usar código verificado (100% de éxito)'
     },
     pt: {
-        'hero-title': 'Código de Referência Star Citizen Novembro 2025 ✅ 50.000 UEC Grátis',
+        'hero-title': 'Código de Referência Star Citizen 2026 ✅ 50.000 UEC Grátis',
         'hero-subtitle': '🎮 Use o código promocional para <strong>50.000 UEC</strong> de bônus instantâneo - Verificado!',
         'your-code': 'Seu Código de Referência:',
         'copy': 'Copiar Código',
@@ -242,13 +242,13 @@ const translations = {
         'players-helped': 'Jogadores Ajudados',
         'active-codes': 'Códigos Ativos',
         'online-now': 'Online Agora',
-        'trust-rating': '⭐ Avaliado 4.9/5',
+        'trust-rating': '⭐ Código de jogador real',
         'success-rate': '✅ 100% Taxa de sucesso',
         'secure-official': '🔒 Seguro e Oficial',
         'why-choose': '🌟 Por que escolher STAR-9L66-ZTDY?',
-        'daily-verified': 'Verificado diariamente - Nunca um código morto',
+        'daily-verified': 'Verificado todo mês - Nunca um código morto',
         'guaranteed-work': '100% Sucesso - Garantido funcionar',
-        'happy-citizens': '3,847+ Cidadãos felizes',
+        'happy-citizens': '28 cidadãos recrutados',
         'single-owner': 'Proprietário único - Não é um gerador aleatório',
         'better-than': '⚡ Melhor que randomizers: 100% de sucesso vs 70% de chance',
         'why-different': '🏆 Por que somos diferentes',
@@ -288,7 +288,7 @@ const translations = {
         'use-verified-100': 'Usar código verificado (100% de sucesso)'
     },
     it: {
-        'hero-title': 'Codice Referral Star Citizen Novembre 2025 ✅ 50.000 UEC Gratis',
+        'hero-title': 'Codice Referral Star Citizen 2026 ✅ 50.000 UEC Gratis',
         'hero-subtitle': '🎮 Usa il codice promo per <strong>50.000 UEC</strong> di bonus istantaneo - Verificato!',
         'your-code': 'Il Tuo Codice Referral:',
         'copy': 'Copia Codice',
@@ -297,13 +297,13 @@ const translations = {
         'players-helped': 'Giocatori Aiutati',
         'active-codes': 'Codici Attivi',
         'online-now': 'Online Ora',
-        'trust-rating': '⭐ Valutato 4.9/5',
+        'trust-rating': '⭐ Codice di un vero giocatore',
         'success-rate': '✅ 100% Tasso di successo',
         'secure-official': '🔒 Sicuro e Ufficiale',
         'why-choose': '🌟 Perché scegliere STAR-9L66-ZTDY?',
-        'daily-verified': 'Verificato quotidianamente - Mai un codice morto',
+        'daily-verified': 'Verificato ogni mese - Mai un codice morto',
         'guaranteed-work': '100% Successo - Garantito funzionare',
-        'happy-citizens': '3,847+ Cittadini felici',
+        'happy-citizens': '28 cittadini reclutati',
         'single-owner': 'Proprietario singolo - Non un generatore casuale',
         'better-than': '⚡ Meglio dei randomizer: 100% di successo vs 70% di possibilità',
         'why-different': '🏆 Perché siamo diversi',
@@ -318,7 +318,7 @@ const translations = {
         'use-verified-100': 'Usa codice verificato (100% successo)'
     },
     pl: {
-        'hero-title': 'Kod Polecający Star Citizen Listopad 2025 ✅ 50 000 UEC Za Darmo',
+        'hero-title': 'Kod Polecający Star Citizen 2026 ✅ 50 000 UEC Za Darmo',
         'hero-subtitle': '🎮 Użyj kodu promocyjnego dla <strong>50 000 UEC</strong> natychmiastowego bonusu - Zweryfikowano!',
         'your-code': 'Twój Kod Polecający:',
         'copy': 'Kopiuj Kod',
@@ -327,13 +327,13 @@ const translations = {
         'players-helped': 'Pomocy Graczom',
         'active-codes': 'Aktywne Kody',
         'online-now': 'Online Teraz',
-        'trust-rating': '⭐ Oceniono 4.9/5',
+        'trust-rating': '⭐ Kod prawdziwego gracza',
         'success-rate': '✅ 100% Skuteczność',
         'secure-official': '🔒 Bezpieczny i Oficjalny',
         'why-choose': '🌟 Dlaczego wybrać STAR-9L66-ZTDY?',
-        'daily-verified': 'Weryfikowany codziennie - Nigdy martwy kod',
+        'daily-verified': 'Weryfikowany co miesiąc - Nigdy martwy kod',
         'guaranteed-work': '100% Sukces - Gwarantowane działanie',
-        'happy-citizens': '3,847+ Szczęśliwych obywateli',
+        'happy-citizens': '28 zrekrutowanych obywateli',
         'single-owner': 'Pojedynczy właściciel - Nie losowy generator',
         'better-than': '⚡ Lepszy niż randomizer: 100% sukcesu vs 70% szansy',
         'why-different': '🏆 Dlaczego jesteśmy inni',
@@ -348,7 +348,7 @@ const translations = {
         'use-verified-100': 'Użyj zweryfikowanego kodu (100% sukcesu)'
     },
     ru: {
-        'hero-title': 'Реферальный Код Star Citizen Ноябрь 2025 ✅ 50,000 UEC Бесплатно',
+        'hero-title': 'Реферальный Код Star Citizen 2026 ✅ 50,000 UEC Бесплатно',
         'hero-subtitle': '🎮 Используйте промокод для <strong>50,000 UEC</strong> мгновенного бонуса - Проверено!',
         'your-code': 'Ваш Реферальный Код:',
         'copy': 'Копировать Код',
@@ -357,13 +357,13 @@ const translations = {
         'players-helped': 'Игрокам Помогли',
         'active-codes': 'Активные Коды',
         'online-now': 'Сейчас Онлайн',
-        'trust-rating': '⭐ Оценка 4.9/5',
+        'trust-rating': '⭐ Код реального игрока',
         'success-rate': '✅ 100% Успешность',
         'secure-official': '🔒 Безопасно и Официально',
         'why-choose': '🌟 Почему выбрать STAR-9L66-ZTDY?',
-        'daily-verified': 'Ежедневная проверка - Никогда мёртвый код',
+        'daily-verified': 'Ежемесячная проверка - Никогда мёртвый код',
         'guaranteed-work': '100% Успех - Гарантированно работает',
-        'happy-citizens': '3,847+ Довольных граждан',
+        'happy-citizens': '28 завербованных граждан',
         'single-owner': 'Один владелец - Не случайный генератор',
         'better-than': '⚡ Лучше рандомайзеров: 100% успеха vs 70% шанс',
         'why-different': '🏆 Почему мы другие',
@@ -378,7 +378,7 @@ const translations = {
         'use-verified-100': 'Использовать проверенный код (100% успех)'
     },
     jp: {
-        'hero-title': 'スターシチズン紹介コード 2025年11月 ✅ 50,000 UEC 無料',
+        'hero-title': 'スターシチズン紹介コード 2026年 ✅ 50,000 UEC 無料',
         'hero-subtitle': '🎮 プロモコードを使用して<strong>50,000 UEC</strong>の即座ボーナス - 確認済み！',
         'your-code': 'あなたの紹介コード：',
         'copy': 'コードをコピー',
@@ -387,13 +387,13 @@ const translations = {
         'players-helped': '助けたプレイヤー',
         'active-codes': 'アクティブコード',
         'online-now': '現在オンライン',
-        'trust-rating': '⭐ 評価4.9/5',
+        'trust-rating': '⭐ 現役プレイヤーのコード',
         'success-rate': '✅ 100%成功率',
         'secure-official': '🔒 安全で公式',
         'why-choose': '🌟 なぜSTAR-9L66-ZTDYを選ぶ？',
-        'daily-verified': '毎日検証 - 無効なコードはありません',
+        'daily-verified': '毎月検証 - 無効なコードはありません',
         'guaranteed-work': '100%成功 - 動作保証',
-        'happy-citizens': '3,847+の満足した市民',
+        'happy-citizens': '28人の市民を採用',
         'single-owner': '単一所有者 - ランダムジェネレータではない',
         'better-than': '⚡ ランダマイザーより優れている：100%成功 vs 70%の確率',
         'why-different': '🏆 なぜ私たちが違うのか',
@@ -408,7 +408,7 @@ const translations = {
         'use-verified-100': '検証済みコードを使用 (100%成功)'
     },
     kr: {
-        'hero-title': '스타 시티즌 추천 코드 2025년 11월 ✅ 50,000 UEC 무료',
+        'hero-title': '스타 시티즌 추천 코드 2026년 ✅ 50,000 UEC 무료',
         'hero-subtitle': '🎮 프로모 코드를 사용하여 <strong>50,000 UEC</strong> 즉시 보너스 - 확인됨!',
         'your-code': '추천 코드:',
         'copy': '코드 복사',
@@ -417,13 +417,13 @@ const translations = {
         'players-helped': '도움받은 플레이어',
         'active-codes': '활성 코드',
         'online-now': '현재 온라인',
-        'trust-rating': '⭐ 평점 4.9/5',
+        'trust-rating': '⭐ 실제 플레이어 코드',
         'success-rate': '✅ 100% 성공률',
         'secure-official': '🔒 안전하고 공식적',
         'why-choose': '🌟 왜 STAR-9L66-ZTDY를 선택해야 하나요?',
-        'daily-verified': '매일 검증 - 죽은 코드 없음',
+        'daily-verified': '매월 검증 - 죽은 코드 없음',
         'guaranteed-work': '100% 성공 - 작동 보장',
-        'happy-citizens': '3,847+ 행복한 시민들',
+        'happy-citizens': '28명의 시민 모집',
         'single-owner': '단일 소유자 - 랜덤 생성기가 아님',
         'better-than': '⚡ 랜덤라이저보다 낫다: 100% 성공 vs 70% 확률',
         'why-different': '🏆 왜 우리가 다른가',
@@ -438,7 +438,7 @@ const translations = {
         'use-verified-100': '검증된 코드 사용 (100% 성공)'
     },
     cn: {
-        'hero-title': '星际公民推荐代码 2025年11月 ✅ 免费50,000 UEC',
+        'hero-title': '星际公民推荐代码 2026年 ✅ 免费50,000 UEC',
         'hero-subtitle': '🎮 使用促销代码获得<strong>50,000 UEC</strong>即时奖金 - 已验证！',
         'your-code': '您的推荐代码：',
         'copy': '复制代码',
@@ -447,13 +447,13 @@ const translations = {
         'players-helped': '已帮助玩家',
         'active-codes': '活跃代码',
         'online-now': '当前在线',
-        'trust-rating': '⭐ 评分 4.9/5',
+        'trust-rating': '⭐ 真实玩家的代码',
         'success-rate': '✅ 100% 成功率',
         'secure-official': '🔒 安全且官方',
         'why-choose': '🌟 为什么选择 STAR-9L66-ZTDY？',
-        'daily-verified': '每日验证 - 永不失效',
+        'daily-verified': '每月验证 - 永不失效',
         'guaranteed-work': '100% 成功 - 保证有效',
-        'happy-citizens': '3,847+ 满意的市民',
+        'happy-citizens': '已招募28位公民',
         'single-owner': '单一拥有者 - 非随机生成器',
         'better-than': '⚡ 优于随机器：100% 成功 vs 70% 机率',
         'why-different': '🏆 为什么我们不同',
@@ -758,70 +758,28 @@ if (typeof gtag !== 'undefined') {
     });
 }
 
-// Initialize stats with high but realistic numbers
+// Real recruitment numbers - update these manually (see claude.md checklist)
+const REAL_STATS = { enlisted: 73, recruited: 28, prospects: 45 };
+
 function initializeStats() {
-    // Get or set initial values (modest but credible numbers)
-    const baseUsers = parseInt(localStorage.getItem('totalUsers') || '247');
-    const baseCodes = parseInt(localStorage.getItem('activeCodes') || '18');
-
-    // Set initial display
-    document.getElementById('total-users').textContent = baseUsers.toLocaleString();
-    document.getElementById('active-codes').textContent = baseCodes;
+    document.getElementById('total-users').textContent = REAL_STATS.enlisted;
+    document.getElementById('active-codes').textContent = REAL_STATS.recruited;
     updateOnlineUsers();
 }
 
-// Update stats dynamically
-function updateStats() {
-    // Increment by 1 every 15 minutes (96 per day)
-    const totalUsersEl = document.getElementById('total-users');
-    const currentUsers = parseInt(totalUsersEl.textContent.replace(/,/g, ''));
-    const newUsers = currentUsers + 1;
+// Stats are real counts - they only change when updated manually
+function updateStats() {}
 
-    totalUsersEl.textContent = newUsers.toLocaleString();
-    localStorage.setItem('totalUsers', newUsers.toString());
-
-    // Animate the change
-    totalUsersEl.style.color = '#4caf50';
-    setTimeout(() => {
-        totalUsersEl.style.color = 'var(--primary-color)';
-    }, 500);
-
-    // Update online users
-    updateOnlineUsers();
-
-    // Occasionally update active codes
-    if (Math.random() > 0.9) {
-        const activeCodesEl = document.getElementById('active-codes');
-        const currentCodes = parseInt(activeCodesEl.textContent);
-        const newCodes = currentCodes + (Math.random() > 0.5 ? 1 : -1);
-        if (newCodes > 15 && newCodes < 25) {
-            activeCodesEl.textContent = newCodes;
-            localStorage.setItem('activeCodes', newCodes.toString());
-        }
-    }
-}
-
-// Update online users (realistic daily pattern)
+// Prospects count is a real number
 function updateOnlineUsers() {
-    const hour = new Date().getHours();
-    let baseOnline = 30;
-
-    // Simulate daily traffic patterns
-    if (hour >= 19 && hour <= 23) baseOnline = 60; // Peak evening
-    else if (hour >= 14 && hour <= 18) baseOnline = 45; // Afternoon
-    else if (hour >= 0 && hour <= 6) baseOnline = 15; // Night
-
-    // Add some randomness
-    const variance = Math.floor(Math.random() * 20) - 10;
-    const onlineNow = Math.max(5, baseOnline + variance);
-
-    document.getElementById('online-now').textContent = onlineNow;
+    const el = document.getElementById('online-now');
+    if (el) el.textContent = REAL_STATS.prospects;
 }
 
 // Countdown Timer
 function startCountdown() {
-    // Set end date to March 31, 2026 (Q1 2026)
-    const endOfMonth = new Date(2026, 2, 31, 23, 59, 59); // Month is 0-indexed, so 2 = March
+    // Set end date to September 30, 2026 (Q3 2026)
+    const endOfMonth = new Date(2026, 8, 30, 23, 59, 59); // Month is 0-indexed, so 8 = September
 
     function updateCountdown() {
         const now = new Date();
@@ -844,81 +802,11 @@ function startCountdown() {
     setInterval(updateCountdown, 1000);
 }
 
-// Activity Feed
-function startActivityFeed() {
-    const countries = ['USA', 'UK', 'Canada', 'Australia', 'Germany', 'France', 'Japan', 'Brazil'];
-    const actions = [
-        'just used code',
-        'claimed bonus',
-        'got 50,000 UEC',
-        'joined with code',
-        'redeemed referral'
-    ];
+// Simulated visitor feed removed - real facts rotate via initActivityFeed instead
+function startActivityFeed() {}
 
-    function addActivity() {
-        const country = countries[Math.floor(Math.random() * countries.length)];
-        const action = actions[Math.floor(Math.random() * actions.length)];
-        const timeAgo = Math.floor(Math.random() * 60) + 1;
-
-        const activityList = document.getElementById('activity-list');
-        const newItem = document.createElement('div');
-        newItem.className = 'activity-item';
-        newItem.textContent = `Someone from ${country} ${action} ${timeAgo}s ago`;
-
-        // Add to top of list
-        activityList.insertBefore(newItem, activityList.firstChild);
-
-        // Keep only last 3 items
-        while (activityList.children.length > 3) {
-            activityList.removeChild(activityList.lastChild);
-        }
-    }
-
-    // Add initial activities
-    addActivity();
-    setTimeout(addActivity, 2000);
-    setTimeout(addActivity, 4000);
-
-    // Add new activity every 10-30 seconds
-    setInterval(() => {
-        if (Math.random() > 0.5) {
-            addActivity();
-        }
-    }, 15000);
-}
-
-// Floating Notifications
-function startFloatingNotifications() {
-    const countries = ['USA', 'UK', 'Canada', 'Germany', 'Australia', 'France', 'Japan', 'South Korea', 'Netherlands', 'Sweden'];
-
-    function showNotification() {
-        const notification = document.getElementById('floating-notification');
-        const countrySpan = document.getElementById('notification-country');
-
-        const country = countries[Math.floor(Math.random() * countries.length)];
-        countrySpan.textContent = country;
-
-        notification.style.display = 'block';
-        notification.style.animation = 'floatIn 0.5s ease forwards';
-
-        setTimeout(() => {
-            notification.style.animation = 'floatOut 0.5s ease forwards';
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 500);
-        }, 4000);
-    }
-
-    // Show first notification after 10 seconds
-    setTimeout(showNotification, 10000);
-
-    // Show notification every 45-90 seconds
-    setInterval(() => {
-        if (Math.random() > 0.3) {
-            showNotification();
-        }
-    }, 60000);
-}
+// Fake 'someone just claimed' popups removed
+function startFloatingNotifications() {}
 
 // Live Elements Updates
 function updateLiveElements() {
@@ -930,76 +818,28 @@ function updateLiveElements() {
         liveDate.textContent = now.toLocaleDateString('en-US', options);
     }
 
-    // Update minutes ago (random between 1-5)
-    const minutesAgo = document.getElementById('minutes-ago');
-    if (minutesAgo) {
-        minutesAgo.textContent = Math.floor(Math.random() * 5) + 1;
-    }
 }
 
-// Update active users more realistically
-function updateActiveUsers() {
-    const activeUsers = document.getElementById('active-users');
-    const onlineNow = document.getElementById('online-now');
+// Live-user simulation removed - stats shown are real recruitment counts
+function updateActiveUsers() {}
 
-    if (activeUsers || onlineNow) {
-        const hour = new Date().getHours();
-        let base = 30;
-
-        // Peak times
-        if (hour >= 19 && hour <= 23) base = 70; // Evening peak
-        else if (hour >= 14 && hour <= 18) base = 50; // Afternoon
-        else if (hour >= 0 && hour <= 6) base = 15; // Night
-
-        // Add variance
-        const variance = Math.floor(Math.random() * 20) - 10;
-        const count = Math.max(10, base + variance);
-
-        if (activeUsers) activeUsers.textContent = count;
-        if (onlineNow) onlineNow.textContent = count;
-    }
-}
-
-// Activity feed data
+// Activity feed data - real recruitment facts only
 const activityTemplates = [
-    { icon: '✅', text: 'New citizen from {location} used code', location: true },
-    { icon: '🊕', text: 'Code verified working - {time}', time: true },
-    { icon: '🚀', text: 'Player from {location} joined the verse', location: true },
-    { icon: '💰', text: '50,000 UEC bonus claimed', time: true },
-    { icon: '⭐', text: 'New 5-star review received', time: true },
-    { icon: '🎆', text: 'Code tested successfully', time: true },
-    { icon: '👥', text: '{count} players online now', count: true },
-    { icon: '🎯', text: '100% success rate maintained', time: true }
+    { icon: '✅', text: '28 citizens recruited with this code to date' },
+    { icon: '🚀', text: '45 more prospects enlisted with it' },
+    { icon: '💰', text: '50,000 UEC standard enlistment bonus - verified July 2026' },
+    { icon: '🛡️', text: 'One code, one active backer - no randomizer roulette' },
+    { icon: '📋', text: 'Checked monthly against the official RSI enlistment page' }
 ];
-
-const locations = ['USA', 'UK', 'Germany', 'Canada', 'Australia', 'France', 'Netherlands', 'Sweden', 'Norway', 'Denmark'];
 
 function generateActivityItem() {
     const template = activityTemplates[Math.floor(Math.random() * activityTemplates.length)];
-    let text = template.text;
-
-    if (template.location) {
-        text = text.replace('{location}', locations[Math.floor(Math.random() * locations.length)]);
-    }
-    if (template.time) {
-        const mins = Math.floor(Math.random() * 30) + 1;
-        text = text.replace('{time}', mins === 1 ? '1 minute ago' : `${mins} minutes ago`);
-    }
-    if (template.count) {
-        const count = Math.floor(Math.random() * 30) + 20;
-        text = text.replace('{count}', count);
-    }
-
-    const now = new Date();
-    const timeAgo = Math.floor(Math.random() * 60);
-    const timestamp = timeAgo === 0 ? 'just now' : timeAgo === 1 ? '1 min ago' : `${timeAgo} mins ago`;
 
     return `
         <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; animation: slideIn 0.5s ease-out;">
             <span style="font-size: 1.5rem;">${template.icon}</span>
             <div style="flex: 1;">
-                <div>${text}</div>
-                <small style="color: var(--text-secondary);">${timestamp}</small>
+                <div>${template.text}</div>
             </div>
         </div>
     `;
