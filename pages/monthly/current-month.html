@@ -23,7 +23,7 @@
         };
 
         // Create key for current month
-        const monthKey = `${year}-${String(month).padStart(2, '0')}`;
+        const monthKey = `${year}-${String(month + 1).padStart(2, '0')}`;
 
         // Check if there's a special event page for this month
         if (eventPages[monthKey]) {
