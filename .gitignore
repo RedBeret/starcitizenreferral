@@ -1,7 +1,6 @@
-# Documentation and Claude files
+# Local docs and editor/tool state
 docs/
-.claude/
-claude.md
+.cl*/
 
 # Star Citizen Fankit (DO NOT COMMIT - Licensed content)
 fankit/

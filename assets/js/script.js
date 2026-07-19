@@ -758,7 +758,7 @@ if (typeof gtag !== 'undefined') {
     });
 }
 
-// Real recruitment numbers - update these manually (see claude.md checklist)
+// Real recruitment numbers - update manually when they change
 const REAL_STATS = { enlisted: 73, recruited: 28, prospects: 45 };
 
 function initializeStats() {
