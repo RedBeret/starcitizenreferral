@@ -778,8 +778,11 @@ function updateOnlineUsers() {
 
 // Countdown Timer
 function startCountdown() {
-    // Set end date to September 30, 2026 (Q3 2026)
-    const endOfMonth = new Date(2026, 8, 30, 23, 59, 59); // Month is 0-indexed, so 8 = September
+    // Count down to the end of the current month - matches the monthly
+    // verification cadence and the schema dates set by update-dates.sh,
+    // and can never freeze on a stale hardcoded date
+    const now0 = new Date();
+    const endOfMonth = new Date(now0.getFullYear(), now0.getMonth() + 1, 0, 23, 59, 59);
 
     function updateCountdown() {
         const now = new Date();
