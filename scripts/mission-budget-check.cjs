@@ -1,0 +1,14 @@
+const assert=require('assert/strict');
+const {calculate}=require('../assets/js/mission-budget.js');
+const sample={reward:30000,crew:2,costs:3000,minutes:45};
+assert.deepEqual(calculate(sample),{share:15000,net:12000,rate:16000});
+assert.deepEqual(calculate({reward:0,crew:1,costs:5000,minutes:30}),{share:0,net:-5000,rate:-10000});
+assert.deepEqual(calculate({reward:1000000,crew:4,costs:20000,minutes:120}),{share:250000,net:230000,rate:115000});
+assert.deepEqual(calculate({reward:0,crew:1,costs:0,minutes:1}),{share:0,net:0,rate:0});
+const thirds=calculate({reward:100,crew:3,costs:0,minutes:60});
+assert.ok(Math.abs(thirds.net-100/3)<1e-10);
+assert.ok(Number.isFinite(calculate({reward:1e12,crew:1,costs:0,minutes:1}).rate));
+const invalid=[['crew',0],['crew',2.5],['crew',1001],['minutes',0],['minutes',-5],['minutes',1.5],['minutes',100001],['reward',-1],['reward',1.5],['reward',1e12+1],['costs',-1],['costs',1e12+1],['reward',Infinity],['reward',NaN],['crew','2']];
+for(const [key,value] of invalid) assert.throws(()=>calculate({...sample,[key]:value}),Error,`${key}=${value}`);
+assert.throws(()=>calculate({reward:1,crew:1,costs:0}),Error);
+console.log('PASS: reward sharing, personal costs, negative and zero net, fractional estimates, bounds and 16 invalid-input cases.');

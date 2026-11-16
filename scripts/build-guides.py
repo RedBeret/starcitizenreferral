@@ -31,6 +31,13 @@ class Headings(HTMLParser):
 def route(slug):
     return f'/pages/guides/{slug}.html'
 
+def catalog_groups():
+    groups=list(dict.fromkeys(x['group'] for x in CATALOG))
+    return (['Core concepts']+[g for g in groups if g!='Core concepts']) if 'Core concepts' in groups else groups
+
+def catalog_order():
+    return [entry for group in catalog_groups() for entry in CATALOG if entry['group']==group]
+
 def external(url, title):
     return f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)}</a>'
 
@@ -54,7 +61,7 @@ def render(entry, body, is_hub=False):
     visible += '</nav>'
     schema = [{'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':breadcrumb}]
     if is_hub:
-        schema.append({'@context':'https://schema.org','@type':'CollectionPage','name':entry['heading'],'url':canonical,'description':entry['description'],'mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'name':e['heading'],'url':DOMAIN+route(e['slug'])} for i,e in enumerate(CATALOG)]}})
+        schema.append({'@context':'https://schema.org','@type':'CollectionPage','name':entry['heading'],'url':canonical,'description':entry['description'],'mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'name':e['heading'],'url':DOMAIN+route(e['slug'])} for i,e in enumerate(catalog_order())]}})
     else:
         schema.append({'@context':'https://schema.org','@type':'Article','headline':entry['heading'],'description':entry['description'],'datePublished':entry.get('published',entry['reviewed']),'dateModified':entry['reviewed'],'author':{'@type':'Person','name':'PatchOps','url':'https://robertsspaceindustries.com/en/citizens/PatchOps'},'mainEntityOfPage':canonical,'image':DOMAIN+'/og-image.jpg','citation':[s['url'] for s in entry['sources']]})
         headings=Headings(); headings.feed(body)
@@ -66,7 +73,7 @@ def render(entry, body, is_hub=False):
     html=TEMPLATE
     for key,value in values.items(): html=html.replace('@@'+key+'@@',value)
     assert not re.search(r'@@[A-Z]+@@',html),path
-    html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115c">\n</head>')
+    html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">\n</head>')
     if entry.get('script'):
         assert entry['script'].startswith('/assets/js/') and (ROOT/entry['script'].lstrip('/')).is_file()
         html=html.replace('</body>', '<script src="'+escape(entry['script'],quote=True)+'?v=20261115" defer></script>\n</body>')
@@ -77,15 +84,16 @@ for entry in CATALOG:
     body=(ROOT/'_content/guides'/f'{entry["slug"]}.html').read_text()
     render(entry,body)
 
-hub={'reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Find Star Citizen references, a glossary, a printable flight checklist, and practical guides to setup, ships, flight and playing together.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
+hub={'script':'/assets/js/guide-search.js','reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Find Star Citizen references, a glossary, a printable flight checklist, a mission-budget calculator, and practical guides to setup, ships, flight and playing together.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
 body='<div class="guide-answer"><strong>Find your next step</strong><p>New to the game? Start with the <a href="/pages/guides/new-player-guide.html">account-to-first-flight overview</a>. Already playing? Pick a specific topic below. Keep the <a href="/pages/guides/glossary.html">glossary</a> handy or open the <a href="/pages/guides/flight-checklist.html">interactive, printable departure checklist</a>.</p></div>'
-groups=list(dict.fromkeys(x['group'] for x in CATALOG))
-if 'Core concepts' in groups: groups=['Core concepts']+[g for g in groups if g!='Core concepts']
-body+='<nav class="toc" aria-label="Guide categories"><strong>Browse by topic</strong><ul>'+''.join(f'<li><a href="#group-{i}">{escape(group)}</a></li>' for i,group in enumerate(groups))+'</ul></nav>'
+groups=catalog_groups()
+body+='<form class="guide-search" data-guide-search hidden role="search" aria-label="Find a guide"><div class="tool-grid"><div><label for="guide-query">Search guides</label><input id="guide-query" name="guide-query" type="search" maxlength="100" autocomplete="off" placeholder="Try doors, HOTAS or cargo" aria-describedby="guide-search-help"></div><div><label for="guide-category">Topic</label><select id="guide-category" name="guide-category"><option value="">All topics</option>'+''.join(f'<option value="{escape(g,quote=True)}">{escape(g)}</option>' for g in groups)+'</select></div></div><p id="guide-search-help" class="small-text">Search guide titles, summaries and related terms. All words must match; combine with a topic to narrow the list.</p><div class="tool-actions"><button class="button secondary" type="reset">Clear filters</button></div><p data-guide-count role="status" aria-live="polite" aria-atomic="true"></p></form><p data-guide-empty hidden>No guides match these filters. Try fewer words, choose All topics, or clear the filters.</p>'
+body+='<nav class="toc" aria-label="Guide categories"><strong>Browse by topic</strong><ul>'+''.join(f'<li data-guide-category="category-{i}"><a href="#group-{i}">{escape(group)}</a></li>' for i,group in enumerate(groups))+'</ul></nav>'
 for i,group in enumerate(groups):
-    body+=f'<section aria-labelledby="group-{i}"><h2 id="group-{i}">{escape(group)}</h2><div class="library-grid">'
+    body+=f'<section id="category-{i}" data-guide-group="{escape(group,quote=True)}" aria-labelledby="group-{i}"><h2 id="group-{i}">{escape(group)}</h2><div class="library-grid">'
     for entry in [x for x in CATALOG if x['group']==group]:
-        body+=f'<a class="library-card" href="{route(entry["slug"])}"><span class="kicker">Field guide</span><h3>{escape(entry["heading"])}</h3><p>{escape(entry["description"])}</p><span class="guide-more">Read the guide <span aria-hidden="true">↗</span></span></a>'
+        search=' '.join([entry['title'],entry['heading'],entry['description'],*entry.get('keywords',[])])
+        body+=f'<a class="library-card" data-search="{escape(search,quote=True)}" href="{route(entry["slug"])}"><span class="kicker">Field guide</span><h3>{escape(entry["heading"])}</h3><p>{escape(entry["description"])}</p><span class="guide-more">Read the guide <span aria-hidden="true">↗</span></span></a>'
     body+='</div></section>'
 body+='<section><h2>Accounts, packages and referral help</h2><ul><li><a href="/pages/guides/new-player-guide.html">New player overview</a> — account creation through the first session.</li><li><a href="/pages/guides/starter-pack-guide.html">Choosing a game package</a> — access, owned ships and temporary loaners.</li><li><a href="/pages/guides/50000-uec-bonus.html">The standard 50,000 UEC bonus</a> — account UEC, alpha credits and signup terms.</li><li><a href="/pages/guides/referral-codes.html">How referral codes work</a> — eligibility and the account-creation window.</li><li><a href="/pages/info/star-citizen-referral-code-not-working.html">Referral troubleshooting</a> — an empty field, an existing account or delayed credits.</li></ul></section>'
 body+='<p>Release information is separate from these task guides: see the <a href="/pages/monthly/current-month.html">dated LIVE/PTU and event snapshot</a> for that context. This library is an independent community resource by PatchOps.</p>'
@@ -101,7 +109,7 @@ for path in (ROOT/'pages').rglob('*.html'):
         html=re.sub(re.escape(marker)+r'.*?<!-- END-GUIDE-LIBRARY-DISCOVERY -->\s*','',html,flags=re.S)
         html=html.replace('<section class="source-list"',discovery+'\n<section class="source-list"',1)
         if '/assets/css/guides.css' not in html:
-            html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115c">\n</head>')
+            html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">\n</head>')
     if html!=path.read_text(): path.write_text(html)
 
 # Append only the new canonical URLs; do not manufacture fresh dates on older pages.

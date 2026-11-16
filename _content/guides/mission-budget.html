@@ -1,0 +1,29 @@
+<div class="guide-answer"><strong>Quick answer</strong><p>Estimate your share of a contract reward, subtract the trip expenses you pay, and include the whole session when comparing time. This calculator uses your entries; it does not fetch live payouts, read your wallet or predict a successful mission.</p></div>
+<h2 id="calculator">Plan a contract budget</h2>
+<p>Enter the <strong>total reward before it is split</strong>, the number of accepting participants, <strong>your own costs</strong>, and total minutes from preparation through the end of the trip. Costs here belong to you; they are not automatically divided among the crew.</p>
+<form class="budget-tool" data-budget-form hidden aria-label="Mission budget calculator">
+<div class="tool-grid">
+<div><label for="budget-reward">Total contract reward (aUEC)</label><input id="budget-reward" name="reward" type="number" min="0" max="1000000000000" step="1" required inputmode="numeric" aria-describedby="reward-help"><p id="reward-help" class="small-text">Use the full contract amount, before the equal split.</p></div>
+<div><label for="budget-crew">Participants sharing the reward</label><input id="budget-crew" name="crew" type="number" min="1" max="1000" step="1" value="1" required inputmode="numeric"></div>
+<div><label for="budget-costs">Your trip costs (aUEC)</label><input id="budget-costs" name="costs" type="number" min="0" max="1000000000000" step="1" value="0" required inputmode="numeric" aria-describedby="costs-help"><p id="costs-help" class="small-text">Your fuel, equipment, rental and other expenses. Include only costs you pay.</p></div>
+<div><label for="budget-minutes">Whole trip time (minutes)</label><input id="budget-minutes" name="minutes" type="number" min="1" max="100000" step="1" required inputmode="numeric" aria-describedby="minutes-help"><p id="minutes-help" class="small-text">Include preparation, travel, waiting and the return trip.</p></div>
+</div>
+<div class="tool-actions"><button class="button" type="submit">Calculate estimate</button><button class="button secondary" type="button" data-budget-example>Load example</button><button class="button secondary" type="reset">Clear</button></div>
+<p class="small-text">The example is fictional. Values are not saved and are not sent to this site.</p>
+<p data-budget-error class="tool-error" role="alert"></p>
+<section data-budget-results class="tool-results" hidden role="status" aria-live="polite" aria-atomic="true" aria-labelledby="budget-results-heading"><h3 id="budget-results-heading">Your estimate</h3><dl><div><dt>Share before costs</dt><dd data-budget-share></dd></div><div><dt>Net after your costs</dt><dd data-budget-net></dd></div><div><dt>Net per hour at this pace</dt><dd data-budget-rate></dd></div></dl><p data-budget-note></p></section>
+</form>
+<noscript><p>The interactive calculator needs JavaScript. You can use the formulas and worked example below without it.</p></noscript>
+<h2 id="formula">The calculation, in plain language</h2>
+<ul><li><strong>Your gross share = total reward ÷ participants.</strong></li><li><strong>Your net = your gross share − your costs.</strong></li><li><strong>Your estimated hourly net = your net × 60 ÷ total minutes.</strong></li></ul>
+<p>RSI’s <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts" target="_blank" rel="noopener noreferrer">contract guide</a> describes sharing a mission and dividing its reward equally among the party members who accept. This tool uses that equal-split assumption. It does not model eligibility exceptions, game rounding or any additional reward components.</p>
+<p>If you already know your personal payout, use one participant and enter that amount as the reward. Do not enter your personal share and divide it a second time.</p>
+<h2 id="example">A fictional worked example</h2>
+<p>Suppose a contract pays 30,000 aUEC in total, two people share it, you pay 3,000 aUEC in trip costs, and the full trip takes 45 minutes. Your share is 15,000 aUEC. After your costs, the net is 12,000 aUEC. At that pace the arithmetic gives 16,000 aUEC per hour.</p>
+<p>Those numbers demonstrate the calculation. They are not a current contract offer, a normal income claim or a guarantee that another trip will produce the same result.</p>
+<h2 id="compare">Compare a whole trip, not just the objective</h2>
+<p>Start your time estimate before preparation and stop after the relevant return or hand-in. If one job requires a long shopping trip while another uses equipment already on hand, that difference belongs in the comparison.</p>
+<p>Costs should follow the comparison you want to make. Charging a full equipment purchase to the first trip gives a different picture from spreading its cost across several trips. Choose one approach, label it in your own notes and use it consistently. Do not count the same expense twice.</p>
+<h2 id="limits">Understand what the estimate leaves out</h2>
+<p>The result assumes the entered reward is received. It does not price the chance of failure, a crash, lost cargo or a changed destination. RSI’s <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug" target="_blank" rel="noopener noreferrer">loss guidance</a> says support does not manually restore aUEC lost through a crash or bug.</p>
+<p>A negative result means your entered costs exceed your entered share; it does not prevent playing for enjoyment or practice. Use the <a href="/pages/guides/beginner-missions.html">beginner mission questions</a> and <a href="/pages/guides/cargo-planning.html">cargo planning guide</a> to consider the rest of the task before accepting it.</p>

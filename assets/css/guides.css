@@ -109,3 +109,29 @@
     .checklist-page .flight-checklist label span { color:black!important; }
     .checklist-page .flight-checklist input[type=checkbox] { flex-basis:16px; width:16px; height:16px; margin-top:2px; }
 }
+
+/* Enhancements remain hidden until ready; complete articles stay in the HTML. */
+.guide-search,.budget-tool { padding:24px; margin:28px 0; background:var(--panel); border:1px solid var(--line); }
+.tool-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.guide-search label,.budget-tool label { display:block; font-weight:600; margin-bottom:8px; }
+.guide-search input,.guide-search select,.budget-tool input {
+    display:block; width:100%; min-width:0; min-height:48px;
+    padding:10px 12px; border:1px solid var(--muted); border-radius:0;
+    background:var(--bg); color:var(--ink); font:inherit;
+}
+.guide-search input:focus-visible,.budget-tool input:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
+.tool-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+.tool-actions .button { white-space:normal; }
+.tool-results { border-top:1px solid var(--line); padding-top:20px; margin-top:24px; }
+.tool-results dl>div { margin-bottom:16px; }
+.tool-results dt { color:var(--muted); }
+.tool-results dd { margin:4px 0; font-family:var(--display); font-size:25px; overflow-wrap:anywhere; }
+.tool-error:not(:empty) { border-left:3px solid var(--amber); padding:12px; }
+.guide-search [data-guide-count] { margin-bottom:0; }
+.guide-search[hidden],.budget-tool[hidden],.library-card[hidden],
+[data-guide-group][hidden],[data-guide-category][hidden],
+[data-guide-empty][hidden],[data-budget-results][hidden] { display:none; }
+@media(max-width:680px) {
+    .tool-grid { grid-template-columns:1fr; }
+    .guide-search,.budget-tool { padding:20px; }
+}

@@ -94,3 +94,20 @@ layout with:
 ```sh
 SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/evergreen-browser-check.cjs
 ```
+
+The library's search and category filter use local title, summary and curated
+related-term matching. They do not store search text or place it in the URL;
+all cards remain accessible without JavaScript. The mission-budget planner uses
+entered contract totals, an equal reward split, personal expenses and whole-trip
+time. It does not fetch live prices or payouts. Run the arithmetic checks with:
+
+```sh
+node scripts/mission-budget-check.cjs
+```
+
+With the preview server running, check search, combined filters, empty results,
+calculator validation, result layouts and no-JavaScript content with:
+
+```sh
+SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/discovery-browser-check.cjs
+```

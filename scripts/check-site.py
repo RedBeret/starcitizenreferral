@@ -24,11 +24,12 @@ class Page(HTMLParser):
         self.canonicals = []; self.schema = []; self.title = ''; self.h1 = 0
         self.in_title = False; self.in_schema = False; self.schema_text = ''
         self.description = ''; self.noindex = False; self.refresh = None
-        self.referrals = []; self.main = 0; self.viewport = False
+        self.library_cards = []; self.referrals = []; self.main = 0; self.viewport = False
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if 'id' in a: self.ids.append(a['id'])
         if tag == 'a' and a.get('href'): self.links.append(a['href'])
+        if tag == 'a' and 'library-card' in a.get('class','').split(): self.library_cards.append(a.get('href'))
         if tag == 'a' and 'data-referral-link' in a: self.referrals.append(a)
         if tag == 'img':
             self.images.append(a)
@@ -121,6 +122,12 @@ if catalog_path.exists():
     catalog = json.loads(catalog_path.read_text())
     hub = '/pages/guides/guide-library.html'
     check(hub in pages, 'Guide library is missing')
+    if hub in pages:
+        collections=[s for s in pages[hub].schema if s.get('@type')=='CollectionPage']
+        check(len(collections)==1,'Expected one library CollectionPage schema')
+        if collections:
+            structured=[urlsplit(item['url']).path for item in collections[0]['mainEntity']['itemListElement']]
+            check(structured==pages[hub].library_cards,'Library schema order differs from visible guide order')
     indexed_titles = [p.title for p in pages.values() if not p.noindex and not p.refresh]
     check(len(indexed_titles) == len(set(indexed_titles)), 'Duplicate title among indexable pages')
     for entry in catalog:

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08111b"><title>Star Citizen Mission Budget Calculator | Net aUEC &amp; Crew Share</title>
+<meta name="description" content="Calculate a Star Citizen contract’s equal crew share, your net aUEC after costs, and estimated hourly result using your own reward and trip time.">
+<meta name="author" content="PatchOps">
+<link rel="canonical" href="https://starcitizenreferrals.space/pages/guides/mission-budget.html">
+<link rel="icon" href="/favicon.png" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Star Citizen Mission Budget Calculator | Net aUEC &amp; Crew Share">
+<meta property="og:description" content="Calculate a Star Citizen contract’s equal crew share, your net aUEC after costs, and estimated hourly result using your own reward and trip time.">
+<meta property="og:url" content="https://starcitizenreferrals.space/pages/guides/mission-budget.html">
+<meta property="og:image" content="https://starcitizenreferrals.space/og-image.jpg">
+<meta property="og:image:alt" content="Star Citizen referral code STAR-9L66-ZTDY — 50,000 UEC standard bonus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Star Citizen Mission Budget Calculator | Net aUEC &amp; Crew Share">
+<meta name="twitter:description" content="Calculate a Star Citizen contract’s equal crew share, your net aUEC after costs, and estimated hourly result using your own reward and trip time.">
+<meta name="twitter:image" content="https://starcitizenreferrals.space/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=20261115">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')==='light'?'light':'dark'}catch{}
+</script>
+<script src="/assets/js/script.js?v=20261115" defer>
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://starcitizenreferrals.space/"}, {"@type": "ListItem", "position": 2, "name": "Guide library", "item": "https://starcitizenreferrals.space/pages/guides/guide-library.html"}, {"@type": "ListItem", "position": 3, "name": "Estimate a mission’s share, costs and time.", "item": "https://starcitizenreferrals.space/pages/guides/mission-budget.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Estimate a mission’s share, costs and time.", "description": "Calculate a Star Citizen contract’s equal crew share, your net aUEC after costs, and estimated hourly result using your own reward and trip time.", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "author": {"@type": "Person", "name": "PatchOps", "url": "https://robertsspaceindustries.com/en/citizens/PatchOps"}, "mainEntityOfPage": "https://starcitizenreferrals.space/pages/guides/mission-budget.html", "image": "https://starcitizenreferrals.space/og-image.jpg", "citation": ["https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts", "https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug"]}</script>
+<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">
+</head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+<div class="shell head-inner"><a class="brand" href="/" aria-label="Star Citizen Referrals home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3 35 12v17L20 37 5 29V12Z" stroke="currentColor" stroke-width="1.4"/><path d="m12 27 8-16 8 16-8-4Z" stroke="currentColor" stroke-width="1.6"/><path d="M3 20h8m18 0h8" stroke="currentColor"/></svg><span><span class="brand-name">STAR CITIZEN REFERRALS</span><span class="brand-sub">An independent pilot’s field guide</span></span></a>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="/pages/guides/new-player-guide.html">Start here</a><a href="/pages/guides/guide-library.html" aria-current="page">Guides</a><a href="/pages/monthly/current-month.html">Events & updates</a>
+</nav>
+<div class="head-actions"><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" class="button small" data-referral-link data-placement="header" target="_blank" rel="sponsored noopener noreferrer"><span>Get the bonus</span><span class="arrow" aria-hidden="true">↗</span></a><button class="icon-button" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 3a7 7 0 0 1 0 14Z" fill="currentColor"/></svg></button><button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</div>
+</div>
+</header>
+<main id="main">
+<div class="shell">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pages/guides/guide-library.html">Guide library</a><span aria-hidden="true">/</span><span>Estimate a mission’s share, costs and time.</span></nav>
+<header class="article-head">
+<p class="eyebrow">The pilot’s field guide
+</p>
+<h1>Estimate a mission’s share, costs and time.</h1>
+<p class="article-lede">Use your own numbers to understand a contract budget. This is a planning estimate, not a live payout or earnings promise.</p>
+<div class="byline"><span>By <a href="https://robertsspaceindustries.com/en/citizens/PatchOps" target="_blank" rel="noopener noreferrer">PatchOps</a></span><span>Sources checked <time datetime="2026-11-15">15 November 2026</time></span><span>Independent community guide</span>
+</div>
+</header>
+<div class="article-layout">
+<article class="article-body">
+<div class="guide-answer"><strong>Quick answer</strong><p>Estimate your share of a contract reward, subtract the trip expenses you pay, and include the whole session when comparing time. This calculator uses your entries; it does not fetch live payouts, read your wallet or predict a successful mission.</p></div>
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><ul><li><a href="#calculator">Plan a contract budget</a></li><li><a href="#formula">The calculation, in plain language</a></li><li><a href="#example">A fictional worked example</a></li><li><a href="#compare">Compare a whole trip, not just the objective</a></li><li><a href="#limits">Understand what the estimate leaves out</a></li></ul></nav>
+
+<h2 id="calculator">Plan a contract budget</h2>
+<p>Enter the <strong>total reward before it is split</strong>, the number of accepting participants, <strong>your own costs</strong>, and total minutes from preparation through the end of the trip. Costs here belong to you; they are not automatically divided among the crew.</p>
+<form class="budget-tool" data-budget-form hidden aria-label="Mission budget calculator">
+<div class="tool-grid">
+<div><label for="budget-reward">Total contract reward (aUEC)</label><input id="budget-reward" name="reward" type="number" min="0" max="1000000000000" step="1" required inputmode="numeric" aria-describedby="reward-help"><p id="reward-help" class="small-text">Use the full contract amount, before the equal split.</p></div>
+<div><label for="budget-crew">Participants sharing the reward</label><input id="budget-crew" name="crew" type="number" min="1" max="1000" step="1" value="1" required inputmode="numeric"></div>
+<div><label for="budget-costs">Your trip costs (aUEC)</label><input id="budget-costs" name="costs" type="number" min="0" max="1000000000000" step="1" value="0" required inputmode="numeric" aria-describedby="costs-help"><p id="costs-help" class="small-text">Your fuel, equipment, rental and other expenses. Include only costs you pay.</p></div>
+<div><label for="budget-minutes">Whole trip time (minutes)</label><input id="budget-minutes" name="minutes" type="number" min="1" max="100000" step="1" required inputmode="numeric" aria-describedby="minutes-help"><p id="minutes-help" class="small-text">Include preparation, travel, waiting and the return trip.</p></div>
+</div>
+<div class="tool-actions"><button class="button" type="submit">Calculate estimate</button><button class="button secondary" type="button" data-budget-example>Load example</button><button class="button secondary" type="reset">Clear</button></div>
+<p class="small-text">The example is fictional. Values are not saved and are not sent to this site.</p>
+<p data-budget-error class="tool-error" role="alert"></p>
+<section data-budget-results class="tool-results" hidden role="status" aria-live="polite" aria-atomic="true" aria-labelledby="budget-results-heading"><h3 id="budget-results-heading">Your estimate</h3><dl><div><dt>Share before costs</dt><dd data-budget-share></dd></div><div><dt>Net after your costs</dt><dd data-budget-net></dd></div><div><dt>Net per hour at this pace</dt><dd data-budget-rate></dd></div></dl><p data-budget-note></p></section>
+</form>
+<noscript><p>The interactive calculator needs JavaScript. You can use the formulas and worked example below without it.</p></noscript>
+<h2 id="formula">The calculation, in plain language</h2>
+<ul><li><strong>Your gross share = total reward ÷ participants.</strong></li><li><strong>Your net = your gross share − your costs.</strong></li><li><strong>Your estimated hourly net = your net × 60 ÷ total minutes.</strong></li></ul>
+<p>RSI’s <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts" target="_blank" rel="noopener noreferrer">contract guide</a> describes sharing a mission and dividing its reward equally among the party members who accept. This tool uses that equal-split assumption. It does not model eligibility exceptions, game rounding or any additional reward components.</p>
+<p>If you already know your personal payout, use one participant and enter that amount as the reward. Do not enter your personal share and divide it a second time.</p>
+<h2 id="example">A fictional worked example</h2>
+<p>Suppose a contract pays 30,000 aUEC in total, two people share it, you pay 3,000 aUEC in trip costs, and the full trip takes 45 minutes. Your share is 15,000 aUEC. After your costs, the net is 12,000 aUEC. At that pace the arithmetic gives 16,000 aUEC per hour.</p>
+<p>Those numbers demonstrate the calculation. They are not a current contract offer, a normal income claim or a guarantee that another trip will produce the same result.</p>
+<h2 id="compare">Compare a whole trip, not just the objective</h2>
+<p>Start your time estimate before preparation and stop after the relevant return or hand-in. If one job requires a long shopping trip while another uses equipment already on hand, that difference belongs in the comparison.</p>
+<p>Costs should follow the comparison you want to make. Charging a full equipment purchase to the first trip gives a different picture from spreading its cost across several trips. Choose one approach, label it in your own notes and use it consistently. Do not count the same expense twice.</p>
+<h2 id="limits">Understand what the estimate leaves out</h2>
+<p>The result assumes the entered reward is received. It does not price the chance of failure, a crash, lost cargo or a changed destination. RSI’s <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug" target="_blank" rel="noopener noreferrer">loss guidance</a> says support does not manually restore aUEC lost through a crash or bug.</p>
+<p>A negative result means your entered costs exceed your entered share; it does not prevent playing for enjoyment or practice. Use the <a href="/pages/guides/beginner-missions.html">beginner mission questions</a> and <a href="/pages/guides/cargo-planning.html">cargo planning guide</a> to consider the rest of the task before accepting it.</p>
+<section class="source-list" aria-label="Official sources"><h2>Official sources</h2><ul><li><a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts" target="_blank" rel="noopener noreferrer">RSI: contract objectives and reward sharing</a></li><li><a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug" target="_blank" rel="noopener noreferrer">RSI: aUEC loss and cargo budgeting</a></li></ul><p class="small-text">Researched from RSI documentation checked on 15 November 2026. Controls and alpha systems may change; use the current in-game prompts and source articles.</p></section>
+</article>
+
+<aside class="article-side" aria-label="Referral and related guides">
+<div class="claim-panel">
+<div class="claim-label"><span>Your referral code</span><span class="bonus-label">50,000 UEC</span>
+</div>
+<div class="code-row"><output class="referral-code" aria-label="Referral code">STAR-9L66-ZTDY</output><button class="copy-button" data-copy-code data-placement="sidebar" aria-label="Copy referral code STAR-9L66-ZTDY"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="6" y="6" width="10" height="11" rx="1" stroke="currentColor"/><path d="M13 4V2H3v11h1" stroke="currentColor"/></svg><span>Copy</span></button>
+</div><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" class="button " data-referral-link data-placement="sidebar" target="_blank" rel="sponsored noopener noreferrer"><span>Create account on RSI</span><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="claim-footnote">Opens the official RSI signup page with the code prefilled. Check the referral field before you submit.
+</p>
+</div>
+<nav class="side-links" aria-label="Related guides"><strong>Continue exploring</strong><a href="/pages/guides/guide-library.html">All Star Citizen guides →</a><a href="/pages/guides/beginner-missions.html">Choosing your first missions in Star Citizen. →</a><a href="/pages/guides/cargo-planning.html">Plan a cargo run before you load the ship. →</a><a href="/pages/guides/currencies.html">Understand Star Citizen’s different currencies. →</a><a href="/pages/guides/referral-codes.html">Referral rules →</a></nav>
+</aside>
+</div>
+</div>
+</main>
+<footer class="site-foot">
+<div class="shell">
+<div class="footer-top">
+<div class="footer-about"><a class="brand" href="/" aria-label="Star Citizen Referrals home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3 35 12v17L20 37 5 29V12Z" stroke="currentColor" stroke-width="1.4"/><path d="m12 27 8-16 8 16-8-4Z" stroke="currentColor" stroke-width="1.6"/><path d="M3 20h8m18 0h8" stroke="currentColor"/></svg><span><span class="brand-name">STAR CITIZEN REFERRALS</span><span class="brand-sub">An independent pilot’s field guide</span></span></a>
+<p>Made by <a href="https://robertsspaceindustries.com/en/citizens/PatchOps" target="_blank" rel="noopener noreferrer">PatchOps</a>, a fellow pilot. Practical help for your first account, your first ship, and your first flight.
+</p>
+<p><strong>31 recruited citizens · 53 prospects</strong><br>Owner-reported snapshot · 15 November 2026. <a href="/pages/info/about.html">About the figures →</a>
+</p>
+</div>
+<div class="footer-links">
+<div><strong>Field guide</strong><a href="/pages/guides/guide-library.html">Browse all guides</a><a href="/pages/guides/new-player-guide.html">Getting started</a><a href="/pages/guides/starter-pack-guide.html">Game packages</a><a href="/pages/guides/50000-uec-bonus.html">The 50,000 UEC bonus</a><a href="/pages/monthly/current-month.html">Events & updates</a>
+</div>
+<div><strong>About this site</strong><a href="/pages/info/about.html">About & disclosure</a><a href="/pages/tools/verify.html">Check the referral link</a><a href="/pages/tools/ai.html">Site data & sources</a><a href="/privacy.html">Privacy</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. Content belongs to its respective owners. <a href="https://robertsspaceindustries.com/en/" target="_blank" rel="noopener noreferrer">Official Star Citizen website ↗</a>
+</p>
+<p>Referral disclosure: using STAR-9L66-ZTDY supports PatchOps through RSI’s in-game recruitment rewards. Any valid referral code provides the same standard new-account bonus.
+</p>
+<p>Star Citizen and Roberts Space Industries are trademarks of Cloud Imperium Rights LLC. Game imagery © Cloud Imperium Rights LLC / Cloud Imperium Rights Ltd. <a href="/assets/images/flight/credits.json" target="_blank" rel="noopener noreferrer">Image sources</a> · Content reviewed <time datetime="2026-11-15">15 November 2026</time>.
+</p>
+</div>
+</div>
+</footer>
+<div class="toast" id="site-status" role="status" aria-live="polite" aria-atomic="true" hidden>
+</div>
+<script src="/assets/js/mission-budget.js?v=20261115" defer></script>
+</body>
+</html>

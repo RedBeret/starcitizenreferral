@@ -22,7 +22,15 @@
       "free-fly",
       "first-flight-new-babbage"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "specs",
+      "hardware",
+      "RAM",
+      "SSD",
+      "GPU",
+      "PC"
+    ]
   },
   {
     "slug": "install-star-citizen",
@@ -51,7 +59,13 @@
       "free-fly",
       "first-flight-new-babbage"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "download",
+      "launcher",
+      "install",
+      "verification"
+    ]
   },
   {
     "slug": "first-flight-new-babbage",
@@ -80,7 +94,13 @@
       "personal-hangars",
       "keybindings"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "microTech",
+      "spaceport",
+      "ASOP",
+      "first takeoff"
+    ]
   },
   {
     "slug": "quantum-travel",
@@ -109,7 +129,13 @@
       "ship-maintenance",
       "keybindings"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "QT",
+      "jump",
+      "navigation",
+      "route"
+    ]
   },
   {
     "slug": "play-with-friends",
@@ -134,11 +160,18 @@
       }
     ],
     "related": [
+      "organizations",
       "find-a-player-guide",
-      "flight-checklist",
       "beginner-missions"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "party",
+      "multiplayer",
+      "invite",
+      "contacts",
+      "crew"
+    ]
   },
   {
     "slug": "beginner-missions",
@@ -163,11 +196,17 @@
       }
     ],
     "related": [
-      "inventory-and-equipment",
-      "renting-ships",
-      "medical-and-respawn"
+      "mission-budget",
+      "cargo-planning",
+      "inventory-and-equipment"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "jobs",
+      "contracts",
+      "aUEC",
+      "earning"
+    ]
   },
   {
     "slug": "ship-insurance",
@@ -192,7 +231,12 @@
       "personal-hangars",
       "buying-ships-auec"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "LTI",
+      "claim",
+      "replacement"
+    ]
   },
   {
     "slug": "free-fly",
@@ -221,7 +265,11 @@
       "install-star-citizen",
       "first-flight-new-babbage"
     ],
-    "published": "2026-11-15"
+    "published": "2026-11-15",
+    "keywords": [
+      "trial",
+      "free access"
+    ]
   },
   {
     "slug": "landing-guide",
@@ -246,6 +294,12 @@
       "first-flight-new-babbage",
       "quantum-travel",
       "ship-maintenance"
+    ],
+    "keywords": [
+      "ATC",
+      "clearance",
+      "hangar",
+      "landing gear"
     ]
   },
   {
@@ -271,6 +325,15 @@
       "essential-ship-controls",
       "flight-checklist",
       "glossary"
+    ],
+    "keywords": [
+      "HOTAS",
+      "HOSAS",
+      "joystick",
+      "controller",
+      "XML",
+      "peripherals",
+      "bindings"
     ]
   },
   {
@@ -296,6 +359,15 @@
       "medical-and-respawn",
       "personal-hangars",
       "beginner-missions"
+    ],
+    "keywords": [
+      "gear",
+      "armor",
+      "undersuit",
+      "backpack",
+      "storage",
+      "kiosk",
+      "missing items"
     ]
   },
   {
@@ -321,6 +393,13 @@
       "inventory-and-equipment",
       "play-with-friends",
       "personal-hangars"
+    ],
+    "keywords": [
+      "healing",
+      "regeneration",
+      "death",
+      "rescue",
+      "injury"
     ]
   },
   {
@@ -346,6 +425,14 @@
       "landing-guide",
       "quantum-travel",
       "ship-insurance"
+    ],
+    "keywords": [
+      "repair",
+      "refuel",
+      "rearm",
+      "hydrogen",
+      "quantum fuel",
+      "restock"
     ]
   },
   {
@@ -375,6 +462,11 @@
       "choosing-a-ship",
       "buying-ships-auec",
       "currencies"
+    ],
+    "keywords": [
+      "rental",
+      "REC",
+      "try ships"
     ]
   },
   {
@@ -404,6 +496,12 @@
       "renting-ships",
       "beginner-missions",
       "personal-hangars"
+    ],
+    "keywords": [
+      "dealer",
+      "New Deal",
+      "Astro Armada",
+      "earned currency"
     ]
   },
   {
@@ -433,6 +531,13 @@
       "first-flight-new-babbage",
       "inventory-and-equipment",
       "landing-guide"
+    ],
+    "keywords": [
+      "ASOP",
+      "retrieve",
+      "home",
+      "residence",
+      "spawn ship"
     ]
   },
   {
@@ -474,6 +579,14 @@
       "currencies",
       "find-a-player-guide",
       "flight-checklist"
+    ],
+    "keywords": [
+      "definitions",
+      "abbreviations",
+      "terms",
+      "jargon",
+      "PU",
+      "PTU"
     ]
   },
   {
@@ -499,6 +612,14 @@
       "buying-ships-auec",
       "renting-ships",
       "glossary"
+    ],
+    "keywords": [
+      "aUEC",
+      "UEC",
+      "REC",
+      "store credit",
+      "wallet",
+      "money"
     ]
   },
   {
@@ -528,6 +649,12 @@
       "renting-ships",
       "buying-ships-auec",
       "flight-checklist"
+    ],
+    "keywords": [
+      "roles",
+      "solo",
+      "crew",
+      "compare ships"
     ]
   },
   {
@@ -553,6 +680,13 @@
       "play-with-friends",
       "glossary",
       "flight-checklist"
+    ],
+    "keywords": [
+      "teacher",
+      "mentor",
+      "learn",
+      "lesson",
+      "help"
     ]
   },
   {
@@ -578,6 +712,13 @@
       "find-a-player-guide",
       "glossary",
       "install-star-citizen"
+    ],
+    "keywords": [
+      "Issue Council",
+      "report bug",
+      "crash",
+      "reproduce",
+      "IC"
     ]
   },
   {
@@ -608,7 +749,14 @@
       "ship-maintenance",
       "keybindings"
     ],
-    "script": "/assets/js/flight-checklist.js"
+    "script": "/assets/js/flight-checklist.js",
+    "keywords": [
+      "preflight",
+      "pre flight",
+      "departure",
+      "printable",
+      "check list"
+    ]
   },
   {
     "slug": "essential-ship-controls",
@@ -643,8 +791,165 @@
     ],
     "related": [
       "keybindings",
-      "flight-checklist",
-      "landing-guide"
+      "arena-commander-practice",
+      "flight-checklist"
+    ],
+    "keywords": [
+      "open doors",
+      "close doors",
+      "lock",
+      "unlock",
+      "stagger",
+      "staggered fire",
+      "Galaxy",
+      "keys",
+      "keyboard",
+      "ATC",
+      "landing gear",
+      "space brake",
+      "F1",
+      "F4"
+    ]
+  },
+  {
+    "slug": "cargo-planning",
+    "group": "Playing together & earning credits",
+    "title": "Star Citizen Cargo Planning | Hauling vs Commodity Trading",
+    "heading": "Plan a cargo run before you load the ship.",
+    "description": "Understand Star Citizen hauling versus commodity trading, check storage and access, plan loading and unloading, and consider trip costs.",
+    "lede": "A practical framework for understanding the load, route and work involved, without a changing trade-route price list.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360034785754-Commodities",
+        "title": "RSI: commodities, storage and trading"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts",
+        "title": "RSI: contract objectives and reward sharing"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug",
+        "title": "RSI: aUEC loss and cargo budgeting"
+      }
+    ],
+    "related": [
+      "mission-budget",
+      "choosing-a-ship",
+      "flight-checklist"
+    ],
+    "keywords": [
+      "hauling",
+      "trading",
+      "commodities",
+      "freight",
+      "SCU",
+      "loading"
+    ]
+  },
+  {
+    "slug": "organizations",
+    "group": "Learning & community",
+    "title": "Star Citizen Organizations | Find & Join an Org",
+    "heading": "Find an organization that fits your sessions.",
+    "description": "Understand Star Citizen organizations, check the Spectrum ID, compare schedules and activities, and prepare for a first group session.",
+    "lede": "Choose a community around how and when you actually play, then arrange a specific shared activity.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115010675447-Organizations",
+        "title": "RSI: organization identity, applications and membership"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008166874-Playing-with-Friends",
+        "title": "RSI: contacts and session groups"
+      }
+    ],
+    "related": [
+      "play-with-friends",
+      "find-a-player-guide",
+      "cargo-planning"
+    ],
+    "keywords": [
+      "org",
+      "guild",
+      "clan",
+      "community",
+      "membership",
+      "SID"
+    ]
+  },
+  {
+    "slug": "arena-commander-practice",
+    "group": "Before you play",
+    "title": "Star Citizen Arena Commander | Flight & Controls Practice",
+    "heading": "Use Arena Commander for focused practice.",
+    "description": "Plan Star Citizen Arena Commander practice for flight, controls and weapon modes, and understand how it differs from the Persistent Universe.",
+    "lede": "Pick one skill, repeat a short exercise, then bring the result into an ordinary trip.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360003091714-Arena-Commander",
+        "title": "RSI: Arena Commander access and modes"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360037987493-Multiplayer-Game-Options",
+        "title": "RSI: practice and multiplayer environments"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013172187-Renting-Ships-Equipment",
+        "title": "RSI: rental currencies and mode restrictions"
+      }
+    ],
+    "related": [
+      "essential-ship-controls",
+      "keybindings",
+      "find-a-player-guide"
+    ],
+    "keywords": [
+      "AC",
+      "free flight",
+      "training",
+      "practice",
+      "simulation"
+    ]
+  },
+  {
+    "slug": "mission-budget",
+    "group": "Playing together & earning credits",
+    "title": "Star Citizen Mission Budget Calculator | Net aUEC & Crew Share",
+    "heading": "Estimate a mission’s share, costs and time.",
+    "description": "Calculate a Star Citizen contract’s equal crew share, your net aUEC after costs, and estimated hourly result using your own reward and trip time.",
+    "lede": "Use your own numbers to understand a contract budget. This is a planning estimate, not a live payout or earnings promise.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts",
+        "title": "RSI: contract objectives and reward sharing"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug",
+        "title": "RSI: aUEC loss and cargo budgeting"
+      }
+    ],
+    "related": [
+      "beginner-missions",
+      "cargo-planning",
+      "currencies"
+    ],
+    "script": "/assets/js/mission-budget.js",
+    "keywords": [
+      "calculator",
+      "profit",
+      "income",
+      "earnings",
+      "crew share",
+      "expenses",
+      "aUEC per hour"
     ]
   }
 ]
