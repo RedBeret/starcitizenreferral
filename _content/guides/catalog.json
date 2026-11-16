@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "system-requirements",
+    "group": "Before you play",
+    "title": "Star Citizen System Requirements | RAM, GPU & SSD",
+    "heading": "Star Citizen system requirements: check your PC.",
+    "description": "Check the official minimum and recommended requirements, understand the SSD and RAM figures, and plan a useful performance trial.",
+    "lede": "Compare your PC with RSI’s published requirements, then decide what to test before buying a game package.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360042417374-Star-Citizen-Minimum-System-Requirements",
+        "title": "RSI: minimum and recommended PC requirements"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013373508-Install-the-RSI-Star-Citizen-Launcher",
+        "title": "RSI: installing the launcher and game"
+      }
+    ],
+    "related": [
+      "install-star-citizen",
+      "free-fly",
+      "first-flight-new-babbage"
+    ]
+  },
+  {
+    "slug": "install-star-citizen",
+    "group": "Before you play",
+    "title": "How to Install Star Citizen | RSI Launcher Guide",
+    "heading": "How to install Star Citizen with the RSI Launcher.",
+    "description": "Download Star Citizen from RSI, choose LIVE, check your SSD install path, and troubleshoot launcher or verification problems.",
+    "lede": "A practical installation checklist, plus the first things to inspect when the launcher cannot find the game.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013373508-Install-the-RSI-Star-Citizen-Launcher",
+        "title": "RSI: installing the launcher and game"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360000161747-Troubleshoot-the-RSI-Launcher",
+        "title": "RSI: launcher troubleshooting"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013195927-Public-Test-Universe-PTU-FAQ",
+        "title": "RSI: test-environment access"
+      }
+    ],
+    "related": [
+      "system-requirements",
+      "free-fly",
+      "first-flight-new-babbage"
+    ]
+  },
+  {
+    "slug": "first-flight-new-babbage",
+    "group": "Your first flight",
+    "title": "Star Citizen First Flight | New Babbage to Your Ship",
+    "heading": "Your first Star Citizen flight from New Babbage.",
+    "description": "Find the New Babbage spaceport, retrieve your ship at an ASOP terminal, and prepare for departure and your first return landing.",
+    "lede": "Follow the route from your starting point to the cockpit, with separate instructions for hab and personal-hangar starts.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360048403193-Now-Leaving-New-Babbage",
+        "title": "RSI: illustrated New Babbage directions"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360025028633-Getting-Started-in-the-Verse",
+        "title": "RSI: tutorial, hangars and first flight"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360020925254-How-to-Land-Your-Ship",
+        "title": "RSI: landing authorization and approach"
+      }
+    ],
+    "related": [
+      "quantum-travel",
+      "play-with-friends",
+      "beginner-missions"
+    ]
+  },
+  {
+    "slug": "quantum-travel",
+    "group": "Your first flight",
+    "title": "How to Quantum Travel in Star Citizen | Route & Checks",
+    "heading": "How quantum travel works in Star Citizen.",
+    "description": "Plan a route, prepare your quantum drive, understand RSI’s documented controls, and troubleshoot a jump that will not start.",
+    "lede": "Break the journey into route, mode, alignment, calibration and engagement so you can tell which step needs attention.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360019449994-How-to-Quantum-Travel",
+        "title": "RSI: routing, flight modes and quantum travel"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360025028633-Getting-Started-in-the-Verse",
+        "title": "RSI: tutorial, hangars and first flight"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360020925254-How-to-Land-Your-Ship",
+        "title": "RSI: landing authorization and approach"
+      }
+    ],
+    "related": [
+      "first-flight-new-babbage",
+      "play-with-friends",
+      "beginner-missions"
+    ]
+  },
+  {
+    "slug": "play-with-friends",
+    "group": "Playing together & earning credits",
+    "title": "How to Play Star Citizen with Friends | Party Guide",
+    "heading": "How to play Star Citizen with friends.",
+    "description": "Add contacts, form a Star Citizen party, choose a meeting place, share contracts, and find help through the official Guide System.",
+    "lede": "Get the group together before spreading out across the universe. Contacts, parties and shared missions each have their own step.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008166874-Playing-with-Friends",
+        "title": "RSI: contacts and parties"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts",
+        "title": "RSI: contracts, sharing and rewards"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360038526034-Guide-System",
+        "title": "RSI: finding an experienced player guide"
+      }
+    ],
+    "related": [
+      "first-flight-new-babbage",
+      "quantum-travel",
+      "beginner-missions"
+    ]
+  },
+  {
+    "slug": "beginner-missions",
+    "group": "Playing together & earning credits",
+    "title": "Star Citizen Beginner Missions | Starting to Earn aUEC",
+    "heading": "Choosing your first missions in Star Citizen.",
+    "description": "Find beginner contracts, compare task requirements and costs, share missions with friends, and understand net aUEC without fixed payout promises.",
+    "lede": "Choose a job you can understand and finish. Use a pre-departure checklist and evaluate the result with your actual costs.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008918933-Missions-and-Contracts",
+        "title": "RSI: contracts, sharing and rewards"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360042279414-Can-I-recover-aUEC-lost-due-to-a-crash-or-bug",
+        "title": "RSI: aUEC loss and cargo budgeting"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360006492734-Currencies-of-Star-Citizen-UEC-aUEC-REC-Store-Credit",
+        "title": "RSI: UEC, aUEC and store credit"
+      }
+    ],
+    "related": [
+      "play-with-friends",
+      "quantum-travel",
+      "ship-insurance"
+    ]
+  },
+  {
+    "slug": "ship-insurance",
+    "group": "Access & ownership",
+    "title": "Star Citizen Ship Insurance | Claims, Loadouts & LTI",
+    "heading": "Star Citizen ship insurance, claims and LTI.",
+    "description": "Understand Star Citizen alpha claims, pledge insurance durations, custom loadout coverage and Lifetime Insurance using current RSI guidance.",
+    "lede": "Separate the ship you need back today from the insurance listed on a pledge and plans for the finished game.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360000093467-Ship-Insurance-FAQs",
+        "title": "RSI: alpha insurance, loadouts and LTI"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013194987-Pledges-FAQ",
+        "title": "RSI: game packages and pledge contents"
+      }
+    ],
+    "related": [
+      "first-flight-new-babbage",
+      "beginner-missions",
+      "free-fly"
+    ]
+  },
+  {
+    "slug": "free-fly",
+    "group": "Access & ownership",
+    "title": "Star Citizen Free Fly Guide | Access, Setup & Referral",
+    "heading": "How to join a Star Citizen Free Fly.",
+    "description": "Prepare for a Star Citizen Free Fly, check the official dates, distinguish event access from referral codes, and plan a useful first session.",
+    "lede": "Try the game under an announced event’s terms, with a clear plan for the download, first session and temporary access.",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956",
+        "title": "RSI: IAE 2956 Free Fly access"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013373508-Install-the-RSI-Star-Citizen-Launcher",
+        "title": "RSI: installing the launcher and game"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013195927-Public-Test-Universe-PTU-FAQ",
+        "title": "RSI: test-environment access"
+      }
+    ],
+    "related": [
+      "system-requirements",
+      "install-star-citizen",
+      "first-flight-new-babbage"
+    ]
+  }
+]

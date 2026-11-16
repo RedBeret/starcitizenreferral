@@ -56,3 +56,30 @@ SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/browser-check.cjs
 Start the local server first. The check prints its temporary artifact directory
 and covers desktop/mobile routes, copy permission failures, saved preferences,
 translations, aliases, event expiry, no-JavaScript access and analytics behavior.
+
+## Guide library
+
+The task guides and library live under `pages/guides/`. Their editable sources
+are `_content/guides/*.html`, metadata and official sources are in
+`_content/guides/catalog.json`, and the guide-only template is
+`_content/guide-template.html`. The underscore source directory is excluded by
+GitHub Pages/Jekyll; visitors receive the generated complete HTML pages.
+
+```sh
+python3 scripts/build-guides.py
+python3 scripts/check-site.py
+```
+
+The generator writes the guide pages, contextual guide navigation and new
+sitemap entries. It asserts that the homepage, shared CSS/JS and sharing image
+remain unchanged. Edit actual review dates after researching the source; the
+script does not roll older pages' dates forward.
+
+With the local server running and Playwright available, verify the catalog with:
+
+```sh
+SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/guide-browser-check.cjs
+```
+
+This checks all catalog guides and the library at 320, 390, 768 and 1440px,
+including source links, referral identity, contents links and guide discovery.

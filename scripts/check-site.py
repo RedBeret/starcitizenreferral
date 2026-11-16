@@ -115,6 +115,28 @@ for entry in entries:
         check(page.canonicals == [loc], f'Sitemap canonical mismatch: {route}')
     check(bool(re.fullmatch(r'\d{4}-\d{2}-\d{2}', entry.find('s:lastmod', ns).text)), 'Invalid lastmod')
 
+# The guide catalog is also the discovery contract for new articles.
+catalog_path = ROOT / '_content/guides/catalog.json'
+if catalog_path.exists():
+    catalog = json.loads(catalog_path.read_text())
+    hub = '/pages/guides/guide-library.html'
+    check(hub in pages, 'Guide library is missing')
+    indexed_titles = [p.title for p in pages.values() if not p.noindex and not p.refresh]
+    check(len(indexed_titles) == len(set(indexed_titles)), 'Duplicate title among indexable pages')
+    for entry in catalog:
+        route = '/pages/guides/' + entry['slug'] + '.html'
+        check(route in pages, 'Catalog page missing: ' + route)
+        if route not in pages: continue
+        page = pages[route]
+        check(not page.noindex and not page.refresh, 'Catalog guide is not indexable: ' + route)
+        check(page.canonicals == [DOMAIN + route], 'Guide canonical mismatch: ' + route)
+        check(route in pages[hub].links, 'Guide orphaned from library: ' + route)
+        check(hub in page.links, 'Guide does not link back to library: ' + route)
+        check(DOMAIN + route in seen, 'Guide missing from sitemap: ' + route)
+        for source in entry['sources']:
+            check(source['url'] in page.links, 'Official source absent from guide: ' + route)
+        check('@@' not in (ROOT / route.lstrip('/')).read_text(), 'Unresolved guide template token: ' + route)
+
 api = json.loads((ROOT / 'assets/api.json').read_text())
 ref = api['referral_codes'][0]
 check(ref['code'] == CODE, 'API referral identity changed')
