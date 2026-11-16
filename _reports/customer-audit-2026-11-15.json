@@ -1,0 +1,604 @@
+{
+  "date": "2026-11-15",
+  "scope": "Sequential simulated visitor journeys, browser lab checks and core source research; no real participants, RSI registration, purchases or reward delivery.",
+  "visitors": [
+    {
+      "number": 1,
+      "name": "New desktop player checks code and official signup",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Hero displays the exact code and standard bonus",
+          "passed": true
+        },
+        {
+          "label": "Copy produces the actual code",
+          "passed": true
+        },
+        {
+          "label": "CTA opens the exact official destination; test intercepts before account creation",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 2,
+      "name": "New phone visitor follows onboarding to PC requirements",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Open menu and choose Start here",
+          "passed": true
+        },
+        {
+          "label": "Find the detailed hardware guide from onboarding",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 3,
+      "name": "Existing account holder checks the grace period",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "FAQ answers the already-created-account question",
+          "passed": true
+        },
+        {
+          "label": "Troubleshooting does not promise changing an attached code",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 4,
+      "name": "Signed-in RSI visitor understands homepage redirects",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Read signed-in explanation without creating another account",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 5,
+      "name": "Prospective buyer searches for game-package help",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Search finds the existing package guide",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 6,
+      "name": "New recruit searches for the 50,000-credit explanation",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Bonus search finds the actual bonus guide",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 7,
+      "name": "Frustrated visitor searches for a referral that is not working",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Problem search finds direct troubleshooting help",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 8,
+      "name": "Returning player finds HOTAS setup",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Search HOTAS and reach the profile guide",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 9,
+      "name": "Phone keyboard user presses Escape while searching",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Escape in a search field does not jump focus to a closed menu",
+          "passed": true
+        },
+        {
+          "label": "Escape closes an actually open menu and restores its button",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 10,
+      "name": "Keyboard-only reader uses skip link and native FAQ",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "First Tab reveals skip link; Enter targets main content",
+          "passed": true
+        },
+        {
+          "label": "FAQ opens with keyboard",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 11,
+      "name": "Small-screen reader at a 320 CSS-pixel viewport",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Content reflows at /",
+          "passed": true
+        },
+        {
+          "label": "Content reflows at /pages/guides/essential-ship-controls.html",
+          "passed": true
+        },
+        {
+          "label": "Content reflows at /pages/guides/mission-budget.html",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 12,
+      "name": "Visitor denies clipboard permission",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Failed automatic copy provides a selected manual fallback",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 13,
+      "name": "Privacy-conscious visitor blocks storage and analytics",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Theme remains usable and analytics is not loaded",
+          "passed": true
+        },
+        {
+          "label": "Privacy page explains preferences and signup ownership",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 14,
+      "name": "German-language phone visitor",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Signup panel uses German with the unchanged referral destination",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 15,
+      "name": "No-JavaScript mobile visitor",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Code and signup remain present",
+          "passed": true
+        },
+        {
+          "label": "All guide cards stay readable",
+          "passed": true
+        },
+        {
+          "label": "Worked arithmetic remains available without the calculator",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 16,
+      "name": "Crew planner calculates a shared contract",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Example uses personal expenses after equal sharing",
+          "passed": true
+        },
+        {
+          "label": "Editing hides stale results and zero crew is rejected",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 17,
+      "name": "Galaxy pilot checks door and staggered-fire guidance",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Find controls by Galaxy and doors",
+          "passed": true
+        },
+        {
+          "label": "Unverified ship-specific shortcut is not presented as tested",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 18,
+      "name": "Printer user keeps an offline departure list",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Native checklist ticks and resets",
+          "passed": true
+        },
+        {
+          "label": "Printable layout includes all twelve checks",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 19,
+      "name": "Old bookmark visitor arrives at a 2025 event",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Archive is explicit and leads to the dated current snapshot",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 20,
+      "name": "Visitor opens a mistyped or removed page",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "404 keeps the visitor oriented with useful recovery links",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 21,
+      "name": "Fonts fail on a slow phone connection",
+      "engine": "chromium",
+      "steps": [
+        {
+          "label": "Fallback fonts keep code and primary action readable",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 22,
+      "name": "Firefox desktop reader finds and uses a tool",
+      "engine": "firefox",
+      "steps": [
+        {
+          "label": "Search and navigate to the budget planner",
+          "passed": true
+        },
+        {
+          "label": "Calculator produces the same result in this engine",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "number": 23,
+      "name": "WebKit mobile reader finds and uses a tool",
+      "engine": "webkit",
+      "steps": [
+        {
+          "label": "Search and navigate to the budget planner",
+          "passed": true
+        },
+        {
+          "label": "Calculator produces the same result in this engine",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "pageChecks": 220,
+  "routes": 55,
+  "automatedAccessibilityRuns": 50,
+  "automatedAccessibilityViolations": 0,
+  "focusTabStops": 334,
+  "focusFailures": [],
+  "loading": {
+    "base": "https://starcitizenreferrals.space",
+    "conditions": {
+      "viewport": "390x844",
+      "latencyMs": 150,
+      "downloadBytesPerSecond": 200000,
+      "cpuSlowdown": 4,
+      "cache": "disabled",
+      "doNotTrack": true
+    },
+    "note": "One cold lab run per page; not field Core Web Vitals, INP, a Lighthouse score or an earnings/conversion measure.",
+    "pages": [
+      {
+        "route": "/",
+        "status": 200,
+        "lcp": 1388,
+        "cls": 0.061226327952085706,
+        "fcp": 1316,
+        "ttfb": 504.70000000298023,
+        "domContentLoaded": 1381.7000000029802,
+        "load": 1948.4000000022352,
+        "overflow": false,
+        "bytes": 191028,
+        "requests": 11,
+        "heaviest": [
+          {
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 48392
+          },
+          {
+            "url": "https://starcitizenreferrals.space/assets/images/flight/aurora-scene-960.webp",
+            "status": 200,
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 39660
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 31559
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 18874
+          },
+          {
+            "url": "https://starcitizenreferrals.space/assets/images/flight/rsi-referral-field.webp",
+            "status": 200,
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 13474
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkebIl1R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10487
+          }
+        ],
+        "failed": []
+      },
+      {
+        "route": "/pages/guides/guide-library.html",
+        "status": 200,
+        "lcp": 968,
+        "cls": 0.05153575340274454,
+        "fcp": 968,
+        "ttfb": 311.5,
+        "domContentLoaded": 984.1999999992549,
+        "load": 1479.5999999977648,
+        "overflow": false,
+        "bytes": 124385,
+        "requests": 10,
+        "heaviest": [
+          {
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 48392
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 31559
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkeQI51R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10500
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkebIl1R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10072
+          },
+          {
+            "url": "https://starcitizenreferrals.space/pages/guides/guide-library.html",
+            "status": 200,
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 8775
+          },
+          {
+            "url": "https://starcitizenreferrals.space/assets/css/site.css?v=20261115",
+            "status": 200,
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 6255
+          }
+        ],
+        "failed": []
+      },
+      {
+        "route": "/pages/guides/new-player-guide.html",
+        "status": 200,
+        "lcp": 812,
+        "cls": 0.0006532135565958789,
+        "fcp": 812,
+        "ttfb": 225.80000000074506,
+        "domContentLoaded": 806.6000000014901,
+        "load": 1546.1000000014901,
+        "overflow": false,
+        "bytes": 154890,
+        "requests": 10,
+        "heaviest": [
+          {
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 48392
+          },
+          {
+            "url": "https://starcitizenreferrals.space/assets/images/flight/aurora-flight.webp",
+            "status": 200,
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 35092
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 31559
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkebIl1R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10487
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkeQI51R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10085
+          },
+          {
+            "url": "https://starcitizenreferrals.space/assets/css/site.css?v=20261115",
+            "status": 200,
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 6255
+          }
+        ],
+        "failed": []
+      },
+      {
+        "route": "/pages/guides/mission-budget.html",
+        "status": 200,
+        "lcp": 824,
+        "cls": 0.0009116484355697311,
+        "fcp": 824,
+        "ttfb": 246.60000000149012,
+        "domContentLoaded": 860.6000000014901,
+        "load": 1392,
+        "overflow": false,
+        "bytes": 121841,
+        "requests": 10,
+        "heaviest": [
+          {
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 48807
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 31559
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkeQI51R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10085
+          },
+          {
+            "url": "https://fonts.gstatic.com/s/chakrapetch/v13/cIflMapbsEk7TDLdtEz1BwkebIl1R5_F.woff2",
+            "status": 200,
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 10072
+          },
+          {
+            "url": "https://starcitizenreferrals.space/assets/css/site.css?v=20261115",
+            "status": 200,
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 6258
+          },
+          {
+            "url": "https://starcitizenreferrals.space/pages/guides/mission-budget.html",
+            "status": 200,
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 5795
+          }
+        ],
+        "failed": []
+      }
+    ]
+  },
+  "sourceAvailability": {
+    "total": 47,
+    "http200": 14,
+    "botChallenges": 33
+  },
+  "homepage": "HTML, shared stylesheet and sharing artwork preserved; shared JavaScript contains two confirmed keyboard behavior fixes."
+}

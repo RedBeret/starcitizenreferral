@@ -6,7 +6,7 @@ An independent static field guide by PatchOps. The single referral code is
 ## Run locally
 
 ```sh
-python3 -m http.server 4173
+python3 scripts/serve-preview.py
 ```
 
 Visit http://localhost:4173. No build or dependency installation is needed.
@@ -111,3 +111,43 @@ calculator validation, result layouts and no-JavaScript content with:
 ```sh
 SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/discovery-browser-check.cjs
 ```
+
+## Visitor and whole-site audits
+
+Visitor tests use fresh, isolated browser contexts one at a time. They simulate
+new and existing accounts, mobile/keyboard use, blocked clipboard/storage,
+translations, no JavaScript, tools, archives, missing pages, Firefox and WebKit.
+They do not register RSI accounts, submit payments or contact anyone.
+
+Use the test-owned preview runner so a long audit does not depend on a separate
+background server session:
+
+```sh
+SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/run-local-audit.cjs scripts/customer-journey-check.cjs scripts/focus-visibility-check.cjs scripts/discovery-browser-check.cjs
+```
+
+For full-page screenshots, 320/390/768/1440px checks and automated accessibility
+checks, fetch the pinned checker into a temporary location, then run:
+
+```sh
+curl -fL https://unpkg.com/axe-core@4.14.0/axe.min.js -o /tmp/sc-audit-axe.min.js
+SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/run-local-audit.cjs scripts/site-experience-audit.cjs
+```
+
+Set `SC_AXE_PATH` for a different checker location. Without it, the script still
+checks routes/layouts and captures screenshots but does not run axe. Automated
+checks are not a complete accessibility certification. `SC_AUDIT_PHASE=before`
+records failing journeys for investigation; the default mode fails the command
+if a confirmed journey or layout/runtime check fails.
+
+`loading-audit.cjs` records cold-load Chromium traces under a documented
+slower-network/CPU profile. It uses the live site by default and can take
+`SC_QA_BASE` for another origin. Its results are laboratory measurements, not
+field INP, a Lighthouse score, conversion tracking or real-user research.
+
+`_content/guides/library-extras.json` includes existing signup and help pages
+in local library search without regenerating those pages as new guides.
+`404.html` is generated from `_content/not-found.html`; it stays noindex and
+out of the sitemap. The local preview preserves HTTP 404 for unknown paths,
+matching GitHub Pages recovery behavior. Audit summaries are in `_reports/`,
+which stays outside the published Jekyll site.

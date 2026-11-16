@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://starcitizenreferrals.space'
 HUB = '/pages/guides/guide-library.html'
 CATALOG = json.loads((ROOT / '_content/guides/catalog.json').read_text())
+EXTRA_GUIDES = json.loads((ROOT / '_content/guides/library-extras.json').read_text())
+LIBRARY_ENTRIES = CATALOG + EXTRA_GUIDES
 TEMPLATE = (ROOT / '_content/guide-template.html').read_text()
 PROTECTED = ['index.html', 'assets/css/site.css', 'assets/js/script.js', 'og-image.jpg']
 BEFORE = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in PROTECTED}
@@ -31,12 +33,16 @@ class Headings(HTMLParser):
 def route(slug):
     return f'/pages/guides/{slug}.html'
 
+def entry_route(entry):
+    return entry.get('path',route(entry['slug']))
+
 def catalog_groups():
-    groups=list(dict.fromkeys(x['group'] for x in CATALOG))
-    return (['Core concepts']+[g for g in groups if g!='Core concepts']) if 'Core concepts' in groups else groups
+    groups=list(dict.fromkeys(x['group'] for x in LIBRARY_ENTRIES))
+    priority=[g for g in ['Core concepts','Accounts & referral help'] if g in groups]
+    return priority+[g for g in groups if g not in priority]
 
 def catalog_order():
-    return [entry for group in catalog_groups() for entry in CATALOG if entry['group']==group]
+    return [entry for group in catalog_groups() for entry in LIBRARY_ENTRIES if entry['group']==group]
 
 def external(url, title):
     return f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)}</a>'
@@ -61,7 +67,7 @@ def render(entry, body, is_hub=False):
     visible += '</nav>'
     schema = [{'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':breadcrumb}]
     if is_hub:
-        schema.append({'@context':'https://schema.org','@type':'CollectionPage','name':entry['heading'],'url':canonical,'description':entry['description'],'mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'name':e['heading'],'url':DOMAIN+route(e['slug'])} for i,e in enumerate(catalog_order())]}})
+        schema.append({'@context':'https://schema.org','@type':'CollectionPage','name':entry['heading'],'url':canonical,'description':entry['description'],'mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'name':e['heading'],'url':DOMAIN+entry_route(e)} for i,e in enumerate(catalog_order())]}})
     else:
         schema.append({'@context':'https://schema.org','@type':'Article','headline':entry['heading'],'description':entry['description'],'datePublished':entry.get('published',entry['reviewed']),'dateModified':entry['reviewed'],'author':{'@type':'Person','name':'PatchOps','url':'https://robertsspaceindustries.com/en/citizens/PatchOps'},'mainEntityOfPage':canonical,'image':DOMAIN+'/og-image.jpg','citation':[s['url'] for s in entry['sources']]})
         headings=Headings(); headings.feed(body)
@@ -91,13 +97,33 @@ body+='<form class="guide-search" data-guide-search hidden role="search" aria-la
 body+='<nav class="toc" aria-label="Guide categories"><strong>Browse by topic</strong><ul>'+''.join(f'<li data-guide-category="category-{i}"><a href="#group-{i}">{escape(group)}</a></li>' for i,group in enumerate(groups))+'</ul></nav>'
 for i,group in enumerate(groups):
     body+=f'<section id="category-{i}" data-guide-group="{escape(group,quote=True)}" aria-labelledby="group-{i}"><h2 id="group-{i}">{escape(group)}</h2><div class="library-grid">'
-    for entry in [x for x in CATALOG if x['group']==group]:
+    for entry in [x for x in LIBRARY_ENTRIES if x['group']==group]:
         search=' '.join([entry['title'],entry['heading'],entry['description'],*entry.get('keywords',[])])
-        body+=f'<a class="library-card" data-search="{escape(search,quote=True)}" href="{route(entry["slug"])}"><span class="kicker">Field guide</span><h3>{escape(entry["heading"])}</h3><p>{escape(entry["description"])}</p><span class="guide-more">Read the guide <span aria-hidden="true">↗</span></span></a>'
+        body+=f'<a class="library-card" data-search="{escape(search,quote=True)}" href="{entry_route(entry)}"><span class="kicker">Field guide</span><h3>{escape(entry["heading"])}</h3><p>{escape(entry["description"])}</p><span class="guide-more">Read the guide <span aria-hidden="true">↗</span></span></a>'
     body+='</div></section>'
-body+='<section><h2>Accounts, packages and referral help</h2><ul><li><a href="/pages/guides/new-player-guide.html">New player overview</a> — account creation through the first session.</li><li><a href="/pages/guides/starter-pack-guide.html">Choosing a game package</a> — access, owned ships and temporary loaners.</li><li><a href="/pages/guides/50000-uec-bonus.html">The standard 50,000 UEC bonus</a> — account UEC, alpha credits and signup terms.</li><li><a href="/pages/guides/referral-codes.html">How referral codes work</a> — eligibility and the account-creation window.</li><li><a href="/pages/info/star-citizen-referral-code-not-working.html">Referral troubleshooting</a> — an empty field, an existing account or delayed credits.</li></ul></section>'
 body+='<p>Release information is separate from these task guides: see the <a href="/pages/monthly/current-month.html">dated LIVE/PTU and event snapshot</a> for that context. This library is an independent community resource by PatchOps.</p>'
 render(hub,body,True)
+
+# GitHub Pages serves this document for unknown paths, retaining HTTP 404.
+recovery_values={
+    'REVIEW_DATE':hub['reviewed'],
+    'REVIEW_LABEL':date.fromisoformat(hub['reviewed']).strftime('%d %B %Y').lstrip('0'),
+    'TITLE':'Page Not Found | Star Citizen Referrals',
+    'DESCRIPTION':'Find the Star Citizen guide library, homepage and referral troubleshooting when a link is missing or has moved.',
+    'CANONICAL':DOMAIN+'/404.html',
+    'SCHEMA':'<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@type':'WebPage','name':'Page not found','url':DOMAIN+'/404.html'})+'</script>',
+    'BREADCRUMB':'<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Page not found</span></nav>',
+    'HEADING':'That page is off course.',
+    'LEDE':'Use a working link below to continue your visit.',
+    'BODY':(ROOT/'_content/not-found.html').read_text(),
+    'RELATED':related_block(['first-flight-new-babbage','essential-ship-controls'])
+}
+recovery=TEMPLATE
+for key,value in recovery_values.items(): recovery=recovery.replace('@@'+key+'@@',value)
+recovery=re.sub(r'<div class="byline">.*?</div>','',recovery,flags=re.S)
+recovery=recovery.replace('</head>','<meta name="robots" content="noindex,follow">\n<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">\n</head>')
+assert not re.search(r'@@[A-Z]+@@',recovery)
+(ROOT/'404.html').write_text(recovery)
 
 # Add discovery within the existing guide section. The homepage is deliberately excluded.
 for path in (ROOT/'pages').rglob('*.html'):
@@ -124,4 +150,4 @@ for r,reviewed in dated_paths.items():
 s=s.replace('</urlset>',additions+'</urlset>')
 if s!=p.read_text():p.write_text(s)
 for path,digest in BEFORE.items(): assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest, 'Protected file changed: '+path
-print(f'Built {len(CATALOG)} guides and one library. Homepage and shared assets unchanged.')
+print(f'Built {len(CATALOG)} guides and a library of {len(LIBRARY_ENTRIES)} resources. Homepage and shared assets unchanged.')

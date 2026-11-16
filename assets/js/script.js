@@ -124,7 +124,7 @@
             menuButton.setAttribute('aria-expanded', String(open));
         });
         menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-        document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeMenu(); if (menuButton && menuButton.offsetParent) menuButton.focus(); } });
+        document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.dataset.open === 'true') { closeMenu(); if (menuButton && menuButton.offsetParent) menuButton.focus(); } });
         const heroAction = document.getElementById('enlist-link');
         const dock = document.getElementById('mobile-dock');
         if (heroAction && dock && 'IntersectionObserver' in window) {
@@ -133,6 +133,18 @@
                 dock.dataset.show = String(!entry.isIntersecting && entry.boundingClientRect.bottom < 0);
             }, { rootMargin: '-80px 0px 0px 0px' }).observe(heroAction);
         }
+        // Native focus scrolling does not account for the fixed mobile signup bar.
+        document.addEventListener('focusin', event => {
+            const target = event.target;
+            if (!(target instanceof HTMLElement) || !dock || dock.contains(target)) return;
+            requestAnimationFrame(() => {
+                const bar = dock.getBoundingClientRect();
+                const focused = target.getBoundingClientRect();
+                if (bar.height > 0 && bar.top < innerHeight && focused.bottom > bar.top && focused.top < innerHeight) {
+                    target.scrollIntoView({ block: 'center', behavior: 'instant' });
+                }
+            });
+        });
         // Fixed event dates expire instead of moving forward on every visit.
         document.querySelectorAll('[data-event-end]').forEach(event => {
             if (Date.now() >= Date.parse(event.dataset.eventEnd)) {

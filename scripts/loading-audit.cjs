@@ -1,0 +1,19 @@
+/* Controlled Chromium lab measurements; not field INP or a Lighthouse score. */
+const {chromium}=require(process.env.SC_PLAYWRIGHT_MODULE||'playwright');
+const fs=require('fs');const path=require('path');const os=require('os');
+const base=process.env.SC_QA_BASE||'https://starcitizenreferrals.space';
+const output=fs.mkdtempSync(path.join(os.tmpdir(),'sc-loading-audit-'));
+(async()=>{const browser=await chromium.launch({headless:true});const rows=[];
+for(const route of ['/','/pages/guides/guide-library.html','/pages/guides/new-player-guide.html','/pages/guides/mission-budget.html']){
+ const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+ await context.addInitScript(()=>{Object.defineProperty(navigator,'doNotTrack',{get(){return '1'}});window.__lab={lcp:0,cls:0};new PerformanceObserver(list=>{for(const e of list.getEntries())window.__lab.lcp=e.startTime;}).observe({type:'largest-contentful-paint',buffered:true});new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.__lab.cls+=e.value;}).observe({type:'layout-shift',buffered:true});});
+ const page=await context.newPage();const cdp=await context.newCDPSession(page);await cdp.send('Network.enable');await cdp.send('Network.setCacheDisabled',{cacheDisabled:true});await cdp.send('Network.emulateNetworkConditions',{offline:false,latency:150,downloadThroughput:200000,uploadThroughput:93750});await cdp.send('Emulation.setCPUThrottlingRate',{rate:4});
+ const requests=new Map();cdp.on('Network.responseReceived',e=>requests.set(e.requestId,{url:e.response.url,status:e.response.status,type:e.type,mimeType:e.response.mimeType,bytes:0}));cdp.on('Network.loadingFinished',e=>{const r=requests.get(e.requestId);if(r)r.bytes=e.encodedDataLength});
+ const failed=[];page.on('requestfailed',r=>failed.push({url:r.url(),error:r.failure()?.errorText}));
+ await cdp.send('Tracing.start',{categories:'devtools.timeline,loading,blink.user_timing',transferMode:'ReturnAsStream'});
+ const response=await page.goto(base+route,{waitUntil:'load',timeout:60000});await page.evaluate(()=>Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,5000))]));await page.waitForTimeout(2000);
+ const metrics=await page.evaluate(()=>{const nav=performance.getEntriesByType('navigation')[0];return {...window.__lab,fcp:performance.getEntriesByName('first-contentful-paint')[0]?.startTime,ttfb:nav.responseStart,domContentLoaded:nav.domContentLoadedEventEnd,load:nav.loadEventEnd,overflow:document.documentElement.scrollWidth>innerWidth}});
+ const complete=new Promise(resolve=>cdp.once('Tracing.tracingComplete',resolve));await cdp.send('Tracing.end');const {stream}=await complete;const chunks=[];while(true){const part=await cdp.send('IO.read',{handle:stream});chunks.push(part.base64Encoded?Buffer.from(part.data,'base64'):Buffer.from(part.data));if(part.eof)break;}await cdp.send('IO.close',{handle:stream});const slug=route==='/'?'home':route.split('/').pop().replace('.html','');fs.writeFileSync(output+'/'+slug+'-trace.json',Buffer.concat(chunks));
+ const resources=[...requests.values()];const row={route,status:response.status(),...metrics,bytes:resources.reduce((n,r)=>n+r.bytes,0),requests:resources.length,heaviest:resources.sort((a,b)=>b.bytes-a.bytes).slice(0,6),failed};rows.push(row);console.log(JSON.stringify(row));await context.close();
+}
+await browser.close();fs.writeFileSync(output+'/report.json',JSON.stringify({base,conditions:{viewport:'390x844',latencyMs:150,downloadBytesPerSecond:200000,cpuSlowdown:4,cache:'disabled',doNotTrack:true},note:'One cold lab run per page; not field Core Web Vitals, INP, a Lighthouse score or an earnings/conversion measure.',pages:rows},null,2));console.log('Artifacts:',output);})().catch(e=>{console.error(e);process.exitCode=1});

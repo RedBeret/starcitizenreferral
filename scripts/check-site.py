@@ -58,6 +58,7 @@ class Page(HTMLParser):
             self.in_schema = False
 
 files = [ROOT / 'index.html', ROOT / 'privacy.html', ROOT / 'iae2025.html', ROOT / 'ad.html', ROOT / 'og-image.html']
+if (ROOT / '404.html').exists(): files.append(ROOT / '404.html')
 files += sorted((ROOT / 'pages').rglob('*.html'))
 pages = {}
 for path in files:
@@ -143,6 +144,21 @@ if catalog_path.exists():
         for source in entry['sources']:
             check(source['url'] in page.links, 'Official source absent from guide: ' + route)
         check('@@' not in (ROOT / route.lstrip('/')).read_text(), 'Unresolved guide template token: ' + route)
+
+extras_path=ROOT/'_content/guides/library-extras.json'
+if extras_path.exists():
+    extras=json.loads(extras_path.read_text())
+    hub='/pages/guides/guide-library.html'
+    for entry in extras:
+        route=entry['path']
+        check(route in pages,'Searchable help page missing: '+route)
+        check(route in pages[hub].library_cards,'Help page absent from searchable cards: '+route)
+        if route in pages:
+            check(not pages[route].noindex and not pages[route].refresh,'Searchable help page is not indexable: '+route)
+if '/404.html' in pages:
+    check(pages['/404.html'].noindex,'Recovery page must be noindex')
+    check(DOMAIN+'/404.html' not in seen,'Recovery page must not enter sitemap')
+    check('/pages/guides/guide-library.html' in pages['/404.html'].links,'Recovery page lacks guide navigation')
 
 api = json.loads((ROOT / 'assets/api.json').read_text())
 ref = api['referral_codes'][0]
