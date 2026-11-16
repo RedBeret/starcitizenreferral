@@ -1,0 +1,28 @@
+{
+  "reviewed": "2026-11-15",
+  "owner": "Cloud Imperium Rights LLC / Cloud Imperium Rights Ltd.",
+  "campaign_page": "https://robertsspaceindustries.com/en/comm-link/transmission/20449-RSI-Aurora-Mk-II",
+  "images": [
+    {
+      "files": [
+        "aurora-scene.webp",
+        "aurora-scene-960.webp"
+      ],
+      "source": "https://robertsspaceindustries.com/i/06b623a5aa91f48b4d8451631c0c2d901fade802/resize(3000,1286,cover,ADdPNihJzmPbNuTnFsH1DqUeqBRpXdSXVVtgJTyDDgscGKrzJuoFjResf1JAsBs8suuP4sdcRySoWTnB79of3N4BG)/85/sc-rsi-auroramkii-fallback-image.webp"
+    },
+    {
+      "files": [
+        "aurora-flight.webp"
+      ],
+      "source": "https://robertsspaceindustries.com/i/2532e18cc832ac99358becf5f23bf4ecd018b6a7/resize(3000,1210,cover,crop(3450,1391,0,0,ADdPNihJzmPbNuTnFsH1DqUeqBRpXdSXVVtgJTyDDgscGKrzJuoFjResjHpCqZsSKhpgHdpsnYqtThiAN4KZJXkRk))/85/sc-rsi-auroramkii-trailer-copy.webp"
+    },
+    {
+      "files": [
+        "rsi-referral-field.webp"
+      ],
+      "source": "https://www.robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY",
+      "description": "Cropped screenshot of public signup referral panel, captured November 15, 2026; no account created or private information supplied."
+    }
+  ],
+  "note": "Official artwork shown on an independent fan site. Optimization/cropping for presentation; no claim of ownership. Research screenshots of other sites are not production assets."
+}

@@ -1,603 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Citizen New Player Guide 2026 - Complete Beginner Tutorial | Get 50,000 UEC Free</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="⭐ Complete Star Citizen beginner guide 2026. Learn how to start, best ships, what to buy first with 50,000 UEC bonus. Use code STAR-9L66-ZTDY for free credits!">
-    <meta name="keywords" content="star citizen new player guide 2026, star citizen beginner tutorial, star citizen how to start, star citizen first steps, star citizen starter guide, star citizen tips for beginners, star citizen 50000 uec guide, star citizen what to buy first, star citizen starter ships 2026">
-    <meta name="author" content="Star Citizen Referrals">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Star Citizen New Player Guide 2026 - Start with 50,000 UEC Free">
-    <meta property="og:description" content="Complete beginner's guide to Star Citizen. Learn everything you need to start your journey with 50,000 UEC bonus!">
-    <meta property="og:image" content="https://starcitizenreferrals.space/og-image.jpg">
-    <meta property="og:url" content="https://starcitizenreferrals.space/pages/guides/new-player-guide.html">
-    <meta property="og:type" content="article">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://starcitizenreferrals.space/pages/guides/new-player-guide.html">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../../favicon.png">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GGWQK594R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0GGWQK594R');
-    </script>
-
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "@id": "https://starcitizenreferrals.space/pages/guides/new-player-guide.html#guide",
-        "name": "How to Start Playing Star Citizen in 2026",
-        "description": "Complete guide for new Star Citizen players including how to get 50,000 UEC free, choosing starter ships, and what to do first",
-        "image": "https://starcitizenreferrals.space/og-image.jpg",
-        "supply": [
-            {
-                "@type": "HowToSupply",
-                "name": "Star Citizen Account with Referral Code STAR-9L66-ZTDY"
-            },
-            {
-                "@type": "HowToSupply",
-                "name": "Game Package (minimum $45)"
-            }
-        ],
-        "step": [
-            {
-                "@type": "HowToStep",
-                "name": "Create Account with Referral Code",
-                "text": "Sign up at Roberts Space Industries using referral code STAR-9L66-ZTDY to get 50,000 UEC bonus",
-                "url": "https://robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY"
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Choose Game Package",
-                "text": "Select a starter package - Aurora MR or Mustang Alpha are great choices"
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Download and Install",
-                "text": "Download the RSI Launcher and install Star Citizen (requires 100GB+ space)"
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Complete Tutorial",
-                "text": "Play through the in-game tutorial to learn basic controls"
-            },
-            {
-                "@type": "HowToStep",
-                "name": "Start at Your Home Location",
-                "text": "Choose your starting location and begin exploring the universe"
-            }
-        ],
-        "totalTime": "PT2H",
-        "estimatedCost": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": "45"
-        }
-    }
-    </script>
-
-    <style>
-        .guide-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .guide-section {
-            background: var(--bg-card);
-            border-radius: 15px;
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        .guide-section h2 {
-            color: var(--primary-color);
-            font-family: 'Orbitron', monospace;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .guide-section h3 {
-            color: var(--accent-color);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .step-list {
-            counter-reset: step-counter;
-            list-style: none;
-            padding: 0;
-        }
-        .step-list li {
-            counter-increment: step-counter;
-            position: relative;
-            padding-left: 3rem;
-            margin-bottom: 1.5rem;
-        }
-        .step-list li::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: var(--primary-color);
-            color: var(--bg-dark);
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-        .ship-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        .ship-card {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 1.5rem;
-        }
-        .ship-card h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        .price-tag {
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-        .tip-box {
-            background: rgba(0, 200, 255, 0.1);
-            border-left: 4px solid var(--primary-color);
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0 10px 10px 0;
-        }
-        .warning-box {
-            background: rgba(255, 100, 100, 0.1);
-            border-left: 4px solid #ff6464;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0 10px 10px 0;
-        }
-        .checklist {
-            list-style: none;
-            padding: 0;
-        }
-        .checklist li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-        .checklist li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--text-secondary);
-        }
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08111b"><title>Star Citizen New Player Guide | Account to First Flight</title>
+<meta name="description" content="Start Star Citizen with a practical checklist: PC requirements, RSI account, referral code, game packages, installation, and first-flight resources.">
+<meta name="author" content="PatchOps">
+<link rel="canonical" href="https://starcitizenreferrals.space/pages/guides/new-player-guide.html">
+<link rel="icon" href="/favicon.png" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Star Citizen New Player Guide | Account to First Flight">
+<meta property="og:description" content="Start Star Citizen with a practical checklist: PC requirements, RSI account, referral code, game packages, installation, and first-flight resources.">
+<meta property="og:url" content="https://starcitizenreferrals.space/pages/guides/new-player-guide.html">
+<meta property="og:image" content="https://starcitizenreferrals.space/og-image.jpg">
+<meta property="og:image:alt" content="Star Citizen referral code STAR-9L66-ZTDY — 50,000 UEC standard bonus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Star Citizen New Player Guide | Account to First Flight">
+<meta name="twitter:description" content="Start Star Citizen with a practical checklist: PC requirements, RSI account, referral code, game packages, installation, and first-flight resources.">
+<meta name="twitter:image" content="https://starcitizenreferrals.space/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=20261115">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')==='light'?'light':'dark'}catch{}
+</script>
+<script src="/assets/js/script.js?v=20261115" defer>
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://starcitizenreferrals.space/"}, {"@type": "ListItem", "position": 2, "name": "Your first steps in Star Citizen.", "item": "https://starcitizenreferrals.space/pages/guides/new-player-guide.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Your first steps in Star Citizen.", "description": "Start Star Citizen with a practical checklist: PC requirements, RSI account, referral code, game packages, installation, and first-flight resources.", "dateModified": "2026-11-15", "author": {"@type": "Person", "name": "PatchOps", "url": "https://robertsspaceindustries.com/en/citizens/PatchOps"}, "mainEntityOfPage": "https://starcitizenreferrals.space/pages/guides/new-player-guide.html", "image": "https://starcitizenreferrals.space/og-image.jpg"}
+</script>
 </head>
-<body>
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-
-    <header>
-        <nav>
-            <div class="logo">
-                <span class="logo-text">⭐ STAR CITIZEN REFERRALS</span>
-            </div>
-            <div class="nav-links">
-                <span class="beta-badge">🚧 Beta</span>
-                <a href="/" style="color: var(--primary-color); text-decoration: none; margin-right: 1rem;">Get Code</a>
-                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="guide-content">
-            <div class="breadcrumb">
-                <a href="/">Home</a>
-                <span>›</span>
-                <span>New Player Guide</span>
-            </div>
-
-            <section class="hero">
-                <h1>🚀 Star Citizen New Player Guide 2026</h1>
-                <p class="subtitle">Everything you need to start your journey in the verse - plus get <strong>50,000 UEC FREE!</strong></p>
-
-                <div class="referral-container">
-                    <div class="referral-box">
-                        <p class="referral-label">⚡ Quick Start: Get Your 50,000 UEC Bonus</p>
-                        <div class="code-display">
-                            <input type="text" id="referral-code" readonly value="STAR-9L66-ZTDY">
-                            <button id="copy-btn" class="btn-copy">
-                                <span class="copy-icon">📋</span>
-                                <span class="copy-text">Copy Code</span>
-                            </button>
-                        </div>
-                        <a href="https://robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" class="btn-enlist" target="_blank" rel="noopener noreferrer">
-                            <span>🚀</span> Sign Up with Bonus
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <div class="guide-section">
-                <h2><span>📖</span> Table of Contents</h2>
-                <ul>
-                    <li><a href="#getting-started">Getting Started - Account & Referral Code</a></li>
-                    <li><a href="#game-packages">Choosing Your First Game Package</a></li>
-                    <li><a href="#starter-ships">Best Starter Ships Comparison</a></li>
-                    <li><a href="#first-steps">Your First Steps in the Verse</a></li>
-                    <li><a href="#spending-uec">How to Spend Your 50,000 UEC Wisely</a></li>
-                    <li><a href="#money-making">Best Money Making Methods for Beginners</a></li>
-                    <li><a href="#tips">Essential Tips & Tricks</a></li>
-                    <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
-                </ul>
-            </div>
-
-            <div class="guide-section" id="getting-started">
-                <h2><span>🎮</span> Getting Started - Account Creation</h2>
-
-                <div class="tip-box">
-                    <strong>💡 Pro Tip:</strong> Always use a referral code when creating your account! You get 50,000 UEC free, and you have a 24-hour grace period if you forget.
-                </div>
-
-                <ol class="step-list">
-                    <li>
-                        <strong>Visit the Official Site</strong><br>
-                        Go to <a href="https://robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" target="_blank" rel="noopener noreferrer">Roberts Space Industries</a> (this link includes the referral code)
-                    </li>
-                    <li>
-                        <strong>Create Your Account</strong><br>
-                        Enter your email, create a password, and choose your handle (username)
-                    </li>
-                    <li>
-                        <strong>Enter Referral Code</strong><br>
-                        Use code <strong>STAR-9L66-ZTDY</strong> in the referral field for 50,000 UEC bonus
-                    </li>
-                    <li>
-                        <strong>Verify Your Email</strong><br>
-                        Check your inbox and click the verification link
-                    </li>
-                    <li>
-                        <strong>Set Up Two-Factor Authentication</strong><br>
-                        Highly recommended to protect your account and purchases
-                    </li>
-                </ol>
-
-                <div class="warning-box">
-                    <strong>⚠️ Important:</strong> If you forgot to add the referral code during signup, you have 24 hours to add it in your account settings!
-                </div>
-            </div>
-
-            <div class="guide-section" id="game-packages">
-                <h2><span>📦</span> Choosing Your First Game Package</h2>
-
-                <p>You need a game package to play Star Citizen. Here are the most popular starter options:</p>
-
-                <div class="ship-grid">
-                    <div class="ship-card">
-                        <h4>Mustang Alpha Starter Pack</h4>
-                        <p class="price-tag">$45 USD</p>
-                        <ul>
-                            <li>✓ Most affordable entry</li>
-                            <li>✓ Good combat capability</li>
-                            <li>✓ Agile and fast</li>
-                            <li>✓ Always available</li>
-                        </ul>
-                        <p><strong>Best for:</strong> Budget-conscious new players</p>
-                        <div class="tip-box" style="margin-top: 0.5rem; font-size: 0.85rem;">
-                            <small><strong>Note:</strong> Aurora MR was discontinued in May 2025</small>
-                        </div>
-                    </div>
-
-                    <div class="ship-card" style="border: 2px solid var(--accent-color);">
-                        <div style="background: var(--accent-color); color: var(--bg-dark); padding: 0.25rem 0.5rem; border-radius: 5px; font-size: 0.8rem; font-weight: bold; text-align: center; margin-bottom: 0.5rem;">⭐ RECOMMENDED</div>
-                        <h4>Avenger Titan Starter Pack</h4>
-                        <p class="price-tag">$70 USD</p>
-                        <ul>
-                            <li>✓ #1 rated starter ship</li>
-                            <li>✓ Bed + cargo space</li>
-                            <li>✓ Excellent firepower</li>
-                            <li>✓ Can do all mission types</li>
-                        </ul>
-                        <p><strong>Best for:</strong> Players wanting the best all-around start</p>
-                    </div>
-
-                    <div class="ship-card">
-                        <h4>Cutlass Black Pack</h4>
-                        <p class="price-tag">$115 USD</p>
-                        <ul>
-                            <li>✓ Multi-crew capable</li>
-                            <li>✓ Large cargo hold</li>
-                            <li>✓ Versatile combat ship</li>
-                            <li>✓ Great for groups</li>
-                        </ul>
-                        <p><strong>Best for:</strong> Players who want to start big</p>
-                    </div>
-
-                    <div class="ship-card">
-                        <h4>Nomad Starter Pack</h4>
-                        <p class="price-tag">$95 USD</p>
-                        <ul>
-                            <li>✓ Excellent cargo capacity</li>
-                            <li>✓ Very fast for its size</li>
-                            <li>✓ Unique design</li>
-                            <li>✓ Great for trading</li>
-                        </ul>
-                        <p><strong>Best for:</strong> Cargo and trading focus</p>
-                    </div>
-                </div>
-
-                <div class="tip-box">
-                    <strong>💰 Money Saving Tip:</strong> You can always upgrade your ship later using the CCU (Cross-Chassis Upgrade) system. Start with Mustang Alpha and upgrade when ready! During IAE each November, watch for Warbond CCU discounts!
-                </div>
-            </div>
-
-            <div class="guide-section" id="first-steps">
-                <h2><span>🌟</span> Your First Steps in Star Citizen</h2>
-
-                <h3>After Installing the Game:</h3>
-                <ol class="step-list">
-                    <li>
-                        <strong>Choose Your Starting Location</strong><br>
-                        Area 18 (ArcCorp) - Industrial city, good for missions<br>
-                        New Babbage (microTech) - Beautiful snowy planet<br>
-                        Lorville (Hurston) - Large city with varied missions<br>
-                        Orison (Crusader) - Cloud city, stunning views
-                    </li>
-                    <li>
-                        <strong>Wake Up in Your Hab</strong><br>
-                        Take time to learn movement controls<br>
-                        Press F to interact with objects<br>
-                        Hold F for interaction wheel
-                    </li>
-                    <li>
-                        <strong>Find the Spaceport</strong><br>
-                        Follow signs or ask in chat (F12)<br>
-                        Take the train/shuttle to the spaceport
-                    </li>
-                    <li>
-                        <strong>Spawn Your Ship</strong><br>
-                        Use ASOP terminals at the spaceport<br>
-                        Request your ship and note the hangar/pad number
-                    </li>
-                    <li>
-                        <strong>Take Your First Flight</strong><br>
-                        Enter ship (hold F, select "Open" then "Enter")<br>
-                        Press R to flight ready<br>
-                        Hold Space to take off
-                    </li>
-                </ol>
-
-                <h3>Essential Keybinds to Know:</h3>
-                <ul class="checklist">
-                    <li><strong>F</strong> - Interact / Inner Thought</li>
-                    <li><strong>R</strong> - Flight Ready</li>
-                    <li><strong>Space</strong> - Strafe Up / Takeoff</li>
-                    <li><strong>Ctrl</strong> - Strafe Down / Land</li>
-                    <li><strong>B</strong> - Quantum Travel</li>
-                    <li><strong>F1</strong> - MobiGlas (Map/Missions)</li>
-                    <li><strong>F12</strong> - Chat Window</li>
-                    <li><strong>Tab</strong> - Scan Mode</li>
-                </ul>
-            </div>
-
-            <div class="guide-section" id="spending-uec">
-                <h2><span>💰</span> Understanding Your 50,000 UEC Bonus</h2>
-
-                <div class="warning-box">
-                    <strong>⚡ Important Update (2026):</strong> Your 50,000 UEC referral bonus will be available when Star Citizen officially launches. During the current alpha testing phase, you'll start with 20,000 aUEC (alpha credits) to use for gear and equipment. The bonus UEC is reserved for the final game!
-                </div>
-
-                <p>Here's the smartest way to spend your starting aUEC during alpha testing:</p>
-
-                <h3>Priority 1: Essential Gear (8,000 aUEC)</h3>
-                <ul class="checklist">
-                    <li><strong>Undersuit</strong> (3,000-5,000 aUEC) - Novikov or Odyssey II for protection</li>
-                    <li><strong>Helmet</strong> (2,000-3,000 aUEC) - Match to your suit</li>
-                    <li><strong>Backpack</strong> (3,000-5,000 aUEC) - MacFlex Core for extra cargo capacity</li>
-                </ul>
-
-                <h3>Priority 2: Tools & Weapons (8,000 aUEC)</h3>
-                <ul class="checklist">
-                    <li><strong>MultiTool</strong> (2,000 aUEC) - Pyro RYT essential for mining & tractor beam</li>
-                    <li><strong>Sidearm</strong> (2,000-3,000 aUEC) - LH86 or Arclight pistol</li>
-                    <li><strong>Primary Weapon</strong> (5,000-7,000 aUEC) - P4-AR rifle for FPS missions</li>
-                    <li><strong>Ammo & Magazines</strong> (1,000 aUEC) - Stock up</li>
-                </ul>
-
-                <h3>Priority 3: Medical Supplies (2,000 aUEC)</h3>
-                <ul class="checklist">
-                    <li><strong>MedPens</strong> (50 aUEC each) - Buy 20-30 for emergencies</li>
-                    <li><strong>Med Gun</strong> (Optional) - ParaMed for serious injuries</li>
-                </ul>
-
-                <h3>Keep Reserve Funds (2,000 aUEC)</h3>
-                <p>Save emergency funds for:</p>
-                <ul>
-                    <li>Ship insurance claims (currently free in alpha)</li>
-                    <li>Fuel and repairs</li>
-                    <li>Replacing lost gear after death</li>
-                    <li>Initial cargo for trading</li>
-                </ul>
-
-                <div class="tip-box">
-                    <strong>💡 Pro Tip:</strong> During alpha, death and bugs may wipe your gear. Always keep backup equipment stored in your ship! Buy essential items at major cities like Area 18 or Lorville for better prices.
-                </div>
-            </div>
-
-            <div class="guide-section" id="money-making">
-                <h2><span>💵</span> Best Money Making for Beginners</h2>
-
-                <h3>1. Delivery Missions (5,000-15,000 UEC)</h3>
-                <p>Perfect for learning to fly and navigate. Pick up packages and deliver them to different locations.</p>
-                <ul>
-                    <li>✓ Low risk</li>
-                    <li>✓ Good for learning locations</li>
-                    <li>✓ No combat required</li>
-                </ul>
-
-                <h3>2. Bounty Hunting (10,000-25,000 UEC)</h3>
-                <p>Start with "Very Low Risk Targets" and work your way up.</p>
-                <ul>
-                    <li>✓ Good money</li>
-                    <li>✓ Improves combat skills</li>
-                    <li>✗ Risk of ship destruction</li>
-                </ul>
-
-                <h3>3. Mining (Variable)</h3>
-                <p>Rent a ROC mining vehicle (1,400 UEC/day) and mine gems on moons.</p>
-                <ul>
-                    <li>✓ Peaceful gameplay</li>
-                    <li>✓ Can be very profitable</li>
-                    <li>✗ Requires initial investment</li>
-                </ul>
-
-                <h3>4. Investigation Missions (7,000-12,000 UEC)</h3>
-                <p>Find missing people or investigate crash sites.</p>
-                <ul>
-                    <li>✓ Interesting gameplay</li>
-                    <li>✓ Explores game lore</li>
-                    <li>✗ Can be time consuming</li>
-                </ul>
-            </div>
-
-            <div class="guide-section" id="tips">
-                <h2><span>🎯</span> Essential Tips for New Players</h2>
-
-                <ul class="checklist">
-                    <li><strong>Join an Organization:</strong> Find a group to play with for better experience</li>
-                    <li><strong>Ask for Help:</strong> The community is very helpful in global chat</li>
-                    <li><strong>Set Spawn Point:</strong> Always set your regeneration point at stations</li>
-                    <li><strong>Insurance is Free:</strong> Ship insurance claims cost nothing currently</li>
-                    <li><strong>Store Gear in Ships:</strong> Keep spare equipment in your ship's inventory</li>
-                    <li><strong>Learn to EVA:</strong> Practice zero-G movement in safe areas</li>
-                    <li><strong>Use Practice Arena:</strong> Arena Commander for combat practice</li>
-                    <li><strong>Take Screenshots:</strong> Print Screen key - the game is beautiful!</li>
-                </ul>
-            </div>
-
-            <div class="guide-section" id="mistakes">
-                <h2><span>❌</span> Common Mistakes to Avoid</h2>
-
-                <div class="warning-box">
-                    <strong>Avoid these rookie mistakes:</strong>
-                </div>
-
-                <ul>
-                    <li>❌ <strong>Not using a referral code</strong> - You miss out on 50,000 UEC!</li>
-                    <li>❌ <strong>Forgetting to request landing</strong> - You'll get a crime stat</li>
-                    <li>❌ <strong>Not setting spawn point</strong> - You'll respawn far away</li>
-                    <li>❌ <strong>Ramming space stations</strong> - Instant death and crime stat</li>
-                    <li>❌ <strong>Ignoring fuel levels</strong> - Getting stranded is not fun</li>
-                    <li>❌ <strong>Fighting security</strong> - They will destroy you</li>
-                    <li>❌ <strong>Quantum traveling into planets</strong> - Always aim for markers</li>
-                    <li>❌ <strong>Not insuring ship upgrades</strong> - You'll lose them on claim</li>
-                </ul>
-            </div>
-
-            <div class="guide-section">
-                <h2><span>🚀</span> Ready to Start Your Adventure?</h2>
-                <p>Don't forget to use referral code <strong>STAR-9L66-ZTDY</strong> for your 50,000 UEC bonus!</p>
-
-                <div class="referral-container">
-                    <div class="referral-box">
-                        <a href="https://robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" class="btn-enlist" target="_blank" rel="noopener noreferrer">
-                            <span>🚀</span> Create Account with 50,000 UEC Bonus
-                        </a>
-                    </div>
-                </div>
-
-                <div class="tip-box" style="margin-top: 2rem;">
-                    <strong>Need More Help?</strong> Check out our other guides:
-                    <ul style="margin-top: 0.5rem;">
-                        <li><a href="/pages/guides/50000-uec-bonus.html">Maximizing Your 50,000 UEC Bonus</a></li>
-                        <li><a href="/pages/monthly/november-2025-code.html">November 2025 IAE Anniversary Sale</a></li>
-                        <li><a href="/">Get Your Referral Code</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>⚠️ Community-run site • Not affiliated with Cloud Imperium Games</p>
-            <p class="small-text">Star Citizen® and Roberts Space Industries® are registered trademarks of Cloud Imperium Rights LLC</p>
-            <div class="footer-links">
-                <a href="../../privacy.html">Privacy</a>
-                <span>•</span>
-                <a href="/">Home</a>
-                <span>•</span>
-                <a href="https://robertsspaceindustries.com" target="_blank" rel="noopener noreferrer">Official Star Citizen</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Simple copy functionality
-        document.getElementById('copy-btn').addEventListener('click', function() {
-            const code = document.getElementById('referral-code');
-            code.select();
-            document.execCommand('copy');
-            this.querySelector('.copy-text').textContent = 'Copied!';
-            setTimeout(() => {
-                this.querySelector('.copy-text').textContent = 'Copy Code';
-            }, 2000);
-        });
-
-        // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.body.setAttribute('data-theme', savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-        });
-    </script>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head">
+<div class="shell head-inner"><a class="brand" href="/" aria-label="Star Citizen Referrals home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3 35 12v17L20 37 5 29V12Z" stroke="currentColor" stroke-width="1.4"/><path d="m12 27 8-16 8 16-8-4Z" stroke="currentColor" stroke-width="1.6"/><path d="M3 20h8m18 0h8" stroke="currentColor"/></svg><span><span class="brand-name">STAR CITIZEN REFERRALS</span><span class="brand-sub">An independent pilot’s field guide</span></span></a>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="/pages/guides/new-player-guide.html" aria-current="page">Start here</a><a href="/#guides">Guides</a><a href="/pages/monthly/current-month.html">Events & updates</a>
+</nav>
+<div class="head-actions"><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" class="button small" data-referral-link data-placement="header" target="_blank" rel="sponsored noopener noreferrer"><span>Get the bonus</span><span class="arrow" aria-hidden="true">↗</span></a><button class="icon-button" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 3a7 7 0 0 1 0 14Z" fill="currentColor"/></svg></button><button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</div>
+</div>
+</header>
+<main id="main">
+<div class="shell">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Your first steps in Star Citizen.</span>
+</nav>
+<header class="article-head">
+<p class="eyebrow">The pilot’s field guide
+</p>
+<h1>Your first steps in Star Citizen.
+</h1>
+<p class="article-lede">A practical route from creating an account to taking your first flight. Start small, check the current requirements, and leave room to explore.
+</p>
+<div class="byline"><span>By <a href="https://robertsspaceindustries.com/en/citizens/PatchOps" target="_blank" rel="noopener noreferrer">PatchOps</a></span><span>Reviewed <time datetime="2026-11-15">15 November 2026</time></span><span>Independent community guide</span>
+</div>
+</header>
+<div class="article-layout">
+<article class="article-body">
+<nav class="toc" aria-label="On this page"><strong>On this page</strong>
+<ul>
+<li><a href="#before">Before you spend anything</a>
+</li>
+<li><a href="#account">Create your RSI account</a>
+</li>
+<li><a href="#package">Understand game access</a>
+</li>
+<li><a href="#install">Install and take your first steps</a>
+</li>
+</ul>
+</nav>
+<h2 id="before">Before you spend anything
+</h2>
+<p>Star Citizen is still in alpha development. Expect bugs and changing systems. Start by reading the <a href="/pages/monthly/current-month.html">current event and release notes</a>; a Free Fly can let you try the game before committing to a package.
+</p>
+<p>Check your PC against <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360042417374-Star-Citizen-Minimum-System-Requirements" target="_blank" rel="noopener noreferrer">RSI’s current requirements</a>. Its published baseline includes 16 GB of RAM and 150+ GB of SSD storage; the recommendation is 32 GB of RAM. The full CPU, graphics and operating-system requirements matter too.
+</p>
+<h2 id="account">Create your RSI account
+</h2>
+<p>Open the <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" target="_blank" rel="noopener noreferrer">official signup form</a> and check that the referral field shows <code>STAR-9L66-ZTDY</code>. Complete account creation on RSI. This site never collects your password or payment information.
+</p>
+<p>The normal referral benefit is <strong>50,000 UEC</strong>. If you omitted a code, RSI allows 24 hours to add one in the account summary. <a href="/pages/guides/referral-codes.html">Read the eligibility rules</a> before choosing a code; it cannot be replaced once associated with your account.
+</p>
+<figure><img src="/assets/images/flight/aurora-flight.webp" alt="RSI Aurora Mk II spacecraft above a planet" width="1000" height="403" loading="lazy">
+<figcaption>Made by the community · Image © Cloud Imperium Games. <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20449-RSI-Aurora-Mk-II" target="_blank" rel="noopener noreferrer">Official Aurora Mk II campaign ↗</a>
+</figcaption>
+</figure>
+<h2 id="package">Understand game access
+</h2>
+<p>Outside a Free Fly, you need a <strong>game package</strong> to play. A standalone ship is a different product and does not by itself include game access. Look for “Star Citizen Digital Download” in the package contents.
+</p>
+<p>The current <a href="https://robertsspaceindustries.com/en/pledge/Packages/Star-Citizen-First-Flight-Pack" target="_blank" rel="noopener noreferrer">First Flight Pack</a> is built around the Aurora Mk II. Check the live listing for its price, region, inclusions and any temporary loaners. <a href="/pages/guides/starter-pack-guide.html">Use our game-package checklist</a> rather than choosing by the biggest ship.
+</p>
+<h2 id="install">Install and take your first steps
+</h2>
+<ol>
+<li>Use the official RSI launcher and install the game on an SSD with sufficient free space.
+</li>
+<li>Choose the <strong>LIVE</strong> environment for the public game. PTU builds have separate access rules and downloads.
+</li>
+<li>Follow the current in-game onboarding and use RSI’s Welcome Hub for flight guidance.
+</li>
+<li>Start with a short session: learn your surroundings, reach the spaceport, retrieve your ship and practise a basic flight.
+</li>
+</ol>
+<p>When a control or mission behaves differently from a guide, check the current patch and in-game prompts. Early development means old instructions can become misleading.
+</p>
+<div class="callout">
+<p><strong>You do not need to learn alone.</strong> Use the official Welcome Hub and Guide System to find experienced players who can help with your first session.
+</p>
+</div>
+<section class="source-list" aria-label="Official sources">
+<h2>Sources & further reading
+</h2>
+<ul>
+<li><a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360042417374-Star-Citizen-Minimum-System-Requirements" target="_blank" rel="noopener noreferrer">RSI: minimum and recommended PC requirements</a>
+</li>
+<li><a href="https://support.robertsspaceindustries.com/hc/en-us/articles/115013102847-Referral-Program-FAQ" target="_blank" rel="noopener noreferrer">RSI: referral program FAQ</a>
+</li>
+<li><a href="https://robertsspaceindustries.com/en/pledge/Packages/Star-Citizen-First-Flight-Pack" target="_blank" rel="noopener noreferrer">RSI: current First Flight Pack</a>
+</li>
+<li><a href="https://robertsspaceindustries.com/en/playstarcitizen" target="_blank" rel="noopener noreferrer">RSI: Welcome Hub</a>
+</li>
+</ul>
+</section>
+</article>
+<aside class="article-side" aria-label="Referral and related guides">
+<div class="claim-panel">
+<div class="claim-label"><span>Your referral code</span><span class="bonus-label">50,000 UEC</span>
+</div>
+<div class="code-row"><output class="referral-code" aria-label="Referral code">STAR-9L66-ZTDY</output><button class="copy-button" data-copy-code data-placement="sidebar" aria-label="Copy referral code STAR-9L66-ZTDY"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="6" y="6" width="10" height="11" rx="1" stroke="currentColor"/><path d="M13 4V2H3v11h1" stroke="currentColor"/></svg><span>Copy</span></button>
+</div><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-9L66-ZTDY" class="button " data-referral-link data-placement="sidebar" target="_blank" rel="sponsored noopener noreferrer"><span>Create account on RSI</span><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="claim-footnote">Opens the official RSI signup page with the code prefilled. Check the referral field before you submit.
+</p>
+</div>
+<nav class="side-links" aria-label="Related guides"><strong>Continue exploring</strong><a href="/pages/guides/new-player-guide.html">New player guide →</a><a href="/pages/guides/starter-pack-guide.html">Choosing a game package →</a><a href="/pages/guides/50000-uec-bonus.html">Understanding the UEC bonus →</a><a href="/pages/monthly/current-month.html">Current events & Alpha 5.0 →</a>
+</nav>
+</aside>
+</div>
+</div>
+</main>
+<footer class="site-foot">
+<div class="shell">
+<div class="footer-top">
+<div class="footer-about"><a class="brand" href="/" aria-label="Star Citizen Referrals home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3 35 12v17L20 37 5 29V12Z" stroke="currentColor" stroke-width="1.4"/><path d="m12 27 8-16 8 16-8-4Z" stroke="currentColor" stroke-width="1.6"/><path d="M3 20h8m18 0h8" stroke="currentColor"/></svg><span><span class="brand-name">STAR CITIZEN REFERRALS</span><span class="brand-sub">An independent pilot’s field guide</span></span></a>
+<p>Made by <a href="https://robertsspaceindustries.com/en/citizens/PatchOps" target="_blank" rel="noopener noreferrer">PatchOps</a>, a fellow pilot. Practical help for your first account, your first ship, and your first flight.
+</p>
+<p><strong>31 recruited citizens · 53 prospects</strong><br>Owner-reported snapshot · 15 November 2026. <a href="/pages/info/about.html">About the figures →</a>
+</p>
+</div>
+<div class="footer-links">
+<div><strong>Field guide</strong><a href="/pages/guides/new-player-guide.html">Getting started</a><a href="/pages/guides/starter-pack-guide.html">Game packages</a><a href="/pages/guides/50000-uec-bonus.html">The 50,000 UEC bonus</a><a href="/pages/monthly/current-month.html">Events & updates</a>
+</div>
+<div><strong>About this site</strong><a href="/pages/info/about.html">About & disclosure</a><a href="/pages/tools/verify.html">Check the referral link</a><a href="/pages/tools/ai.html">Site data & sources</a><a href="/privacy.html">Privacy</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>This is an unofficial Star Citizen fan site, not affiliated with the Cloud Imperium group of companies. Content belongs to its respective owners. <a href="https://robertsspaceindustries.com/en/" target="_blank" rel="noopener noreferrer">Official Star Citizen website ↗</a>
+</p>
+<p>Referral disclosure: using STAR-9L66-ZTDY supports PatchOps through RSI’s in-game recruitment rewards. Any valid referral code provides the same standard new-account bonus.
+</p>
+<p>Star Citizen and Roberts Space Industries are trademarks of Cloud Imperium Rights LLC. Game imagery © Cloud Imperium Rights LLC / Cloud Imperium Rights Ltd. <a href="/assets/images/flight/credits.json" target="_blank" rel="noopener noreferrer">Image sources</a> · Content reviewed <time datetime="2026-11-15">15 November 2026</time>.
+</p>
+</div>
+</div>
+</footer>
+<div class="toast" id="site-status" role="status" aria-live="polite" aria-atomic="true" hidden>
+</div>
 </body>
 </html>
