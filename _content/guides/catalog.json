@@ -134,8 +134,8 @@
       }
     ],
     "related": [
-      "first-flight-new-babbage",
-      "quantum-travel",
+      "find-a-player-guide",
+      "flight-checklist",
       "beginner-missions"
     ],
     "published": "2026-11-15"
@@ -268,9 +268,9 @@
       }
     ],
     "related": [
-      "first-flight-new-babbage",
-      "quantum-travel",
-      "landing-guide"
+      "essential-ship-controls",
+      "flight-checklist",
+      "glossary"
     ]
   },
   {
@@ -372,9 +372,9 @@
       }
     ],
     "related": [
+      "choosing-a-ship",
       "buying-ships-auec",
-      "beginner-missions",
-      "free-fly"
+      "currencies"
     ]
   },
   {
@@ -432,6 +432,218 @@
     "related": [
       "first-flight-new-babbage",
       "inventory-and-equipment",
+      "landing-guide"
+    ]
+  },
+  {
+    "slug": "glossary",
+    "group": "Core concepts",
+    "title": "Star Citizen Glossary | Common Terms & Abbreviations",
+    "heading": "Star Citizen terms, in plain language.",
+    "description": "Understand common Star Citizen terms: PU, PTU, ASOP, ATC, HUD, aUEC, UEC and more, with links to practical guides.",
+    "lede": "Look up the language players use, then follow the relevant walkthrough when you are ready to act.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360025028633-Getting-Started-in-the-Verse",
+        "title": "RSI: first-flight preparation and terminology"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013195927-Public-Test-Universe-PTU-FAQ",
+        "title": "RSI: LIVE and test environments"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360006492734-Currencies-of-Star-Citizen-UEC-aUEC-REC-Store-Credit",
+        "title": "RSI: aUEC, UEC, REC and store credit"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013194987-Pledges-FAQ",
+        "title": "RSI: game packages and standalone pledges"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360038526034-Guide-System",
+        "title": "RSI: finding a volunteer player guide"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115009643527-Bug-Reports-Using-the-Issue-Council",
+        "title": "RSI: bug reports, evidence and contributions"
+      }
+    ],
+    "related": [
+      "currencies",
+      "find-a-player-guide",
+      "flight-checklist"
+    ]
+  },
+  {
+    "slug": "currencies",
+    "group": "Core concepts",
+    "title": "Star Citizen Currencies | aUEC vs UEC, REC & Store Credit",
+    "heading": "Understand Star Citizen’s different currencies.",
+    "description": "Compare aUEC, UEC, REC and store credit, understand where each balance belongs, and work through common currency mix-ups.",
+    "lede": "Begin with the currency label and where you are using it. That distinction is more useful than comparing two unexplained numbers.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360006492734-Currencies-of-Star-Citizen-UEC-aUEC-REC-Store-Credit",
+        "title": "RSI: aUEC, UEC, REC and store credit"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013172187-Renting-Ships-Equipment",
+        "title": "RSI: rentals and their restrictions"
+      }
+    ],
+    "related": [
+      "buying-ships-auec",
+      "renting-ships",
+      "glossary"
+    ]
+  },
+  {
+    "slug": "choosing-a-ship",
+    "group": "Ships & services",
+    "title": "How to Choose a Star Citizen Ship | Roles, Crew & Tasks",
+    "heading": "Choose a ship that fits the way you play.",
+    "description": "Compare Star Citizen ships by purpose, crew, access and session length, using a practical trial checklist instead of a changing ship tier list.",
+    "lede": "A reusable way to compare ships around your own activities, without depending on a current best-in-class ranking.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360002696273-Ships-and-Vehicles",
+        "title": "RSI: ship purposes and equipment"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013172187-Renting-Ships-Equipment",
+        "title": "RSI: rentals and their restrictions"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013194987-Pledges-FAQ",
+        "title": "RSI: game packages and standalone pledges"
+      }
+    ],
+    "related": [
+      "renting-ships",
+      "buying-ships-auec",
+      "flight-checklist"
+    ]
+  },
+  {
+    "slug": "find-a-player-guide",
+    "group": "Learning & community",
+    "title": "Star Citizen Guide System | Find a Player to Help You",
+    "heading": "Find a player guide and plan a useful lesson.",
+    "description": "Use Star Citizen’s official Guide System, prepare a focused request, arrange a meeting, and turn a lesson into a skill you can repeat.",
+    "lede": "One clear learning goal can make a session with an experienced player easier to arrange and more useful.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360038526034-Guide-System",
+        "title": "RSI: finding a volunteer player guide"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008166874-Playing-with-Friends",
+        "title": "RSI: contacts and grouping"
+      }
+    ],
+    "related": [
+      "play-with-friends",
+      "glossary",
+      "flight-checklist"
+    ]
+  },
+  {
+    "slug": "bug-reporting",
+    "group": "Learning & community",
+    "title": "Star Citizen Bug Reporting | Issue Council Guide",
+    "heading": "Write a bug report another player can reproduce.",
+    "description": "Search the Star Citizen Issue Council, distinguish matching issues, record reproduction steps, and use a clear bug report template.",
+    "lede": "Describe what happened, show the steps and keep observations separate from guesses about the cause.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115009643527-Bug-Reports-Using-the-Issue-Council",
+        "title": "RSI: bug reports, evidence and contributions"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/22529807104279-Searching-the-Issue-Council",
+        "title": "RSI: finding an existing issue"
+      }
+    ],
+    "related": [
+      "find-a-player-guide",
+      "glossary",
+      "install-star-citizen"
+    ]
+  },
+  {
+    "slug": "flight-checklist",
+    "group": "Your first flight",
+    "title": "Star Citizen Flight Checklist | Interactive & Printable",
+    "heading": "A departure checklist for your next Star Citizen trip.",
+    "description": "Use an interactive, printable Star Citizen departure checklist covering the trip, equipment, ship services, crew and clearance.",
+    "lede": "A reusable prompt for checking the plan, character, ship and departure before each trip.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360025028633-Getting-Started-in-the-Verse",
+        "title": "RSI: first-flight preparation and terminology"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services",
+        "title": "RSI: fuel, repair and restock services"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360008166874-Playing-with-Friends",
+        "title": "RSI: contacts and grouping"
+      }
+    ],
+    "related": [
+      "landing-guide",
+      "ship-maintenance",
+      "keybindings"
+    ],
+    "script": "/assets/js/flight-checklist.js"
+  },
+  {
+    "slug": "essential-ship-controls",
+    "group": "Your first flight",
+    "title": "Star Citizen Essential Keys | Doors, Staggered Fire & Setup",
+    "heading": "Essential ship controls: keys, doors and staggered fire.",
+    "description": "Learn essential Star Citizen keys, set up door and staggered-fire controls, and distinguish all-doors commands from a single-door task on the Galaxy.",
+    "lede": "Start with a small set of useful actions, then bind and test door or weapon controls in the right context.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360025028633-Getting-Started-in-the-Verse",
+        "title": "RSI: first-flight controls and interaction"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360020925254-How-to-Land-Your-Ship",
+        "title": "RSI: ATC, gear, camera and braking defaults"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360000134267-Set-up-keybindings-for-your-peripherals",
+        "title": "RSI: assigning actions and checking conflicts"
+      },
+      {
+        "url": "https://robertsspaceindustries.com/en/comm-link/engineering/16185-The-Shipyard-Turrets",
+        "title": "RSI: the underlying staggered-fire concept"
+      },
+      {
+        "url": "https://robertsspaceindustries.com/en/comm-link/transmission/20935-Engineering-Gameplay-Guide",
+        "title": "RSI: engineering consoles and room information"
+      }
+    ],
+    "related": [
+      "keybindings",
+      "flight-checklist",
       "landing-guide"
     ]
   }

@@ -66,16 +66,21 @@ def render(entry, body, is_hub=False):
     html=TEMPLATE
     for key,value in values.items(): html=html.replace('@@'+key+'@@',value)
     assert not re.search(r'@@[A-Z]+@@',html),path
-    html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115">\n</head>')
+    html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115c">\n</head>')
+    if entry.get('script'):
+        assert entry['script'].startswith('/assets/js/') and (ROOT/entry['script'].lstrip('/')).is_file()
+        html=html.replace('</body>', '<script src="'+escape(entry['script'],quote=True)+'?v=20261115" defer></script>\n</body>')
+    if entry.get('slug')=='flight-checklist': html=html.replace('<body>','<body class="checklist-page">')
     (ROOT/path.lstrip('/')).write_text(html)
 
 for entry in CATALOG:
     body=(ROOT/'_content/guides'/f'{entry["slug"]}.html').read_text()
     render(entry,body)
 
-hub={'reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Browse practical Star Citizen guides for setup, flight, landing, inventory, medical gameplay, missions, ship services, rentals and buying ships.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
-body='<div class="guide-answer"><strong>Find your next step</strong><p>New to the game? Start with the <a href="/pages/guides/new-player-guide.html">account-to-first-flight overview</a>. Already playing? Pick a specific topic below.</p></div>'
+hub={'reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Find Star Citizen references, a glossary, a printable flight checklist, and practical guides to setup, ships, flight and playing together.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
+body='<div class="guide-answer"><strong>Find your next step</strong><p>New to the game? Start with the <a href="/pages/guides/new-player-guide.html">account-to-first-flight overview</a>. Already playing? Pick a specific topic below. Keep the <a href="/pages/guides/glossary.html">glossary</a> handy or open the <a href="/pages/guides/flight-checklist.html">interactive, printable departure checklist</a>.</p></div>'
 groups=list(dict.fromkeys(x['group'] for x in CATALOG))
+if 'Core concepts' in groups: groups=['Core concepts']+[g for g in groups if g!='Core concepts']
 body+='<nav class="toc" aria-label="Guide categories"><strong>Browse by topic</strong><ul>'+''.join(f'<li><a href="#group-{i}">{escape(group)}</a></li>' for i,group in enumerate(groups))+'</ul></nav>'
 for i,group in enumerate(groups):
     body+=f'<section aria-labelledby="group-{i}"><h2 id="group-{i}">{escape(group)}</h2><div class="library-grid">'
@@ -96,7 +101,7 @@ for path in (ROOT/'pages').rglob('*.html'):
         html=re.sub(re.escape(marker)+r'.*?<!-- END-GUIDE-LIBRARY-DISCOVERY -->\s*','',html,flags=re.S)
         html=html.replace('<section class="source-list"',discovery+'\n<section class="source-list"',1)
         if '/assets/css/guides.css' not in html:
-            html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115">\n</head>')
+            html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115c">\n</head>')
     if html!=path.read_text(): path.write_text(html)
 
 # Append only the new canonical URLs; do not manufacture fresh dates on older pages.

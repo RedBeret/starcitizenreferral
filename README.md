@@ -83,3 +83,14 @@ SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/guide-browser-check.cjs
 
 This checks all catalog guides and the library at 320, 390, 768 and 1440px,
 including source links, referral identity, contents links and guide discovery.
+
+The evergreen references avoid fixed patch numbers, ship rankings and live price
+tables. Keep conceptual explanations separate from changing implementation
+details and link those details to their official source. The departure checklist
+uses native checkboxes with an optional session-only count and print button; it
+does not save progress or read game state. Verify its interactions and print
+layout with:
+
+```sh
+SC_PLAYWRIGHT_MODULE=/path/to/playwright node scripts/evergreen-browser-check.cjs
+```
