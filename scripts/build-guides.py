@@ -56,7 +56,7 @@ def render(entry, body, is_hub=False):
     if is_hub:
         schema.append({'@context':'https://schema.org','@type':'CollectionPage','name':entry['heading'],'url':canonical,'description':entry['description'],'mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'name':e['heading'],'url':DOMAIN+route(e['slug'])} for i,e in enumerate(CATALOG)]}})
     else:
-        schema.append({'@context':'https://schema.org','@type':'Article','headline':entry['heading'],'description':entry['description'],'datePublished':entry['reviewed'],'dateModified':entry['reviewed'],'author':{'@type':'Person','name':'PatchOps','url':'https://robertsspaceindustries.com/en/citizens/PatchOps'},'mainEntityOfPage':canonical,'image':DOMAIN+'/og-image.jpg','citation':[s['url'] for s in entry['sources']]})
+        schema.append({'@context':'https://schema.org','@type':'Article','headline':entry['heading'],'description':entry['description'],'datePublished':entry.get('published',entry['reviewed']),'dateModified':entry['reviewed'],'author':{'@type':'Person','name':'PatchOps','url':'https://robertsspaceindustries.com/en/citizens/PatchOps'},'mainEntityOfPage':canonical,'image':DOMAIN+'/og-image.jpg','citation':[s['url'] for s in entry['sources']]})
         headings=Headings(); headings.feed(body)
         toc='<nav class="toc" aria-label="On this page"><strong>On this page</strong><ul>'+''.join(f'<li><a href="#{escape(i)}">{escape(t)}</a></li>' for i,t in headings.items)+'</ul></nav>'
         # Keep the quick answer before the contents so a visitor gets an immediate answer.
@@ -73,9 +73,11 @@ for entry in CATALOG:
     body=(ROOT/'_content/guides'/f'{entry["slug"]}.html').read_text()
     render(entry,body)
 
-hub={'reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Browse Star Citizen guides for PC requirements, installation, first flight, quantum travel, friends, missions, Free Fly access and insurance.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
+hub={'reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Browse practical Star Citizen guides for setup, flight, landing, inventory, medical gameplay, missions, ship services, rentals and buying ships.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
 body='<div class="guide-answer"><strong>Find your next step</strong><p>New to the game? Start with the <a href="/pages/guides/new-player-guide.html">account-to-first-flight overview</a>. Already playing? Pick a specific topic below.</p></div>'
-for i,group in enumerate(dict.fromkeys(x['group'] for x in CATALOG)):
+groups=list(dict.fromkeys(x['group'] for x in CATALOG))
+body+='<nav class="toc" aria-label="Guide categories"><strong>Browse by topic</strong><ul>'+''.join(f'<li><a href="#group-{i}">{escape(group)}</a></li>' for i,group in enumerate(groups))+'</ul></nav>'
+for i,group in enumerate(groups):
     body+=f'<section aria-labelledby="group-{i}"><h2 id="group-{i}">{escape(group)}</h2><div class="library-grid">'
     for entry in [x for x in CATALOG if x['group']==group]:
         body+=f'<a class="library-card" href="{route(entry["slug"])}"><span class="kicker">Field guide</span><h3>{escape(entry["heading"])}</h3><p>{escape(entry["description"])}</p><span class="guide-more">Read the guide <span aria-hidden="true">↗</span></span></a>'

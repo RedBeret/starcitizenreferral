@@ -21,7 +21,8 @@
       "install-star-citizen",
       "free-fly",
       "first-flight-new-babbage"
-    ]
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "install-star-citizen",
@@ -49,7 +50,8 @@
       "system-requirements",
       "free-fly",
       "first-flight-new-babbage"
-    ]
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "first-flight-new-babbage",
@@ -74,10 +76,11 @@
       }
     ],
     "related": [
-      "quantum-travel",
-      "play-with-friends",
-      "beginner-missions"
-    ]
+      "landing-guide",
+      "personal-hangars",
+      "keybindings"
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "quantum-travel",
@@ -102,10 +105,11 @@
       }
     ],
     "related": [
-      "first-flight-new-babbage",
-      "play-with-friends",
-      "beginner-missions"
-    ]
+      "landing-guide",
+      "ship-maintenance",
+      "keybindings"
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "play-with-friends",
@@ -133,7 +137,8 @@
       "first-flight-new-babbage",
       "quantum-travel",
       "beginner-missions"
-    ]
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "beginner-missions",
@@ -158,10 +163,11 @@
       }
     ],
     "related": [
-      "play-with-friends",
-      "quantum-travel",
-      "ship-insurance"
-    ]
+      "inventory-and-equipment",
+      "renting-ships",
+      "medical-and-respawn"
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "ship-insurance",
@@ -182,10 +188,11 @@
       }
     ],
     "related": [
-      "first-flight-new-babbage",
-      "beginner-missions",
-      "free-fly"
-    ]
+      "ship-maintenance",
+      "personal-hangars",
+      "buying-ships-auec"
+    ],
+    "published": "2026-11-15"
   },
   {
     "slug": "free-fly",
@@ -213,6 +220,219 @@
       "system-requirements",
       "install-star-citizen",
       "first-flight-new-babbage"
+    ],
+    "published": "2026-11-15"
+  },
+  {
+    "slug": "landing-guide",
+    "group": "Your first flight",
+    "title": "How to Land in Star Citizen | ATC & Hangar Guide",
+    "heading": "How to land your ship in Star Citizen.",
+    "description": "Request landing clearance, find your assigned hangar, manage the approach, and check common landing problems in Star Citizen.",
+    "lede": "A clear sequence from finding the spaceport to landing in the right place, with separate checks for clearance and ship control.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360020925254-How-to-Land-Your-Ship",
+        "title": "RSI: landing clearance, approaches and docking"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services",
+        "title": "RSI: repair, restock and refuelling"
+      }
+    ],
+    "related": [
+      "first-flight-new-babbage",
+      "quantum-travel",
+      "ship-maintenance"
+    ]
+  },
+  {
+    "slug": "keybindings",
+    "group": "Before you play",
+    "title": "Star Citizen Keybindings | Controls & HOTAS Profiles",
+    "heading": "Set up your Star Citizen controls and keybindings.",
+    "description": "Find keybindings, choose the right peripheral, resolve conflicts, and export or import a Star Citizen control profile.",
+    "lede": "Start with a small set of actions you understand, then save a profile you can restore or compare later.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360000134267-Set-up-keybindings-for-your-peripherals",
+        "title": "RSI: peripheral profiles and keybindings"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360000183328-Create-export-and-import-custom-profiles",
+        "title": "RSI: exporting and importing control profiles"
+      }
+    ],
+    "related": [
+      "first-flight-new-babbage",
+      "quantum-travel",
+      "landing-guide"
+    ]
+  },
+  {
+    "slug": "inventory-and-equipment",
+    "group": "Equipment & everyday play",
+    "title": "Star Citizen Inventory Guide | Storage & Equipping Gear",
+    "heading": "Find your items and equip your character.",
+    "description": "Understand Star Citizen personal, local and ship storage, use storage kiosks, equip gear, and check why items seem to be missing.",
+    "lede": "An item can be owned, stored somewhere else, or carried without being equipped. Check its location and state before replacing it.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/4409996738327-Personal-Inventory",
+        "title": "RSI: personal, local and ship inventory"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007262334-Equipping-Your-Character",
+        "title": "RSI: equipping items and location restrictions"
+      }
+    ],
+    "related": [
+      "medical-and-respawn",
+      "personal-hangars",
+      "beginner-missions"
+    ]
+  },
+  {
+    "slug": "medical-and-respawn",
+    "group": "Equipment & everyday play",
+    "title": "Star Citizen Medical Guide | Healing, Rescue & Respawn",
+    "heading": "Medical gameplay and respawning in Star Citizen.",
+    "description": "Understand Star Citizen injuries, rescue beacons, medical treatment tiers, regeneration points and the checks that matter after a setback.",
+    "lede": "A guide to the game’s medical systems: assess the character state, choose appropriate help, and understand where you may return.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/4409996816535-Healing-and-Medical-Treatment",
+        "title": "RSI: injuries, medical beds and regeneration"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/4409996738327-Personal-Inventory",
+        "title": "RSI: personal, local and ship inventory"
+      }
+    ],
+    "related": [
+      "inventory-and-equipment",
+      "play-with-friends",
+      "personal-hangars"
+    ]
+  },
+  {
+    "slug": "ship-maintenance",
+    "group": "Ships & services",
+    "title": "Star Citizen Repair, Refuel & Rearm | Ship Services",
+    "heading": "Repair, refuel and rearm your Star Citizen ship.",
+    "description": "Use Star Citizen landing services, distinguish hydrogen and quantum fuel, and check repair or restock requests before departure.",
+    "lede": "Finish the landing first, choose the services you need, then confirm the ship’s displayed state before setting off again.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services",
+        "title": "RSI: repair, restock and refuelling"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360020925254-How-to-Land-Your-Ship",
+        "title": "RSI: landing clearance, approaches and docking"
+      }
+    ],
+    "related": [
+      "landing-guide",
+      "quantum-travel",
+      "ship-insurance"
+    ]
+  },
+  {
+    "slug": "renting-ships",
+    "group": "Ships & services",
+    "title": "How to Rent Ships in Star Citizen | aUEC & REC",
+    "heading": "Try a different ship: rentals in Star Citizen.",
+    "description": "Rent a ship in the Persistent Universe, understand the real-time rental period, and distinguish aUEC rentals from Arena Commander REC.",
+    "lede": "Check the location, currency, duration and restrictions before renting a ship for a specific session.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013172187-Renting-Ships-Equipment",
+        "title": "RSI: Persistent Universe and Arena Commander rentals"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360011409454-Buying-Ships-with-aUEC",
+        "title": "RSI: purchasing ships from in-game dealers"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360006492734-Currencies-of-Star-Citizen-UEC-aUEC-REC-Store-Credit",
+        "title": "RSI: aUEC, UEC, REC and store credit"
+      }
+    ],
+    "related": [
+      "buying-ships-auec",
+      "beginner-missions",
+      "free-fly"
+    ]
+  },
+  {
+    "slug": "buying-ships-auec",
+    "group": "Ships & services",
+    "title": "Buying Ships with aUEC in Star Citizen | Dealer Guide",
+    "heading": "How to buy ships with aUEC in Star Citizen.",
+    "description": "Find in-game ship dealers, review aUEC prices and confirmation screens, retrieve a purchased ship, and compare buying with renting.",
+    "lede": "A practical purchase checklist for earned alpha currency, with the current dealer screen taking priority over old price lists.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360011409454-Buying-Ships-with-aUEC",
+        "title": "RSI: purchasing ships from in-game dealers"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360006492734-Currencies-of-Star-Citizen-UEC-aUEC-REC-Store-Credit",
+        "title": "RSI: aUEC, UEC, REC and store credit"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013172187-Renting-Ships-Equipment",
+        "title": "RSI: Persistent Universe and Arena Commander rentals"
+      }
+    ],
+    "related": [
+      "renting-ships",
+      "beginner-missions",
+      "personal-hangars"
+    ]
+  },
+  {
+    "slug": "personal-hangars",
+    "group": "Ships & services",
+    "title": "Star Citizen Personal Hangars | Location & Retrieval",
+    "heading": "Find your hangar and retrieve your ship.",
+    "description": "Understand Star Citizen personal and public hangars, primary residence, ASOP retrieval, hangar assignment and visiting with a party.",
+    "lede": "Separate the hangar at your home city from a temporary spaceport assignment and the website’s My Hangar account page.",
+    "published": "2026-11-15",
+    "reviewed": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/115013325128-Hangar-FAQs",
+        "title": "RSI: personal and public hangars"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360025028633-Getting-Started-in-the-Verse",
+        "title": "RSI: retrieval and first-flight controls"
+      },
+      {
+        "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/4409996738327-Personal-Inventory",
+        "title": "RSI: personal, local and ship inventory"
+      }
+    ],
+    "related": [
+      "first-flight-new-babbage",
+      "inventory-and-equipment",
+      "landing-guide"
     ]
   }
 ]
