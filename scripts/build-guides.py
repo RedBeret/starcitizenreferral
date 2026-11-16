@@ -54,6 +54,11 @@ def related_block(slugs):
     by_slug = {x['slug']: x for x in CATALOG}
     return '<nav class="side-links" aria-label="Related guides"><strong>Continue exploring</strong><a href="' + HUB + '">All Star Citizen guides →</a>' + ''.join(f'<a href="{route(s)}">{escape(by_slug[s]["heading"])} →</a>' for s in slugs) + '<a href="/pages/guides/referral-codes.html">Referral rules →</a></nav>'
 
+def next_steps(slugs):
+    by_slug={x['slug']:x for x in CATALOG}
+    items=''.join(f'<li><a href="{route(slug)}"><strong>{escape(by_slug[slug]["heading"])}</strong><span>{escape(by_slug[slug]["description"])}</span></a></li>' for slug in slugs)
+    return '<nav class="guide-next-steps" aria-labelledby="next-steps-heading"><h2 id="next-steps-heading">Choose your next step</h2><ul>'+items+'</ul><a href="'+HUB+'">All guides and tools →</a></nav>'
+
 def render(entry, body, is_hub=False):
     path = HUB if is_hub else route(entry['slug'])
     canonical = DOMAIN + path
@@ -74,15 +79,15 @@ def render(entry, body, is_hub=False):
         toc='<nav class="toc" aria-label="On this page"><strong>On this page</strong><ul>'+''.join(f'<li><a href="#{escape(i)}">{escape(t)}</a></li>' for i,t in headings.items)+'</ul></nav>'
         # Keep the quick answer before the contents so a visitor gets an immediate answer.
         end=body.find('</div>')+len('</div>')
-        body=body[:end]+'\n'+toc+'\n'+body[end:]+source_block(entry['sources'], entry['reviewed'])
+        body=body[:end]+'\n'+toc+'\n'+body[end:]+next_steps(entry.get('related',[]))+source_block(entry['sources'], entry['reviewed'])
     values={'REVIEW_DATE':entry['reviewed'],'REVIEW_LABEL':date.fromisoformat(entry['reviewed']).strftime('%d %B %Y').lstrip('0'),'TITLE':escape(entry['title'],quote=True),'DESCRIPTION':escape(entry['description'],quote=True),'CANONICAL':canonical,'SCHEMA':'\n'.join('<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False)+'</script>' for x in schema),'BREADCRUMB':visible,'HEADING':escape(entry['heading']),'LEDE':escape(entry['lede']),'BODY':body,'RELATED':related_block(entry.get('related',[]))}
     html=TEMPLATE
     for key,value in values.items(): html=html.replace('@@'+key+'@@',value)
     assert not re.search(r'@@[A-Z]+@@',html),path
-    html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">\n</head>')
+    html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115e">\n</head>')
     if entry.get('script'):
         assert entry['script'].startswith('/assets/js/') and (ROOT/entry['script'].lstrip('/')).is_file()
-        html=html.replace('</body>', '<script src="'+escape(entry['script'],quote=True)+'?v=20261115" defer></script>\n</body>')
+        html=html.replace('</body>', '<script src="'+escape(entry['script'],quote=True)+'?v=20261115e" defer></script>\n</body>')
     if entry.get('slug')=='flight-checklist': html=html.replace('<body>','<body class="checklist-page">')
     (ROOT/path.lstrip('/')).write_text(html)
 
@@ -93,7 +98,8 @@ for entry in CATALOG:
 hub={'script':'/assets/js/guide-search.js','reviewed':max(x['reviewed'] for x in CATALOG),'heading':'Star Citizen guides for your first adventures.','title':'Star Citizen Guide Library | Setup, Flight & Beginner Help','description':'Find Star Citizen references, a glossary, a printable flight checklist, a mission-budget calculator, and practical guides to setup, ships, flight and playing together.','lede':'Choose the next thing you want to do. Each guide tackles a practical question, with official sources and related steps.','related':['system-requirements','first-flight-new-babbage','beginner-missions']}
 body='<div class="guide-answer"><strong>Find your next step</strong><p>New to the game? Start with the <a href="/pages/guides/new-player-guide.html">account-to-first-flight overview</a>. Already playing? Pick a specific topic below. Keep the <a href="/pages/guides/glossary.html">glossary</a> handy or open the <a href="/pages/guides/flight-checklist.html">interactive, printable departure checklist</a>.</p></div>'
 groups=catalog_groups()
-body+='<form class="guide-search" data-guide-search hidden role="search" aria-label="Find a guide"><div class="tool-grid"><div><label for="guide-query">Search guides</label><input id="guide-query" name="guide-query" type="search" maxlength="100" autocomplete="off" placeholder="Try doors, HOTAS or cargo" aria-describedby="guide-search-help"></div><div><label for="guide-category">Topic</label><select id="guide-category" name="guide-category"><option value="">All topics</option>'+''.join(f'<option value="{escape(g,quote=True)}">{escape(g)}</option>' for g in groups)+'</select></div></div><p id="guide-search-help" class="small-text">Search guide titles, summaries and related terms. All words must match; combine with a topic to narrow the list.</p><div class="tool-actions"><button class="button secondary" type="reset">Clear filters</button></div><p data-guide-count role="status" aria-live="polite" aria-atomic="true"></p></form><p data-guide-empty hidden>No guides match these filters. Try fewer words, choose All topics, or clear the filters.</p>'
+body+='<form class="guide-search" data-guide-search hidden role="search" aria-label="Find a guide"><div class="tool-grid"><div><label for="guide-query">Search guides</label><input id="guide-query" name="guide-query" type="search" maxlength="100" autocomplete="off" placeholder="Ask a question or try HOTAS" aria-describedby="guide-search-help"></div><div><label for="guide-category">Topic</label><select id="guide-category" name="guide-category"><option value="">All topics</option>'+''.join(f'<option value="{escape(g,quote=True)}">{escape(g)}</option>' for g in groups)+'</select></div></div><p id="guide-search-help" class="small-text">Ask a question such as “how do I open all doors?” or enter a topic such as HOTAS. Use the topic filter to narrow the results.</p><div class="tool-actions"><button class="button secondary" type="reset">Clear filters</button></div><p data-guide-count role="status" aria-live="polite" aria-atomic="true"></p></form><p data-guide-empty hidden>No guides match these filters. Try fewer words, choose All topics, or clear the filters.</p>'
+body+=(ROOT/'_content/starting-paths.html').read_text()
 body+='<nav class="toc" aria-label="Guide categories"><strong>Browse by topic</strong><ul>'+''.join(f'<li data-guide-category="category-{i}"><a href="#group-{i}">{escape(group)}</a></li>' for i,group in enumerate(groups))+'</ul></nav>'
 for i,group in enumerate(groups):
     body+=f'<section id="category-{i}" data-guide-group="{escape(group,quote=True)}" aria-labelledby="group-{i}"><h2 id="group-{i}">{escape(group)}</h2><div class="library-grid">'
@@ -121,7 +127,7 @@ recovery_values={
 recovery=TEMPLATE
 for key,value in recovery_values.items(): recovery=recovery.replace('@@'+key+'@@',value)
 recovery=re.sub(r'<div class="byline">.*?</div>','',recovery,flags=re.S)
-recovery=recovery.replace('</head>','<meta name="robots" content="noindex,follow">\n<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">\n</head>')
+recovery=recovery.replace('</head>','<meta name="robots" content="noindex,follow">\n<link rel="stylesheet" href="/assets/css/guides.css?v=20261115e">\n</head>')
 assert not re.search(r'@@[A-Z]+@@',recovery)
 (ROOT/'404.html').write_text(recovery)
 
@@ -135,7 +141,7 @@ for path in (ROOT/'pages').rglob('*.html'):
         html=re.sub(re.escape(marker)+r'.*?<!-- END-GUIDE-LIBRARY-DISCOVERY -->\s*','',html,flags=re.S)
         html=html.replace('<section class="source-list"',discovery+'\n<section class="source-list"',1)
         if '/assets/css/guides.css' not in html:
-            html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115d">\n</head>')
+            html=html.replace('</head>','<link rel="stylesheet" href="/assets/css/guides.css?v=20261115e">\n</head>')
     if html!=path.read_text(): path.write_text(html)
 
 # Append only the new canonical URLs; do not manufacture fresh dates on older pages.

@@ -1,0 +1,17 @@
+const assert=require('assert/strict');
+const {normalize,tokens,queryTerms}=require('../assets/js/guide-search.js');
+assert.deepEqual(queryTerms('How do I open all the doors?'),['open','door']);
+assert.deepEqual(queryTerms('Can I add a referral after creating an account?'),['referral','signup','account']);
+assert.deepEqual(queryTerms('Why is my referral code not working?'),['referral','code','not','working']);
+assert.deepEqual(queryTerms('no credits'),['no','credit']);
+assert.deepEqual(queryTerms('without a game package'),['without','game','package']);
+assert.deepEqual(queryTerms('where is my ship'),['retrieve','ship']);
+assert.deepEqual(queryTerms('50k credits'),queryTerms('50,000 credits'));
+assert.deepEqual(queryTerms('how do I'),[]);
+assert.deepEqual(queryTerms(''),[]);
+assert.deepEqual(queryTerms('AC'),['ac']);
+assert.deepEqual(queryTerms('F4'),['f4']);
+assert.equal(normalize(' HÓTAS '),'hotas');
+assert.deepEqual(tokens('refueling refuelling'),['refuel','refuel']);
+assert.deepEqual(tokens('rentals renting'),['rent','rent']);
+console.log('PASS: questions, aliases, negative intent, ship retrieval, bonus amounts, accents and short action codes.');
